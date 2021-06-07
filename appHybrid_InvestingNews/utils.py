@@ -18,6 +18,8 @@ def returnChromeSettings():
     global BROWSER
     chromedriver_autoinstaller.install()
     options = Options()
+    ua = UserAgent()
+    userAgent = ua.random
     profile = {"plugins.plugins_list": [{"enabled": True, "name": "Chrome PDF Viewer"}], # Disable Chrome's PDF Viewer
                "download.prompt_for_download": False,
                "download.directory_upgrade": True
@@ -26,7 +28,7 @@ def returnChromeSettings():
     options.add_argument("start-maximized")
     options.add_experimental_option("excludeSwitches", ["enable-automation"])
     options.add_experimental_option('useAutomationExtension', False)
-    options.add_argument("user-agent=Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.103 Safari/537.36")
+    options.add_argument(f"user-agent={userAgent}")
 
     if objControl.heroku:
         #Chrome configuration for heroku

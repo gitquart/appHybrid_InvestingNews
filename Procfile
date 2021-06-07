@@ -1,1 +1,1 @@
-worker: python3 /app/appHybrid_SentenciasCJF/main.py
+worker: python3 /app/appHybrid_InvestingNews/main.py
