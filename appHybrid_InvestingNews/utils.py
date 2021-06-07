@@ -14,6 +14,8 @@ from nltk.tokenize import word_tokenize
 stop_words = set(stopwords.words('english'))
 from operator import itemgetter
 import math
+from sklearn.feature_extraction.text import TfidfVectorizer
+from nltk.corpus import stopwords
 
 
 objControl=cInternalControl()
@@ -57,16 +59,18 @@ def readUrl():
         #btnCloseAlert=devuelveElemento('/html/body/div[6]/div[2]/i')
         #BROWSER.execute_script("arguments[0].click();",btnCloseAlert)
         #Reading articles
+        #sw = set(stopwords.words('english'))
         for x in range(1,38):
             linkArticle=devuelveElemento(f'/html/body/div[5]/section/div[4]/article[{str(x)}]/div[1]/a')
             BROWSER.execute_script("arguments[0].click();",linkArticle)
             articleContent=devuelveElemento('/html/body/div[5]/section/div[3]')
             strContent=articleContent.text
+            lsCorpus=[]
+            lsCorpus.append(articleContent)
             #Start of getting keywords
-            #-Getting words for TF
-            total_words = strContent.split()
-            total_word_length = len(total_words)
-            #-Getting 
+            tfidf=TfidfVectorizer(stop_words='english')
+            Tfidf_matrix=tfidf.fit_transform(lsCorpus)
+            print('...')
             #End of getting keywords
             
 
