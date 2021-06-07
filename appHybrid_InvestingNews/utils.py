@@ -47,36 +47,16 @@ readUrl
 Reads the url from the jury web site
 """
 
-def readUrl(startPage,limit):
-    if startPage==limit:
-        print('The query is over')
-        os.sys.exit(0)
+def readUrl():
     returnChromeSettings()
     print('Starting process...')
-    url="https://bj.scjn.gob.mx/busqueda?q=*&indice=sentencias_pub&page="+str(startPage)
+    url="https://www.investing.com/news/commodities-news"
     response= requests.get(url)
     status= response.status_code
     if status==200:
         BROWSER.get(url)
         time.sleep(5)
-        # Start preparing Judgment
-        #This 'for page' cycle is independent from the query in cassandra, if something fails here then the page is saved in cassandra and it will start over from the page saved
-        json_file='json_judgment.json'
-        #Import JSON file  
-        if objControl.heroku:   
-            json_jud=devuelveJSON(objControl.rutaHeroku+json_file)  
-        else:
-            json_jud=devuelveJSON(objControl.rutaLocal+json_file)
-       
-
-        prepareJudgment(startPage,json_jud) 
-        print('----------------End of Page '+str(startPage)+'---------------------------')
-        query='update thesis.cjf_control set page='+str(startPage+1)+' where id_control='+str(objControl.idControl)
-        db.executeNonQuery(query)
-
-
-        
-
+      
 
 def printToFile(completeFileName,content):
     with open(completeFileName, 'w') as f:
