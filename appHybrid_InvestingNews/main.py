@@ -16,6 +16,8 @@ import cassandraUtil as db
 import utils as tool
 from InternalControl import * 
 
+tool.readUrl()
+
 
 
   
