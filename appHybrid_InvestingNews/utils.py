@@ -3,12 +3,18 @@ import json
 import os
 from selenium import webdriver
 import chromedriver_autoinstaller
-import requests 
 import uuid
 import time
 from InternalControl import cInternalControl
 from selenium.webdriver.chrome.options import Options
 from fake_useragent import UserAgent
+from nltk import tokenize
+from nltk.corpus import stopwords
+from nltk.tokenize import word_tokenize 
+stop_words = set(stopwords.words('english'))
+from operator import itemgetter
+import math
+
 
 objControl=cInternalControl()
 BROWSER=''
@@ -56,6 +62,10 @@ def readUrl():
             BROWSER.execute_script("arguments[0].click();",linkArticle)
             articleContent=devuelveElemento('/html/body/div[5]/section/div[3]')
             strContent=articleContent.text
+            #Start of getting keywords
+            total_words = strContent.split()
+            total_word_length = len(total_words)
+            #End of getting keywords
             
 
         
