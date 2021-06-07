@@ -8,6 +8,7 @@ import uuid
 import time
 from InternalControl import cInternalControl
 from selenium.webdriver.chrome.options import Options
+from fake_useragent import UserAgent
 
 objControl=cInternalControl()
 BROWSER=''
@@ -16,27 +17,26 @@ BROWSER=''
 def returnChromeSettings():
     global BROWSER
     chromedriver_autoinstaller.install()
+    options = Options()
+    profile = {"plugins.plugins_list": [{"enabled": True, "name": "Chrome PDF Viewer"}], # Disable Chrome's PDF Viewer
+               "download.prompt_for_download": False,
+               "download.directory_upgrade": True
+               }         
+    options.add_experimental_option("prefs", profile)
+    options.add_argument("start-maximized")
+    options.add_experimental_option("excludeSwitches", ["enable-automation"])
+    options.add_experimental_option('useAutomationExtension', False)
+    options.add_argument("user-agent=Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.103 Safari/537.36")
+
     if objControl.heroku:
         #Chrome configuration for heroku
-        chrome_options= webdriver.ChromeOptions()
-        chrome_options.binary_location=os.environ.get("GOOGLE_CHROME_BIN")
-        chrome_options.add_argument("--headless")
-        chrome_options.add_argument("--disable-dev-shm-usage")
-        chrome_options.add_argument("--no-sandbox")
+        options.binary_location=os.environ.get("GOOGLE_CHROME_BIN")
+        options.add_argument("--headless")
+        options.add_argument("--disable-dev-shm-usage")
+        options.add_argument("--no-sandbox")
 
-        BROWSER=webdriver.Chrome(executable_path=os.environ.get("CHROMEDRIVER_PATH"),chrome_options=chrome_options)
-
+        BROWSER=webdriver.Chrome(executable_path=os.environ.get("CHROMEDRIVER_PATH"),chrome_options=options)
     else:
-        options = Options()
-        profile = {"plugins.plugins_list": [{"enabled": True, "name": "Chrome PDF Viewer"}], # Disable Chrome's PDF Viewer
-               "download.default_directory": objControl.download_dir , 
-               "download.prompt_for_download": False,
-               "download.directory_upgrade": True,
-               "download.extensions_to_open": "applications/pdf",
-               "plugins.always_open_pdf_externally": True #It will not show PDF directly in chrome
-               }           
-
-        options.add_experimental_option("prefs", profile)
         BROWSER=webdriver.Chrome(options=options)  
 
 
