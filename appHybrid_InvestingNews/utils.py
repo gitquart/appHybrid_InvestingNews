@@ -63,8 +63,10 @@ def readUrl():
             articleContent=devuelveElemento('/html/body/div[5]/section/div[3]')
             strContent=articleContent.text
             #Start of getting keywords
+            #-Getting words for TF
             total_words = strContent.split()
             total_word_length = len(total_words)
+            #-Getting 
             #End of getting keywords
             
 
