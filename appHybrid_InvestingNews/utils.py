@@ -20,23 +20,14 @@ def returnChromeSettings():
     options = Options()
     ua = UserAgent()
     userAgent = ua.random
-    profile = {"plugins.plugins_list": [{"enabled": True, "name": "Chrome PDF Viewer"}], # Disable Chrome's PDF Viewer
-               "download.prompt_for_download": False,
-               "download.directory_upgrade": True
-               }         
-    options.add_experimental_option("prefs", profile)
     options.add_argument("start-maximized")
-    options.add_experimental_option("excludeSwitches", ["enable-automation"])
-    options.add_experimental_option('useAutomationExtension', False)
     options.add_argument(f"user-agent={userAgent}")
+    options.add_argument("--no-sandbox")
 
     if objControl.heroku:
         #Chrome configuration for heroku
         options.binary_location=os.environ.get("GOOGLE_CHROME_BIN")
-        options.add_argument("--headless")
         options.add_argument("--disable-dev-shm-usage")
-        options.add_argument("--no-sandbox")
-
         BROWSER=webdriver.Chrome(executable_path=os.environ.get("CHROMEDRIVER_PATH"),chrome_options=options)
     else:
         BROWSER=webdriver.Chrome(options=options)  
@@ -53,11 +44,10 @@ def readUrl():
     returnChromeSettings()
     print('Starting process...')
     url="https://www.investing.com/news/commodities-news"
-    response= requests.get(url)
-    status= response.status_code
-    if status==200:
-        BROWSER.get(url)
-        time.sleep(5)
+    BROWSER.get(url)
+    print('...')
+    
+    
       
 
 def printToFile(completeFileName,content):
