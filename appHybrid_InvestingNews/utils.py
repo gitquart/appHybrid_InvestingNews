@@ -41,11 +41,27 @@ Reads the url from the jury web site
 """
 
 def readUrl():
-    returnChromeSettings()
-    print('Starting process...')
-    url="https://www.investing.com/news/commodities-news"
-    BROWSER.get(url)
-    print('...')
+    try:
+        returnChromeSettings()
+        print('Starting process...')
+        url="https://www.investing.com/news/commodities-news"
+        BROWSER.get(url)
+        #print('Waiting for banner to appear')
+        #time.sleep(5)
+        #btnCloseAlert=devuelveElemento('/html/body/div[6]/div[2]/i')
+        #BROWSER.execute_script("arguments[0].click();",btnCloseAlert)
+        #Reading articles
+        for x in range(1,38):
+            linkArticle=devuelveElemento(f'/html/body/div[5]/section/div[4]/article[{str(x)}]/div[1]/a')
+            BROWSER.execute_script("arguments[0].click();",linkArticle)
+            articleContent=devuelveElemento('/html/body/div[5]/section/div[3]')
+            strContent=articleContent.text
+            
+
+        
+    except NameError as error:
+        print(str(error))    
+
     
     
       
