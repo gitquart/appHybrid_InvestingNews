@@ -52,7 +52,6 @@ Reads the url from the jury web site
 def readUrl():
     try:
         returnChromeSettings()
-        print('Starting process...')
         url="https://www.investing.com/news/commodities-news"
         BROWSER.get(url)
         #print('Waiting for banner to appear')
@@ -71,7 +70,7 @@ def readUrl():
             # https://towardsdatascience.com/using-tf-idf-to-form-descriptive-chapter-summaries-via-keyword-extraction-4e6fd857d190
             #Pre processing
             file_test='Results.txt'
-            printToFile(file_test,f'--------News {str(x)} ---------------\n')
+            printToFile(file_test,f'--------Start of New {str(x)} ---------------\n')
             printToFile(file_test,f' News Content :\n')
             printToFile(file_test,strContent+'\n')
             strContent = strContent.replace('.',' ')
