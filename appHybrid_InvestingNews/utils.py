@@ -13,8 +13,8 @@ import re
 import pandas as pd
 from nltk.corpus import stopwords
 import nltk
-
-
+from wordcloud import WordCloud
+import matplotlib.pyplot as plt
 
 
 objControl=cInternalControl()
@@ -94,11 +94,19 @@ def readUrl():
             printToFile(file_test,f'-------------------First {str(keywordsLimit)} Important Keywords--------------------\n')
             printToFile(file_test,f'-------------------Word , Tf-idf value--------------------\n')
             # Create a dataframe with the results
+            dictWord_TF_IDF={}
             df = pd.DataFrame({'Feature': lsNames,'tfidf_value': lsTFIDF}).sort_values(by=['tfidf_value'],ascending=False)[0:keywordsLimit]
             for index,row in df.iterrows():
                 line=str(row['Feature'])+' , '+str(row['tfidf_value'])
+                dictWord_TF_IDF[str(row['Feature'])]=float(str(row['tfidf_value']))
                 printToFile(file_test,line+'\n')
                 
+            #Create WorldCloud from any dictionary (Ex: Word, Freq; Word, TF-IDF,....{Word, AnyValue})
+            wordcloud = WordCloud().generate_from_frequencies(dictWord_TF_IDF)
+            plt.imshow(wordcloud, interpolation='bilinear')
+            plt.axis("off")
+            plt.show()
+
             #End of getting keywords
             printToFile(file_test,f'-------------------End of News {str(x)}--------------------\n')
             print(f'----------End of New {str(x)}-------------')
