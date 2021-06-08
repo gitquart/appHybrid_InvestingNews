@@ -11,11 +11,16 @@ from fake_useragent import UserAgent
 from sklearn.feature_extraction.text import TfidfVectorizer
 import re
 import pandas as pd
+from nltk.corpus import stopwords
+import nltk
+
 
 
 
 objControl=cInternalControl()
 BROWSER=''
+nltk.download('stopwords')
+st = set(stopwords.words('english'))
 
 
 def returnChromeSettings():
@@ -61,29 +66,39 @@ def readUrl():
             BROWSER.execute_script("arguments[0].click();",linkArticle)
             articleContent=devuelveElemento('/html/body/div[5]/section/div[3]')
             strContent=articleContent.text
+            #This implementation of code is based on : 
+            # https://towardsdatascience.com/using-tf-idf-to-form-descriptive-chapter-summaries-via-keyword-extraction-4e6fd857d190
             #Pre processing
             file_test='Results.txt'
-            printToFile(file_test,'')
+            printToFile(file_test,f'--------News {str(x)} ---------------\n')
+            printToFile(file_test,f' News Content :\n')
+            printToFile(file_test,strContent+'\n')
             strContent = strContent.replace('.',' ')
             strContent = re.sub(r'\s+',' ',re.sub(r'[^\w \s]','',strContent) ).lower()
             lsCorpus=[]
             lsCorpus.append(strContent)
             #Start of getting keywords
-            vectorizer = TfidfVectorizer(stop_words='english')
+            vectorizer = TfidfVectorizer(stop_words=st)
             """
             fit_transform() returns
             X sparse matrix of (n_samples, n_features)
             Tf-idf-weighted document-term matrix.
             """
             tf_idf_matrix = vectorizer.fit_transform(lsCorpus)
-            names = vectorizer.get_feature_names()
-            data = tf_idf_matrix.todense().tolist()
+            lsNames = vectorizer.get_feature_names()
+            lsDocData = tf_idf_matrix.todense().tolist()
+            lsTFIDF=[]
+            for tf_idf_value in lsDocData[0]:
+                lsTFIDF.append(tf_idf_value)
+
             # Create a dataframe with the results
-            df = pd.DataFrame(data, columns=names)
-            N = 10;
-            for row in df.iterrows():
-                print(row[1].sort_values(ascending=False)[:N])
+            df = pd.DataFrame({'Feature': lsNames,'tfidf_value': lsTFIDF})
+            for index, row in df.iterrows():
+                print(row['Feature'])
+                print(row['tfidf_value'])
+       
             #End of getting keywords
+            printToFile(file_test,f'-------------------End of News {str(x)}--------------------\n')
         
     except NameError as error:
         print(str(error))    
