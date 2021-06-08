@@ -8,14 +8,10 @@ import time
 from InternalControl import cInternalControl
 from selenium.webdriver.chrome.options import Options
 from fake_useragent import UserAgent
-from nltk import tokenize
-from nltk.corpus import stopwords
-from nltk.tokenize import word_tokenize 
-stop_words = set(stopwords.words('english'))
-from operator import itemgetter
-import math
 from sklearn.feature_extraction.text import TfidfVectorizer
-from nltk.corpus import stopwords
+import re
+import pandas as pd
+
 
 
 objControl=cInternalControl()
@@ -65,15 +61,29 @@ def readUrl():
             BROWSER.execute_script("arguments[0].click();",linkArticle)
             articleContent=devuelveElemento('/html/body/div[5]/section/div[3]')
             strContent=articleContent.text
+            #Pre processing
+            file_test='Results.txt'
+            printToFile(file_test,'')
+            strContent = strContent.replace('.',' ')
+            strContent = re.sub(r'\s+',' ',re.sub(r'[^\w \s]','',strContent) ).lower()
             lsCorpus=[]
-            lsCorpus.append(articleContent)
+            lsCorpus.append(strContent)
             #Start of getting keywords
-            tfidf=TfidfVectorizer(stop_words='english')
-            Tfidf_matrix=tfidf.fit_transform(lsCorpus)
-            print('...')
+            vectorizer = TfidfVectorizer(stop_words='english')
+            """
+            fit_transform() returns
+            X sparse matrix of (n_samples, n_features)
+            Tf-idf-weighted document-term matrix.
+            """
+            tf_idf_matrix = vectorizer.fit_transform(lsCorpus)
+            names = vectorizer.get_feature_names()
+            data = tf_idf_matrix.todense().tolist()
+            # Create a dataframe with the results
+            df = pd.DataFrame(data, columns=names)
+            N = 10;
+            for row in df.iterrows():
+                print(row[1].sort_values(ascending=False)[:N])
             #End of getting keywords
-            
-
         
     except NameError as error:
         print(str(error))    
@@ -83,114 +93,11 @@ def readUrl():
       
 
 def printToFile(completeFileName,content):
-    with open(completeFileName, 'w') as f:
+    with open(completeFileName, 'a') as f:
         f.write(content)
-
-def prepareJudgment(currentPage,json_jud): 
-    """
-    prepareJudgment:
-        Reads 10 judgements each time
-    """
-    for x in range(3,13):
-        #/html/body/div[2]/app-root/app-sitio/div/app-resultados/main/div/div/div[2]/div[3]/app-resultado/div[1]/div/div/app-engrose/div/div/a/span
-        linkDoc=devuelveElemento('/html/body/div[2]/app-root/app-sitio/div/app-resultados/main/div/div/div[2]/div['+str(x)+']/app-resultado/div[1]/div/div/app-engrose/div/div/a')
-        time.sleep(3)
-        if linkDoc:
-            print('-----------Waiting 10 secs for the link of the document to be ready--------')
-            time.sleep(10)
-            href=linkDoc.get_attribute('href')
-            print('Value of linkDoc:',href)
-            if href!='':
-                BROWSER.execute_script("arguments[0].click();", linkDoc)
-            time.sleep(5)
-            
-            #----------------Get judgment information-----------------------------------------    
-            #----------------------FIRST TAB--------------------------------------------------
-            #Clean JSON
-            json_jud['ID']=''
-            json_jud['judgment_text']=''
-            json_jud['file']=''
-            json_jud['strDate']=''
-            json_jud['year']=0
-            json_jud['subject']=''
-            json_jud['minister']=''
-            json_jud['topic']=''
-            json_jud['title']=''
-            #Content
-            json_jud['ID']=str(uuid.uuid4())
-            judg_content=devuelveElemento('/html/body/div[2]/app-root/app-sitio/div/app-viewer/main/div/div[2]/section/div/div/div/div[1]/div/div/app-vengroses/div[2]/div/div/div')
-            #Remove any character that can break cassandra : ','
-            json_jud['judgment_text']=judg_content.text.replace("'","")
-            #Title
-            title=devuelveElemento('/html/body/div[2]/app-root/app-sitio/div/app-viewer/main/div/div[2]/section/div/div/nav/div/a[1]')
-            json_jud['title']=title.text
-            #-------------------2ND TAB 'Ficha técnica' click tab-----------------------------
-            tabFT=devuelveElemento('/html/body/div[2]/app-root/app-sitio/div/app-viewer/main/div/div[2]/section/div/div/nav/div/a[2]')
-            #tabFT.click()
-            BROWSER.execute_script("arguments[0].click();", tabFT)
-            time.sleep(9)
-            #File
-            exp_file=devuelveElemento('/html/body/div[2]/app-root/app-sitio/div/app-viewer/main/div/div[2]/section/div/div/div/div[2]/app-vefichatecnica/div/div[2]/table/tbody[1]/tr[1]/td')
-            exp_file_value=exp_file.text
-            json_jud['file']=exp_file_value
-            json_jud['strDate']=exp_file_value
-            #Year
-            if '-' in exp_file_value:
-                #Other cases
-                #14/2021-CA
-                strgetValue=exp_file_value.split('/')[1]
-                year=int(strgetValue.split('-')[0])
-            else:    
-                year=int(exp_file_value.split('/')[1])
-
-            json_jud['year']=year
-            #Subject
-            subject=devuelveElemento('/html/body/div[2]/app-root/app-sitio/div/app-viewer/main/div/div[2]/section/div/div/div/div[2]/app-vefichatecnica/div/div[2]/table/tbody[1]/tr[2]/td')
-            json_jud['subject']=subject.text
-            #Minister
-            minister=devuelveElemento('/html/body/div[2]/app-root/app-sitio/div/app-viewer/main/div/div[2]/section/div/div/div/div[2]/app-vefichatecnica/div/div[2]/table/tbody[1]/tr[3]/td')
-            if minister.text!='':
-                json_jud['minister']=minister.text
-            else:
-                json_jud['minister']='No value'
-            #Topic    
-            topic=devuelveElemento('/html/body/div[2]/app-root/app-sitio/div/app-viewer/main/div/div[2]/section/div/div/div/div[2]/app-vefichatecnica/div/div[2]/table/tbody[1]/tr[4]/td') 
-            json_jud['topic']=topic.text
-            #-------Start Cassandra Read & Write---------------------------------------
-            #Table for this service : thesis.tbjudgment
-            #Check if the judgment is IN.
-            strFile=json_jud['file'];
-            print('Working with: ',strFile,' , row :',str(x-2),' page :',str(currentPage))
-            query="select id from thesis.tbjudgment where file='"+json_jud['file']+"' and subject='"+json_jud['subject']+"' ALLOW FILTERING;"
-            resultSet=db.getQuery(query)
-            if len(resultSet.current_rows)>0:
-                print('File: ',strFile,' existed')
-            else:
-                db.insertJSON('thesis.tbjudgment',json_jud) 
-                print('File: ',strFile,' added')  
-
-            time.sleep(10)
-            print('Slowing down 10 seconds for cassandra')     
-            #Back to main query page
-            btnBack= devuelveElemento('/html/body/div[2]/app-root/app-sitio/div/app-viewer/main/div/div[1]/div/div[1]/div/div/a[2]/button')
-            if btnBack:
-                time.sleep(5)
-                BROWSER.execute_script("arguments[0].click();",btnBack)
-
-            
-        else:
-            print('-------A link to a judgment could not be open at page :',str(currentPage),'-----------')
-            print('--------------------------------The program exited-----------------------------------')
-            os.sys.exit(0)    
-            
-
-
-            
-
-
-
-           
-                               
+    f.close()    
+ 
+                                       
 def devuelveJSON(jsonFile):
     with open(jsonFile) as json_file:
         jsonObj = json.load(json_file)
