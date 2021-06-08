@@ -62,6 +62,7 @@ def readUrl():
         #Reading articles
         #sw = set(stopwords.words('english'))
         for x in range(1,38):
+            print(f'----------Start of New {str(x)}-------------')
             linkArticle=devuelveElemento(f'/html/body/div[5]/section/div[4]/article[{str(x)}]/div[1]/a')
             BROWSER.execute_script("arguments[0].click();",linkArticle)
             articleContent=devuelveElemento('/html/body/div[5]/section/div[3]')
@@ -90,15 +91,21 @@ def readUrl():
             lsTFIDF=[]
             for tf_idf_value in lsDocData[0]:
                 lsTFIDF.append(tf_idf_value)
-
+            keywordsLimit=10
+            printToFile(file_test,f'-------------------First {str(keywordsLimit)} Important Keywords--------------------\n')
+            printToFile(file_test,f'-------------------Word , Tf-idf value--------------------\n')
             # Create a dataframe with the results
-            df = pd.DataFrame({'Feature': lsNames,'tfidf_value': lsTFIDF})
-            for index, row in df.iterrows():
-                print(row['Feature'])
-                print(row['tfidf_value'])
-       
+            df = pd.DataFrame({'Feature': lsNames,'tfidf_value': lsTFIDF}).sort_values(by=['tfidf_value'],ascending=False)[0:keywordsLimit]
+            for index,row in df.iterrows():
+                line=str(row['Feature'])+' , '+str(row['tfidf_value'])
+                printToFile(file_test,line+'\n')
+                
             #End of getting keywords
             printToFile(file_test,f'-------------------End of News {str(x)}--------------------\n')
+            print(f'----------End of New {str(x)}-------------')
+            btnCommodity= devuelveElemento('/html/body/div[5]/section/div[1]/a')
+            BROWSER.execute_script("arguments[0].click();",btnCommodity)
+            time.sleep(5)
         
     except NameError as error:
         print(str(error))    
