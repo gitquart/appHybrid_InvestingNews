@@ -85,17 +85,23 @@ def readUrl():
             Tf-idf-weighted document-term matrix.
             """
             tf_idf_matrix = vectorizer.fit_transform(lsCorpus)
-            lsNames = vectorizer.get_feature_names()
+            lsFeatures = vectorizer.get_feature_names()
             lsDocData = tf_idf_matrix.todense().tolist()
             lsTFIDF=[]
             for tf_idf_value in lsDocData[0]:
                 lsTFIDF.append(tf_idf_value)
-            keywordsLimit=10
+            keywordsLimit=50
+            print('Keywords limit: ',str(keywordsLimit),'\n')
+            print('Features size: ',str(len(lsFeatures)),'\n')
+            if keywordsLimit>len(lsFeatures):
+                print('The keywords limit is greater than the feature list')
+                os.sys.exit(0)
+
             printToFile(file_test,f'-------------------First {str(keywordsLimit)} Important Keywords--------------------\n')
             printToFile(file_test,f'-------------------Word , Tf-idf value--------------------\n')
             # Create a dataframe with the results
             dictWord_TF_IDF={}
-            df = pd.DataFrame({'Feature': lsNames,'tfidf_value': lsTFIDF}).sort_values(by=['tfidf_value'],ascending=False)[0:keywordsLimit]
+            df = pd.DataFrame({'Feature': lsFeatures,'tfidf_value': lsTFIDF}).sort_values(by=['tfidf_value'],ascending=False)[0:keywordsLimit]
             for index,row in df.iterrows():
                 line=str(row['Feature'])+' , '+str(row['tfidf_value'])
                 dictWord_TF_IDF[str(row['Feature'])]=float(str(row['tfidf_value']))
