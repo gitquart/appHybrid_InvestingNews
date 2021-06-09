@@ -15,6 +15,7 @@ from nltk.corpus import stopwords
 import nltk
 from wordcloud import WordCloud
 import matplotlib.pyplot as plt
+from selenium.webdriver.common.by import By
 
 
 objControl=cInternalControl()
@@ -61,7 +62,14 @@ def readUrl():
             #Check Source
             strContent=''
             strSource=''
-            txtSource=devuelveElemento(f'/html/body/div[5]/section/div[4]/article[{str(x)}]/div[1]/span/span[1]')
+            txtSource=''
+            time.sleep(4)
+            #For source: Those from "lsSource" list have "span", the rest have "div"
+            try:
+                txtSource=BROWSER.find_elements_by_xpath(f'/html/body/div[5]/section/div[4]/article[{str(x)}]/div[1]/span/span[1]')[0]
+            except:
+                txtSource=BROWSER.find_elements_by_xpath(f'/html/body/div[5]/section/div[4]/article[{str(x)}]/div[1]/div/span[1]')[0]
+
             strSource=txtSource.text
             strSource=strSource.split(' ')[1]
             linkArticle=devuelveElemento(f'/html/body/div[5]/section/div[4]/article[{str(x)}]/div[1]/a')
@@ -71,8 +79,29 @@ def readUrl():
                 articleContent=devuelveElemento('/html/body/div[5]/section/div[3]')
                 strContent=articleContent.text
             else:
-                linkPopUp=devuelveElemento('/html/body/div[6]/div/div/div/a')
+                #---To know how many windows are open----
+                
+                time.sleep(4)
+                try:
+                    linkPopUp=BROWSER.find_elements_by_xpath('/html/body/div[6]/div/div/div/a')[0]
+                except:
+                    linkPopUp=BROWSER.find_elements_by_xpath('/html/body/div[7]/div/div/div/a')[0]
                 BROWSER.execute_script("arguments[0].click();",linkPopUp)
+                time.sleep(3)
+                if len(BROWSER.window_handles)>1:
+                    second_window=BROWSER.window_handles[1]
+                    BROWSER.switch_to.window(second_window)
+                    #Now in the second window
+                    strContent=BROWSER.page_source
+                    #Close Window 2
+                    BROWSER.close()
+                    time.sleep(4)
+                    #Now in First window
+                    try:
+                        btnClosePopUp=BROWSER.find_elements_by_xpath('/html/body/div[6]/span/i')[0]
+                    except:
+                        btnClosePopUp=BROWSER.find_elements_by_xpath('/html/body/div[7]/span/i')[0]    
+                    BROWSER.execute_script("arguments[0].click();",btnClosePopUp)
                     
             #This implementation of code is based on : 
             # https://towardsdatascience.com/using-tf-idf-to-form-descriptive-chapter-summaries-via-keyword-extraction-4e6fd857d190
