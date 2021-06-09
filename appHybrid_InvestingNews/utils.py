@@ -68,9 +68,14 @@ def readUrl():
             try:
                 txtSource=BROWSER.find_elements_by_xpath(f'/html/body/div[5]/section/div[4]/article[{str(x)}]/div[1]/span/span[1]')[0]
             except:
-                txtSource=BROWSER.find_elements_by_xpath(f'/html/body/div[5]/section/div[4]/article[{str(x)}]/div[1]/div/span[1]')[0]
+                try:
+                   txtSource=BROWSER.find_elements_by_xpath(f'/html/body/div[5]/section/div[4]/article[{str(x)}]/div[1]/div/span[1]')[0]
+                except:
+                    print(f'----------End of New {str(x)} (Most probable an ad)-------------')
+                    continue
 
-            strSource=txtSource.text
+
+            strSource=txtSource.text    
             strSource=strSource.split(' ')[1]
             linkArticle=devuelveElemento(f'/html/body/div[5]/section/div[4]/article[{str(x)}]/div[1]/a')
             BROWSER.execute_script("arguments[0].click();",linkArticle)
@@ -97,10 +102,12 @@ def readUrl():
                     BROWSER.close()
                     time.sleep(4)
                     #Now in First window
+                    first_window=BROWSER.window_handles[0]
+                    BROWSER.switch_to.window(first_window)
                     try:
-                        btnClosePopUp=BROWSER.find_elements_by_xpath('/html/body/div[6]/span/i')[0]
+                        btnClosePopUp=BROWSER.find_elements_by_xpath('/html/body/div[6]/span')[0]
                     except:
-                        btnClosePopUp=BROWSER.find_elements_by_xpath('/html/body/div[7]/span/i')[0]    
+                        btnClosePopUp=BROWSER.find_elements_by_xpath('/html/body/div[7]/span')[0]    
                     BROWSER.execute_script("arguments[0].click();",btnClosePopUp)
                     
             #This implementation of code is based on : 
