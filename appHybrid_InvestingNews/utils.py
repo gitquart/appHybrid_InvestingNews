@@ -21,6 +21,7 @@ objControl=cInternalControl()
 BROWSER=''
 nltk.download('stopwords')
 st = set(stopwords.words('english'))
+lsSources=['Reuters','Investing.com','Bloomberg']
 
 
 def returnChromeSettings():
@@ -54,18 +55,25 @@ def readUrl():
         returnChromeSettings()
         url="https://www.investing.com/news/commodities-news"
         BROWSER.get(url)
-        #print('Waiting for banner to appear')
-        #time.sleep(5)
-        #btnCloseAlert=devuelveElemento('/html/body/div[6]/div[2]/i')
-        #BROWSER.execute_script("arguments[0].click();",btnCloseAlert)
         #Reading articles
-        #sw = set(stopwords.words('english'))
         for x in range(1,38):
             print(f'----------Start of New {str(x)}-------------')
+            #Check Source
+            strContent=''
+            strSource=''
+            txtSource=devuelveElemento(f'/html/body/div[5]/section/div[4]/article[{str(x)}]/div[1]/span/span[1]')
+            strSource=txtSource.text
+            strSource=strSource.split(' ')[1]
             linkArticle=devuelveElemento(f'/html/body/div[5]/section/div[4]/article[{str(x)}]/div[1]/a')
             BROWSER.execute_script("arguments[0].click();",linkArticle)
-            articleContent=devuelveElemento('/html/body/div[5]/section/div[3]')
-            strContent=articleContent.text
+            if strSource in lsSources:
+                #Case: Sources which news open in Investing.com
+                articleContent=devuelveElemento('/html/body/div[5]/section/div[3]')
+                strContent=articleContent.text
+            else:
+                linkPopUp=devuelveElemento('/html/body/div[6]/div/div/div/a')
+                BROWSER.execute_script("arguments[0].click();",linkPopUp)
+                    
             #This implementation of code is based on : 
             # https://towardsdatascience.com/using-tf-idf-to-form-descriptive-chapter-summaries-via-keyword-extraction-4e6fd857d190
             #Pre processing
@@ -90,7 +98,7 @@ def readUrl():
             lsTFIDF=[]
             for tf_idf_value in lsDocData[0]:
                 lsTFIDF.append(tf_idf_value)
-            keywordsLimit=50
+            keywordsLimit=20
             print('Keywords limit: ',str(keywordsLimit),'\n')
             print('Features size: ',str(len(lsFeatures)),'\n')
             if keywordsLimit>len(lsFeatures):
@@ -108,10 +116,12 @@ def readUrl():
                 printToFile(file_test,line+'\n')
                 
             #Create WorldCloud from any dictionary (Ex: Word, Freq; Word, TF-IDF,....{Word, AnyValue})
+            """
             wordcloud = WordCloud().generate_from_frequencies(dictWord_TF_IDF)
             plt.imshow(wordcloud, interpolation='bilinear')
             plt.axis("off")
             plt.show()
+            """
 
             #End of getting keywords
             printToFile(file_test,f'-------------------End of News {str(x)}--------------------\n')
