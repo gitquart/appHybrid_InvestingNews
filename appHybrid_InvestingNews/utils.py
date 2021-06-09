@@ -104,11 +104,14 @@ def readUrl():
                     #Now in First window
                     first_window=BROWSER.window_handles[0]
                     BROWSER.switch_to.window(first_window)
+                    """
                     try:
                         btnClosePopUp=BROWSER.find_elements_by_xpath('/html/body/div[6]/span')[0]
                     except:
-                        btnClosePopUp=BROWSER.find_elements_by_xpath('/html/body/div[7]/span')[0]    
-                    BROWSER.execute_script("arguments[0].click();",btnClosePopUp)
+                        btnClosePopUp=BROWSER.find_elements_by_xpath('/html/body/div[7]/span')[0]  
+                    """      
+                    #BROWSER.execute_script("arguments[0].click();",btnClosePopUp)
+                    BROWSER.refresh()
                     
             #This implementation of code is based on : 
             # https://towardsdatascience.com/using-tf-idf-to-form-descriptive-chapter-summaries-via-keyword-extraction-4e6fd857d190
