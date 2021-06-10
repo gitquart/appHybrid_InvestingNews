@@ -1,7 +1,7 @@
-import cassandraUtil as db
 import json
 import os
 from selenium import webdriver
+import postgresql as db
 import chromedriver_autoinstaller
 import uuid
 import time
@@ -51,10 +51,9 @@ readUrl
 Reads the url from the jury web site
 """
 
-def readUrl():
+def readUrl(url,page):
     try:
         returnChromeSettings()
-        url="https://www.investing.com/news/commodities-news"
         BROWSER.get(url)
         time.sleep(4)
         tag_article=BROWSER.find_elements_by_tag_name('article')
@@ -175,7 +174,10 @@ def readUrl():
                 BROWSER.execute_script("arguments[0].click();",btnCommodity)
             time.sleep(5)
             
-        print('End of page')
+        print(f'End of page {str(page)}')
+        query=f'update tbControl set page={str(page+1)} where id={str(objControl.idControl)}'
+        db.executeNonQuery(query)
+
 
     except NameError as error:
         print(str(error))    

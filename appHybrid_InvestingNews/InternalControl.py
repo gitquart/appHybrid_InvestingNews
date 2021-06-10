@@ -1,7 +1,7 @@
 import os
 
 class cInternalControl(object):
-    idControl=12
+    idControl=1
     timeout=70
     hfolder='appHybrid_InvestingNews' 
     heroku=False
