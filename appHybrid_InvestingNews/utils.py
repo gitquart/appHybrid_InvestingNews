@@ -56,8 +56,15 @@ def readUrl():
         returnChromeSettings()
         url="https://www.investing.com/news/commodities-news"
         BROWSER.get(url)
+        time.sleep(4)
+        tag_article=BROWSER.find_elements_by_tag_name('article')
+        no_art=len(tag_article)
+        print('Total of News: ',str(no_art))
+        if no_art==0:
+            print('No news, shutting down...')
+            os.sys.exit(0)
         #Reading articles
-        for x in range(1,38):
+        for x in range(1,no_art+1):
             print(f'----------Start of New {str(x)}-------------')
             #Check Source
             strContent=''
@@ -71,7 +78,7 @@ def readUrl():
                 try:
                    txtSource=BROWSER.find_elements_by_xpath(f'/html/body/div[5]/section/div[4]/article[{str(x)}]/div[1]/div/span[1]')[0]
                 except:
-                    print(f'----------End of New {str(x)} (Most probable an ad)-------------')
+                    print(f'----------End of New {str(x)} (Most probable an ad or No content)-------------')
                     continue
 
 
@@ -90,7 +97,11 @@ def readUrl():
                 try:
                     linkPopUp=BROWSER.find_elements_by_xpath('/html/body/div[6]/div/div/div/a')[0]
                 except:
-                    linkPopUp=BROWSER.find_elements_by_xpath('/html/body/div[7]/div/div/div/a')[0]
+                    try:
+                        linkPopUp=BROWSER.find_elements_by_xpath('/html/body/div[7]/div/div/div/a')[0]
+                    except:
+                        linkPopUp=BROWSER.find_elements_by_xpath('/html/body/div[8]/div/div/div/a')[0]
+
                 BROWSER.execute_script("arguments[0].click();",linkPopUp)
                 time.sleep(3)
                 if len(BROWSER.window_handles)>1:
@@ -104,15 +115,8 @@ def readUrl():
                     #Now in First window
                     first_window=BROWSER.window_handles[0]
                     BROWSER.switch_to.window(first_window)
-                    """
-                    try:
-                        btnClosePopUp=BROWSER.find_elements_by_xpath('/html/body/div[6]/span')[0]
-                    except:
-                        btnClosePopUp=BROWSER.find_elements_by_xpath('/html/body/div[7]/span')[0]  
-                    """      
-                    #BROWSER.execute_script("arguments[0].click();",btnClosePopUp)
                     BROWSER.refresh()
-                    
+            """        
             #This implementation of code is based on : 
             # https://towardsdatascience.com/using-tf-idf-to-form-descriptive-chapter-summaries-via-keyword-extraction-4e6fd857d190
             #Pre processing
@@ -126,11 +130,11 @@ def readUrl():
             lsCorpus.append(strContent)
             #Start of getting keywords
             vectorizer = TfidfVectorizer(stop_words=st)
-            """
-            fit_transform() returns
-            X sparse matrix of (n_samples, n_features)
-            Tf-idf-weighted document-term matrix.
-            """
+            
+            #fit_transform() returns
+            #X sparse matrix of (n_samples, n_features)
+            #Tf-idf-weighted document-term matrix.
+            
             tf_idf_matrix = vectorizer.fit_transform(lsCorpus)
             lsFeatures = vectorizer.get_feature_names()
             lsDocData = tf_idf_matrix.todense().tolist()
@@ -155,20 +159,24 @@ def readUrl():
                 printToFile(file_test,line+'\n')
                 
             #Create WorldCloud from any dictionary (Ex: Word, Freq; Word, TF-IDF,....{Word, AnyValue})
-            """
+           
             wordcloud = WordCloud().generate_from_frequencies(dictWord_TF_IDF)
             plt.imshow(wordcloud, interpolation='bilinear')
             plt.axis("off")
             plt.show()
-            """
+            
 
             #End of getting keywords
             printToFile(file_test,f'-------------------End of News {str(x)}--------------------\n')
+            """
             print(f'----------End of New {str(x)}-------------')
-            btnCommodity= devuelveElemento('/html/body/div[5]/section/div[1]/a')
-            BROWSER.execute_script("arguments[0].click();",btnCommodity)
+            if strSource in lsSources:
+                btnCommodity= devuelveElemento('/html/body/div[5]/section/div[1]/a')
+                BROWSER.execute_script("arguments[0].click();",btnCommodity)
             time.sleep(5)
-        
+            
+        print('End of page')
+
     except NameError as error:
         print(str(error))    
 
