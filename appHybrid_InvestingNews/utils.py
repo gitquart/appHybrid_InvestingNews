@@ -108,6 +108,8 @@ def readUrl(url,page):
                     BROWSER.switch_to.window(second_window)
                     #Now in the second window
                     lsdiv=BROWSER.find_elements_by_tag_name('div')
+                    if len(lsdiv)==0:
+                        print('No divs here...')
                     i=1
                     file_news='NewsDetection.txt'
                     printToFile(file_news,f'*********************Start of new {str(x)}************************+\n')
@@ -168,8 +170,8 @@ def readUrl(url,page):
             time.sleep(5)
             
         print(f'End of page {str(page)}')
-        query=f'update tbControl set page={str(page+1)} where id={str(objControl.idControl)}'
-        db.executeNonQuery(query)
+        #query=f'update tbControl set page={str(page+1)} where id={str(objControl.idControl)}'
+        #db.executeNonQuery(query)
         BROWSER.quit()
 
 
@@ -209,7 +211,7 @@ def getDataFrameFromTF_IDF(strContent,keywordsLimit,file_test):
       
 
 def printToFile(completeFileName,content):
-    with open(completeFileName, 'a') as f:
+    with open(completeFileName, 'a',encoding='utf-8') as f:
         f.write(content)
     f.close()    
  
