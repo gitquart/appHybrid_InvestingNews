@@ -177,6 +177,7 @@ def readUrl(url,page):
         print(f'End of page {str(page)}')
         query=f'update tbControl set page={str(page+1)} where id={str(objControl.idControl)}'
         db.executeNonQuery(query)
+        BROWSER.quit()
 
 
     except NameError as error:
