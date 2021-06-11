@@ -107,7 +107,22 @@ def readUrl(url,page):
                     second_window=BROWSER.window_handles[1]
                     BROWSER.switch_to.window(second_window)
                     #Now in the second window
-                    strContent=BROWSER.page_source
+                    lsdiv=BROWSER.find_elements_by_tag_name('div')
+                    i=1
+                    file_news='NewsDetection.txt'
+                    printToFile(file_news,f'*********************Start of new {str(x)}************************+\n')
+                    for div in lsdiv:
+                        divContent=''
+                        divContent=div.text 
+                        if divContent!='':
+                            printToFile(file_news,f'-------------Content div {str(i)}---------------\n')
+                            contentToAnalyze=divContent
+                            printToFile(file_news,f'{contentToAnalyze}\n')
+                            printToFile(file_news,f'-------------End Content div {str(i)}---------------\n')
+                        i+=1 
+
+                    printToFile(file_news,f'*******************End of new {str(x)}***************************\n')       
+                    strContent='Set here the news content when you get it...'
                     #Close Window 2
                     BROWSER.close()
                     time.sleep(4)
