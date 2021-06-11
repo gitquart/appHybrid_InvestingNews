@@ -115,43 +115,22 @@ def readUrl(url,page):
                     first_window=BROWSER.window_handles[0]
                     BROWSER.switch_to.window(first_window)
                     BROWSER.refresh()
-            """        
+                   
             #This implementation of code is based on : 
             # https://towardsdatascience.com/using-tf-idf-to-form-descriptive-chapter-summaries-via-keyword-extraction-4e6fd857d190
+            """
+            #START OF TF-IDF AND WORD CLOUD PROCESS
+            printToFile(file_test,f'--------Start of New {str(x)} ---------------\n')
             #Pre processing
             file_test='Results.txt'
-            printToFile(file_test,f'--------Start of New {str(x)} ---------------\n')
             printToFile(file_test,f' News Content :\n')
             printToFile(file_test,strContent+'\n')
-            strContent = strContent.replace('.',' ')
-            strContent = re.sub(r'\s+',' ',re.sub(r'[^\w \s]','',strContent) ).lower()
-            lsCorpus=[]
-            lsCorpus.append(strContent)
-            #Start of getting keywords
-            vectorizer = TfidfVectorizer(stop_words=st)
-            
-            #fit_transform() returns
-            #X sparse matrix of (n_samples, n_features)
-            #Tf-idf-weighted document-term matrix.
-            
-            tf_idf_matrix = vectorizer.fit_transform(lsCorpus)
-            lsFeatures = vectorizer.get_feature_names()
-            lsDocData = tf_idf_matrix.todense().tolist()
-            lsTFIDF=[]
-            for tf_idf_value in lsDocData[0]:
-                lsTFIDF.append(tf_idf_value)
-            keywordsLimit=20
-            print('Keywords limit: ',str(keywordsLimit),'\n')
-            print('Features size: ',str(len(lsFeatures)),'\n')
-            if keywordsLimit>len(lsFeatures):
-                print('The keywords limit is greater than the feature list')
-                os.sys.exit(0)
+            #End of Pre procesing
 
-            printToFile(file_test,f'-------------------First {str(keywordsLimit)} Important Keywords--------------------\n')
-            printToFile(file_test,f'-------------------Word , Tf-idf value--------------------\n')
-            # Create a dataframe with the results
+            #Creating TF-IDF and its dataframe
+            df=getDataFrameFromTF_IDF(strContent,20,file_test)
+            
             dictWord_TF_IDF={}
-            df = pd.DataFrame({'Feature': lsFeatures,'tfidf_value': lsTFIDF}).sort_values(by=['tfidf_value'],ascending=False)[0:keywordsLimit]
             for index,row in df.iterrows():
                 line=str(row['Feature'])+' , '+str(row['tfidf_value'])
                 dictWord_TF_IDF[str(row['Feature'])]=float(str(row['tfidf_value']))
@@ -163,10 +142,9 @@ def readUrl(url,page):
             plt.imshow(wordcloud, interpolation='bilinear')
             plt.axis("off")
             plt.show()
-            
-
-            #End of getting keywords
+    
             printToFile(file_test,f'-------------------End of News {str(x)}--------------------\n')
+            #END OF TF-IDF AND WORD CLOUD PROCESS
             """
             print(f'----------End of New {str(x)}-------------')
             if strSource in lsSources:
@@ -184,7 +162,35 @@ def readUrl(url,page):
         print(str(error))    
 
     
-    
+def getDataFrameFromTF_IDF(strContent,keywordsLimit,file_test):
+    strContent = strContent.replace('.',' ')
+    strContent = re.sub(r'\s+',' ',re.sub(r'[^\w \s]','',strContent) ).lower()
+    lsCorpus=[]
+    lsCorpus.append(strContent)
+    #Start of getting keywords
+    vectorizer = TfidfVectorizer(stop_words=st)
+            
+    #fit_transform() returns
+    #X sparse matrix of (n_samples, n_features)
+    #Tf-idf-weighted document-term matrix.
+            
+    tf_idf_matrix = vectorizer.fit_transform(lsCorpus)
+    lsFeatures = vectorizer.get_feature_names()
+    lsDocData = tf_idf_matrix.todense().tolist()
+    lsTFIDF=[]
+    for tf_idf_value in lsDocData[0]:
+        lsTFIDF.append(tf_idf_value)
+    print('Keywords limit: ',str(keywordsLimit),'\n')
+    print('Features size: ',str(len(lsFeatures)),'\n')
+    if keywordsLimit>len(lsFeatures):
+        print('The keywords limit is greater than the feature list')
+        os.sys.exit(0)
+
+    printToFile(file_test,f'-------------------First {str(keywordsLimit)} Important Keywords--------------------\n')
+    printToFile(file_test,f'-------------------Word , Tf-idf value--------------------\n')
+
+    df = pd.DataFrame({'Feature': lsFeatures,'tfidf_value': lsTFIDF}).sort_values(by=['tfidf_value'],ascending=False)[0:keywordsLimit]
+    return df
       
 
 def printToFile(completeFileName,content):
