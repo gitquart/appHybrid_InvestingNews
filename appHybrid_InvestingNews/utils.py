@@ -23,6 +23,8 @@ BROWSER=''
 nltk.download('stopwords')
 st = set(stopwords.words('english'))
 lsSources=['Reuters','Investing.com','Bloomberg']
+file_news='NewsDetection.txt'
+file_test='Results.txt'
 
 
 def returnChromeSettings():
@@ -111,15 +113,22 @@ def readUrl(url,page):
                     if len(lsdiv)==0:
                         print('No divs here...')
                     i=1
-                    file_news='NewsDetection.txt'
                     printToFile(file_news,f'*********************Start of new {str(x)}************************+\n')
                     for div in lsdiv:
                         divContent=''
                         divContent=div.text 
                         if divContent!='':
                             printToFile(file_news,f'-------------Content div {str(i)}---------------\n')
-                            contentToAnalyze=divContent
-                            printToFile(file_news,f'{contentToAnalyze}\n')
+                            #Pre -processing of content
+                            divContent=pre_process_data(divContent)
+                            printToFile(file_news,f'{divContent}\n')
+                            lsContent=divContent.split(' ')
+                            no_words=len(lsContent)
+                            if no_words>0:
+                                printToFile(file_news,f'-------------Total words on this div: {str(no_words)}---------------\n')
+                            else:
+                                printToFile(file_news,f'-------------No words on this div---------------\n')    
+                                
                             printToFile(file_news,f'-------------End Content div {str(i)}---------------\n')
                         i+=1 
 
@@ -139,7 +148,6 @@ def readUrl(url,page):
             #START OF TF-IDF AND WORD CLOUD PROCESS
             printToFile(file_test,f'--------Start of New {str(x)} ---------------\n')
             #Pre processing
-            file_test='Results.txt'
             printToFile(file_test,f' News Content :\n')
             printToFile(file_test,strContent+'\n')
             #End of Pre procesing
@@ -178,10 +186,15 @@ def readUrl(url,page):
     except NameError as error:
         print(str(error))    
 
+def pre_process_data(content):
+    content = content.replace('.',' ')
+    content = re.sub(r'\s+',' ',re.sub(r'[^\w \s]','',content)).lower()
+
+    return content
+
     
 def getDataFrameFromTF_IDF(strContent,keywordsLimit,file_test):
-    strContent = strContent.replace('.',' ')
-    strContent = re.sub(r'\s+',' ',re.sub(r'[^\w \s]','',strContent) ).lower()
+    strContent=pre_process_data(strContent)
     lsCorpus=[]
     lsCorpus.append(strContent)
     #Start of getting keywords
