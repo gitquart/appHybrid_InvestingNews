@@ -112,28 +112,35 @@ def readUrl(url,page):
                     lsdiv=BROWSER.find_elements_by_tag_name('div')
                     if len(lsdiv)==0:
                         print('No divs here...')
-                    i=1
-                    printToFile(file_news,f'*********************Start of new {str(x)}************************+\n')
+                    lsNoWord=[]
+                    lsDivContent=[]
+                    #printToFile(file_news,f'*********************Start of new {str(x)}************************+\n')
                     for div in lsdiv:
                         divContent=''
                         divContent=div.text 
                         if divContent!='':
-                            printToFile(file_news,f'-------------Content div {str(i)}---------------\n')
+                            #printToFile(file_news,f'-------------Content div {str(i)}---------------\n')
                             #Pre -processing of content
                             divContent=pre_process_data(divContent)
-                            printToFile(file_news,f'{divContent}\n')
+                            #printToFile(file_news,f'{divContent}\n')
                             lsContent=divContent.split(' ')
                             no_words=len(lsContent)
                             if no_words>0:
-                                printToFile(file_news,f'-------------Total words on this div: {str(no_words)}---------------\n')
-                            else:
-                                printToFile(file_news,f'-------------No words on this div---------------\n')    
-                                
-                            printToFile(file_news,f'-------------End Content div {str(i)}---------------\n')
-                        i+=1 
+                                lsNoWord.append(no_words) 
+                                lsDivContent.append(divContent)   
+                            
+                    data=[]
+                    data.append(lsNoWord)
+                    data.append(lsDivContent)            
+                    dfNews= pd.DataFrame(data,columns=['no_words','div_content'])
+                    dfNews.sort_values(by=['no_words'])
+                    if(dfNews.shape[0])>0:
+                        words1=dfNews[0]['no_words']
+                        words2=dfNews[1]['no_words']
 
-                    printToFile(file_news,f'*******************End of new {str(x)}***************************\n')       
                     strContent='Set here the news content when you get it...'
+                    #Clear dataframe from Memory
+                    del dfNews
                     #Close Window 2
                     BROWSER.close()
                     time.sleep(4)
