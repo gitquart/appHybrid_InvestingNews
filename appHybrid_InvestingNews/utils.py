@@ -129,10 +129,9 @@ def readUrl(url,page):
                                 lsNoWord.append(no_words) 
                                 lsDivContent.append(divContent)   
                             
-                    data=[]
-                    data.append(lsNoWord)
-                    data.append(lsDivContent)            
-                    dfNews= pd.DataFrame(data,columns=['no_words','div_content'])
+                    
+                    dictData={'no_words':lsNoWord,'div_content':lsDivContent}           
+                    dfNews= pd.DataFrame(dictData)
                     dfNews.sort_values(by=['no_words'])
                     if(dfNews.shape[0])>0:
                         words1=dfNews[0]['no_words']
