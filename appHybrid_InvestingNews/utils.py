@@ -1,5 +1,6 @@
 import json
 import os
+from numpy import fabs
 from selenium import webdriver
 import postgresql as db
 import chromedriver_autoinstaller
@@ -109,6 +110,7 @@ def readUrl(url,page):
                     second_window=BROWSER.window_handles[1]
                     BROWSER.switch_to.window(second_window)
                     #Now in the second window
+                    time.sleep(5)
                     lsdiv=BROWSER.find_elements_by_tag_name('div')
                     if len(lsdiv)==0:
                         print('No divs here...')
@@ -129,13 +131,19 @@ def readUrl(url,page):
                                 lsNoWord.append(no_words) 
                                 lsDivContent.append(divContent)   
                             
-                    
                     dictData={'no_words':lsNoWord,'div_content':lsDivContent}           
                     dfNews= pd.DataFrame(dictData)
-                    dfNews.sort_values(by=['no_words'])
-                    if(dfNews.shape[0])>0:
-                        words1=dfNews[0]['no_words']
-                        words2=dfNews[1]['no_words']
+                    dfNews.sort_values(by=['no_words'],ascending=False)
+                    for index,row in dfNews.iterrows():
+                        #cWord: current Words...
+                        cWord=row['no_words']
+                        cNew=row['div_content']
+                        #By a series of test, 300 words or more is considered a New...
+                        if int(cWord)>300:
+                            cWord=row['no_words']
+                            cNew=row['div_content']
+
+
 
                     strContent='Set here the news content when you get it...'
                     #Clear dataframe from Memory
