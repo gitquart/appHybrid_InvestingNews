@@ -133,6 +133,7 @@ def readUrl(url,page):
                             
                     dictData={'no_words':lsNoWord,'div_content':lsDivContent}           
                     dfNews= pd.DataFrame(dictData)
+                    dfNews['div_content'].unique()
                     dfNews.sort_values(by=['no_words'],ascending=False)
                     for index,row in dfNews.iterrows():
                         #cWord: current Words...
