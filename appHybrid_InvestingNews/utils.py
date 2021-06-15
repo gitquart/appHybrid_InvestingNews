@@ -137,7 +137,7 @@ def readUrl(url,page):
                     dfNews['div_content'].unique()
                     dfNews.sort_values(by=['no_words'],ascending=False)
                     #By testing, 300 words or more is considered a New...
-                    for index,row in dfNews.query('no_words > 300').iterrows():
+                    for index,row in dfNews.iterrows():
                         #cWord: current Words...
                         cWord=row['no_words']
                         cNew=row['div_content']
