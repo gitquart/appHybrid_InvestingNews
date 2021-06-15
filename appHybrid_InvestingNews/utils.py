@@ -133,16 +133,15 @@ def readUrl(url,page):
                             
                     dictData={'no_words':lsNoWord,'div_content':lsDivContent}           
                     dfNews= pd.DataFrame(dictData)
+                    #Sort the dataframe
                     dfNews['div_content'].unique()
                     dfNews.sort_values(by=['no_words'],ascending=False)
-                    for index,row in dfNews.iterrows():
+                    #By testing, 300 words or more is considered a New...
+                    for index,row in dfNews.query('no_words > 300').iterrows():
                         #cWord: current Words...
                         cWord=row['no_words']
                         cNew=row['div_content']
-                        #By a series of test, 300 words or more is considered a New...
-                        if int(cWord)>300:
-                            cWord=row['no_words']
-                            cNew=row['div_content']
+                        
 
 
 
