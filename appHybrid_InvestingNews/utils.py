@@ -69,7 +69,7 @@ def readUrl(url,page):
         for x in range(1,no_art+1):
             print(f'----------Start of New {str(x)}-------------')
             #Check Source
-            strContent=''
+            lsContent=[]
             strSource=''
             txtSource=''
             time.sleep(4)
@@ -91,7 +91,7 @@ def readUrl(url,page):
             if strSource in lsSources:
                 #Case: Sources which news open in Investing.com
                 articleContent=devuelveElemento('/html/body/div[5]/section/div[3]')
-                strContent=articleContent.text
+                lsContent.append(articleContent.text)
             else:
                 #---To know how many windows are open----
                 
@@ -137,15 +137,10 @@ def readUrl(url,page):
                     dfNews['div_content'].unique()
                     dfNews.sort_values(by=['no_words'],ascending=False)
                     #By testing, 300 words or more is considered a New...
-                    for index,row in dfNews.iterrows():
+                    for index,row in dfNews.query('no_words > 300').iterrows():
                         #cWord: current Words...
-                        cWord=row['no_words']
-                        cNew=row['div_content']
+                        lsContent.append(str(row['div_content']))
                         
-
-
-
-                    strContent='Set here the news content when you get it...'
                     #Clear dataframe from Memory
                     del dfNews
                     #Close Window 2
@@ -158,16 +153,17 @@ def readUrl(url,page):
                    
             #This implementation of code is based on : 
             # https://towardsdatascience.com/using-tf-idf-to-form-descriptive-chapter-summaries-via-keyword-extraction-4e6fd857d190
-            """
+            
             #START OF TF-IDF AND WORD CLOUD PROCESS
             printToFile(file_test,f'--------Start of New {str(x)} ---------------\n')
             #Pre processing
             printToFile(file_test,f' News Content :\n')
-            printToFile(file_test,strContent+'\n')
+            for content in lsContent:
+                printToFile(file_test,content+'\n')
             #End of Pre procesing
 
             #Creating TF-IDF and its dataframe
-            df=getDataFrameFromTF_IDF(strContent,20,file_test)
+            df=getDataFrameFromTF_IDF(lsContent,20,file_test)
             
             dictWord_TF_IDF={}
             for index,row in df.iterrows():
@@ -176,15 +172,16 @@ def readUrl(url,page):
                 printToFile(file_test,line+'\n')
                 
             #Create WorldCloud from any dictionary (Ex: Word, Freq; Word, TF-IDF,....{Word, AnyValue})
-           
+            """
             wordcloud = WordCloud().generate_from_frequencies(dictWord_TF_IDF)
             plt.imshow(wordcloud, interpolation='bilinear')
             plt.axis("off")
             plt.show()
+            """
     
             printToFile(file_test,f'-------------------End of News {str(x)}--------------------\n')
             #END OF TF-IDF AND WORD CLOUD PROCESS
-            """
+            
             print(f'----------End of New {str(x)}-------------')
             if strSource in lsSources:
                 btnCommodity= devuelveElemento('/html/body/div[5]/section/div[1]/a')
@@ -207,10 +204,10 @@ def pre_process_data(content):
     return content
 
     
-def getDataFrameFromTF_IDF(strContent,keywordsLimit,file_test):
-    strContent=pre_process_data(strContent)
+def getDataFrameFromTF_IDF(lsContent,keywordsLimit,file_test):
     lsCorpus=[]
-    lsCorpus.append(strContent)
+    for content in lsContent:
+        lsCorpus.append(pre_process_data(content))
     #Start of getting keywords
     vectorizer = TfidfVectorizer(stop_words=st)
             
