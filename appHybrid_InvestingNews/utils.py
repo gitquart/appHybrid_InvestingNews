@@ -151,12 +151,12 @@ def readUrl(url,page):
                 printToFile(file_test,line+'\n')
                 
             #Create WorldCloud from any dictionary (Ex: Word, Freq; Word, TF-IDF,....{Word, AnyValue})
-            """
+            
             wordcloud = WordCloud().generate_from_frequencies(dictWord_TF_IDF)
             plt.imshow(wordcloud, interpolation='bilinear')
             plt.axis("off")
-            plt.show()
-            """
+            plt.savefig(f'image_new_{str(x)}.jpeg')
+            
     
             printToFile(file_test,f'-------------------End of News {str(x)}--------------------\n')
             #END OF TF-IDF AND WORD CLOUD PROCESS
