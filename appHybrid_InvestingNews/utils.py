@@ -189,8 +189,9 @@ def getDataFrameFromTF_IDF(lsContent,keywordsLimit,file_test):
     #I add up the Stopwords and some cutomized Stopwords (My stop words list)
     lsFinalStopWords=list(set(lsStopWord) | set(lsMyStopWords))
     lsCorpus=[]
-    lsCorpus.append(pre_process_data(lsContent[0]))
-    lsVocabulary=tokenize.word_tokenize(pre_process_data(lsContent[0])) 
+    data_preprocessed=pre_process_data(lsContent[0])
+    lsCorpus.append(data_preprocessed)
+    lsVocabulary=tokenize.word_tokenize(data_preprocessed) 
     #Remove Comple list of stop words 
     for word in lsVocabulary:
         if word in lsFinalStopWords:
