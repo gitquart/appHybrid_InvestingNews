@@ -23,7 +23,7 @@ from nltk import tokenize
 objControl=cInternalControl()
 BROWSER=''
 nltk.download('stopwords')
-lsMyStopWords=['reuters','by','com','u','s','have','has','said','the','are','his','her','would','say','marketwatch','since']
+lsMyStopWords=objControl.lsMyStopWords
 lsStopWord = set(stopwords.words('english'))
 lsSources=['Reuters','Investing.com','Bloomberg']
 file_news='NewsDetection.txt'
