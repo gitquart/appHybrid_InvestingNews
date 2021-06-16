@@ -23,7 +23,7 @@ from nltk import tokenize
 objControl=cInternalControl()
 BROWSER=''
 nltk.download('stopwords')
-lsMyStopWords=['reuters','by','com','u','s']
+lsMyStopWords=['reuters','by','com','u','s','have','has','said','the','are','his','her']
 lsStopWord = set(stopwords.words('english'))
 lsSources=['Reuters','Investing.com','Bloomberg']
 file_news='NewsDetection.txt'
@@ -198,8 +198,9 @@ def getDataFrameFromTF_IDF(lsContent,keywordsLimit,file_test):
             lsVocabulary.remove(word)
 
     #End of "some filtering"
+    
 
-    vectorizer = TfidfVectorizer(smooth_idf=False,vocabulary=lsVocabulary)
+    vectorizer = TfidfVectorizer(vocabulary=list(set(lsVocabulary)))
             
     #fit_transform() returns
     #X sparse matrix of (n_samples, n_features)
