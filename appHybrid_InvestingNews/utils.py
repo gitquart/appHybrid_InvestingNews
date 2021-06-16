@@ -16,14 +16,15 @@ from nltk.corpus import stopwords
 import nltk
 from wordcloud import WordCloud
 import matplotlib.pyplot as plt
-from selenium.webdriver.common.by import By
 from textblob import TextBlob
+from nltk import tokenize
 
 
 objControl=cInternalControl()
 BROWSER=''
 nltk.download('stopwords')
-st = set(stopwords.words('english'))
+lsMyStopWords=['reuters','by','com','u','s']
+lsStopWord = set(stopwords.words('english'))
 lsSources=['Reuters','Investing.com','Bloomberg']
 file_news='NewsDetection.txt'
 file_test='Results.txt'
@@ -182,11 +183,22 @@ def pre_process_data(content):
 
     
 def getDataFrameFromTF_IDF(lsContent,keywordsLimit,file_test):
+    
+    lsFinalStopWords=[]
+    #Start of "some filtering"
+    #I add up the Stopwords and some cutomized Stopwords (My stop words list)
+    lsFinalStopWords=list(set(lsStopWord) | set(lsMyStopWords))
     lsCorpus=[]
-    for content in lsContent:
-        lsCorpus.append(pre_process_data(content))
-    #Stemming the    
-    vectorizer = TfidfVectorizer(stop_words=st,tokenizer=textblob_tokenizer)
+    lsCorpus.append(pre_process_data(lsContent[0]))
+    lsVocabulary=tokenize.word_tokenize(pre_process_data(lsContent[0])) 
+    #Remove Comple list of stop words 
+    for word in lsVocabulary:
+        if word in lsFinalStopWords:
+            lsVocabulary.remove(word)
+
+    #End of "some filtering"
+
+    vectorizer = TfidfVectorizer(smooth_idf=False,vocabulary=lsVocabulary)
             
     #fit_transform() returns
     #X sparse matrix of (n_samples, n_features)
@@ -241,11 +253,7 @@ def devuelveListaElementos(xPath):
 
     return ele     
 
-def textblob_tokenizer(str_input):
-    blob = TextBlob(str_input.lower())
-    tokens = blob.words
-    words = [token.stem() for token in tokens]
-    return words    
+
 
 
     
