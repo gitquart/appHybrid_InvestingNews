@@ -23,11 +23,12 @@ from nltk import tokenize
 objControl=cInternalControl()
 BROWSER=''
 nltk.download('stopwords')
-lsMyStopWords=['reuters','by','com','u','s','have','has','said','the','are','his','her']
+lsMyStopWords=['reuters','by','com','u','s','have','has','said','the','are','his','her','would','say','marketwatch','since']
 lsStopWord = set(stopwords.words('english'))
 lsSources=['Reuters','Investing.com','Bloomberg']
 file_news='NewsDetection.txt'
 file_test='Results.txt'
+lsWordAllNews=[]
 
 
 def returnChromeSettings():
@@ -167,6 +168,11 @@ def readUrl(url,page):
             time.sleep(5)
             
         print(f'End of page {str(page)}')
+        printToFile(file_test,f'-------------------Printing All words from all news--------------------\n')
+
+        for word in list(set(lsWordAllNews)):
+            printToFile(file_test,f'{str(word)}\n')
+
         #query=f'update tbControl set page={str(page+1)} where id={str(objControl.idControl)}'
         #db.executeNonQuery(query)
         BROWSER.quit()
@@ -189,18 +195,21 @@ def getDataFrameFromTF_IDF(lsContent,keywordsLimit,file_test):
     #I add up the Stopwords and some cutomized Stopwords (My stop words list)
     lsFinalStopWords=list(set(lsStopWord) | set(lsMyStopWords))
     lsCorpus=[]
+    lsVocabulary=[]
+    lsVocabularyWithNoSW=[]
     data_preprocessed=pre_process_data(lsContent[0])
     lsCorpus.append(data_preprocessed)
     lsVocabulary=tokenize.word_tokenize(data_preprocessed) 
     #Remove Comple list of stop words 
     for word in lsVocabulary:
-        if word in lsFinalStopWords:
-            lsVocabulary.remove(word)
+        if word not in lsFinalStopWords:
+            lsVocabularyWithNoSW.append(word)
+            lsWordAllNews.append(word)
 
     #End of "some filtering"
     
 
-    vectorizer = TfidfVectorizer(vocabulary=list(set(lsVocabulary)))
+    vectorizer = TfidfVectorizer(vocabulary=list(set(lsVocabularyWithNoSW)))
             
     #fit_transform() returns
     #X sparse matrix of (n_samples, n_features)
