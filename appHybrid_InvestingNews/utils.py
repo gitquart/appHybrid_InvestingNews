@@ -17,6 +17,7 @@ import nltk
 from wordcloud import WordCloud
 import matplotlib.pyplot as plt
 from selenium.webdriver.common.by import By
+from textblob import TextBlob
 
 
 objControl=cInternalControl()
@@ -103,6 +104,11 @@ def readUrl(url,page):
                         linkPopUp=BROWSER.find_elements_by_xpath('/html/body/div[7]/div/div/div/a')[0]
                     except:
                         linkPopUp=BROWSER.find_elements_by_xpath('/html/body/div[8]/div/div/div/a')[0]
+                        try:
+                            linkPopUp=BROWSER.find_elements_by_xpath('/html/body/div[9]/div/div/div/a')[0]
+                        except:
+                            linkPopUp=BROWSER.find_elements_by_xpath('/html/body/div[10]/div/div/div/a')[0]    
+
 
                 BROWSER.execute_script("arguments[0].click();",linkPopUp)
                 time.sleep(3)
@@ -111,38 +117,9 @@ def readUrl(url,page):
                     BROWSER.switch_to.window(second_window)
                     #Now in the second window
                     time.sleep(5)
-                    lsdiv=BROWSER.find_elements_by_tag_name('div')
-                    if len(lsdiv)==0:
-                        print('No divs here...')
-                    lsNoWord=[]
-                    lsDivContent=[]
-                    #printToFile(file_news,f'*********************Start of new {str(x)}************************+\n')
-                    for div in lsdiv:
-                        divContent=''
-                        divContent=div.text 
-                        if divContent!='':
-                            #printToFile(file_news,f'-------------Content div {str(i)}---------------\n')
-                            #Pre -processing of content
-                            divContent=pre_process_data(divContent)
-                            #printToFile(file_news,f'{divContent}\n')
-                            lsContent=divContent.split(' ')
-                            no_words=len(lsContent)
-                            if no_words>0:
-                                lsNoWord.append(no_words) 
-                                lsDivContent.append(divContent)   
-                            
-                    dictData={'no_words':lsNoWord,'div_content':lsDivContent}           
-                    dfNews= pd.DataFrame(dictData)
-                    #Sort the dataframe
-                    dfNews['div_content'].unique()
-                    dfNews.sort_values(by=['no_words'],ascending=False)
-                    #By testing, 300 words or more is considered a New...
-                    for index,row in dfNews.query('no_words > 300').iterrows():
-                        #cWord: current Words...
-                        lsContent.append(str(row['div_content']))
-                        
-                    #Clear dataframe from Memory
-                    del dfNews
+                    textPage=devuelveElemento('/html/body')
+                    lsContent.append(textPage.text)
+                   
                     #Close Window 2
                     BROWSER.close()
                     time.sleep(4)
@@ -208,8 +185,8 @@ def getDataFrameFromTF_IDF(lsContent,keywordsLimit,file_test):
     lsCorpus=[]
     for content in lsContent:
         lsCorpus.append(pre_process_data(content))
-    #Start of getting keywords
-    vectorizer = TfidfVectorizer(stop_words=st)
+    #Stemming the    
+    vectorizer = TfidfVectorizer(stop_words=st,tokenizer=textblob_tokenizer)
             
     #fit_transform() returns
     #X sparse matrix of (n_samples, n_features)
@@ -263,6 +240,12 @@ def devuelveListaElementos(xPath):
             ele=BROWSER.find_elements_by_xpath(xPath)
 
     return ele     
-    
+
+def textblob_tokenizer(str_input):
+    blob = TextBlob(str_input.lower())
+    tokens = blob.words
+    words = [token.stem() for token in tokens]
+    return words    
+
 
     
