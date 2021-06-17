@@ -18,3 +18,10 @@ https://github.com/heroku/heroku-buildpack-chromedriver
 
 For TF-IDF you can set the Corpus and also the vocabulary already preprocessed:
 http://jonathansoma.com/lede/algorithms-2017/classes/more-text-analysis/counting-and-stemming/
+
+
+
+-----Testing------
+
+21-jun-2021
+-Hacer prueba con 20, 40 y 60 key words y con las 2 primeras páginas o saber qué noticias son de la última hora
