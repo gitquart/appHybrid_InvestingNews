@@ -24,4 +24,4 @@ http://jonathansoma.com/lede/algorithms-2017/classes/more-text-analysis/counting
 -----Testing------
 
 21-jun-2021
--Hacer prueba con 20, 40 y 60 key words y con las 2 primeras páginas o saber qué noticias son de la última hora
+-Hacer pruebas con 20, 40 y 60 key words y con las 2 ó 3 primeras páginas  (según el patrón las 2 ó 3 primeras páginas son las del día)
