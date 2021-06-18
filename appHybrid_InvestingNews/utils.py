@@ -104,7 +104,8 @@ def readUrl(url,page):
                 #Get the link with a recursive method
                 linkPopUp=devuelveElementoDinamico('/html/body/div[option]/div/div/div/a',6)
                 time.sleep(3)
-                BROWSER.execute_script("arguments[0].click();",linkPopUp)
+                if linkPopUp:
+                    BROWSER.execute_script("arguments[0].click();",linkPopUp)
                 time.sleep(3)
                 if len(BROWSER.window_handles)>1:
                     second_window=BROWSER.window_handles[1]
@@ -180,6 +181,7 @@ def readUrl(url,page):
 
         if page==3:
             print('Page 3...Starting the analysis for all Corpus')
+            """
             #Print file "All words"
             printToFile(file_all_words,f'-------------------Printing All words from all news--------------------\n')
             for word in list(set(lsWordAllNews)):
@@ -192,6 +194,7 @@ def readUrl(url,page):
             df_corpus=getDataFrameFromTF_IDF(lsContentCorpus,[20,40,60],file_All_News)
         
             #Generate word cloud for all documents keywords   
+            """
 
         #query=f'update tbControl set page={str(page+1)} where id={str(objControl.idControl)}'
         #db.executeNonQuery(query)
