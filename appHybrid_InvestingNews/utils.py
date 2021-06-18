@@ -72,7 +72,7 @@ def readUrl(url,page):
             os.sys.exit(0)
         #Reading articles
         for x in range(1,no_art+1):
-            print(f'----------Start of New {str(x)}-------------')
+            print(f'----------Start of Page {str(page)} New {str(x)}-------------')
             #Check Source
             lsContent=[]
             strSource=''
@@ -85,7 +85,7 @@ def readUrl(url,page):
                 try:
                    txtSource=BROWSER.find_elements_by_xpath(f'/html/body/div[5]/section/div[4]/article[{str(x)}]/div[1]/div/span[1]')[0]
                 except:
-                    print(f'----------End of New {str(x)} (Most probable an ad or No content)-------------')
+                    print(f'----------End of Page {str(page)} New {str(x)} (Most probable an ad or No content)-------------')
                     continue
 
 
@@ -101,21 +101,9 @@ def readUrl(url,page):
                 #---To know how many windows are open----
                 
                 time.sleep(4)
-                try:
-                    linkPopUp=BROWSER.find_elements_by_xpath('/html/body/div[6]/div/div/div/a')[0]
-                except:
-                    try:
-                        linkPopUp=BROWSER.find_elements_by_xpath('/html/body/div[7]/div/div/div/a')[0]
-                    except:
-                        try:
-                           linkPopUp=BROWSER.find_elements_by_xpath('/html/body/div[8]/div/div/div/a')[0]
-                        except:   
-                            try:
-                                linkPopUp=BROWSER.find_elements_by_xpath('/html/body/div[9]/div/div/div/a')[0]
-                            except:
-                                linkPopUp=BROWSER.find_elements_by_xpath('/html/body/div[10]/div/div/div/a')[0]    
-
-
+                #Get the link with a recursive method
+                linkPopUp=devuelveElementoDinamico('/html/body/div[option]/div/div/div/a',6)
+                time.sleep(3)
                 BROWSER.execute_script("arguments[0].click();",linkPopUp)
                 time.sleep(3)
                 if len(BROWSER.window_handles)>1:
@@ -218,6 +206,16 @@ def pre_process_data(content):
     content = re.sub(r'\s+',' ',re.sub(r'[^\w \s]','',content)).lower()
 
     return content
+
+
+def devuelveElementoDinamico(xPath,option):
+    try:
+        newXPath=xPath.replace('option',str(option))
+        return BROWSER.find_elements_by_xpath(newXPath)[0]     
+    except:
+        option+=1
+        devuelveElementoDinamico(xPath,option)
+                   
 
 
 def createWordCloud(imageName,dictWord_Weight):
