@@ -25,3 +25,4 @@ http://jonathansoma.com/lede/algorithms-2017/classes/more-text-analysis/counting
 
 -El algoritmo TF IDF se aceptó y funnciona bien, hay que reducir stopwords
 -Hacer pruebas con 20, 40 y 60 key words y con las 2 ó 3 primeras páginas  (según el patrón las 2 ó 3 primeras páginas son las del día)
+-En viernes por la tarde pa págian falla, iclusive donde antes no tenía fallas, el lunes 21 de junio 2021 haré pruebas con 3 páginas consecitivas (pág 1 a 3) para hacer conclusiones.
