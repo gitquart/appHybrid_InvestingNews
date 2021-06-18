@@ -9,10 +9,11 @@ import utils as tool
 from InternalControl import * 
 
 objControl= cInternalControl()
-query=f'select app,page from tbControl where id={str(objControl.idControl)}'
-res=db.getQuery(query)
-app=res[0][0]
-page=int(res[0][1])
-url=f"https://www.investing.com/news/commodities-news/{str(page)}"
-print(f'App : {str(app)} on page {str(page)} ')
-tool.readUrl(url,page)
+#query=f'select app,page from tbControl where id={str(objControl.idControl)}'
+#res=db.getQuery(query)
+#app=res[0][0]
+#page=int(res[0][1])
+for page in range(1,4):
+    url=f"https://www.investing.com/news/commodities-news/{str(page)}"
+    #print(f'App : {str(app)} on page {str(page)} ')
+    tool.readUrl(url,page)

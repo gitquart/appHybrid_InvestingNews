@@ -16,7 +16,6 @@ from nltk.corpus import stopwords
 import nltk
 from wordcloud import WordCloud
 import matplotlib.pyplot as plt
-from textblob import TextBlob
 from nltk import tokenize
 
 
@@ -24,11 +23,14 @@ objControl=cInternalControl()
 BROWSER=''
 nltk.download('stopwords')
 lsMyStopWords=objControl.lsMyStopWords
-lsStopWord = set(stopwords.words('english'))
+lsStopWord_English = set(stopwords.words('english'))
+lsStopWord_Spanish= set(stopwords.words('spanish'))
 lsSources=['Reuters','Investing.com','Bloomberg']
 file_news='NewsDetection.txt'
-file_test='Results.txt'
+file_all_words='All_words_from_all_News.txt'
 lsWordAllNews=[]
+#lsContentCorpus has a collection of News, the Corpus
+lsContentCorpus=[]
 
 
 def returnChromeSettings():
@@ -134,44 +136,71 @@ def readUrl(url,page):
             # https://towardsdatascience.com/using-tf-idf-to-form-descriptive-chapter-summaries-via-keyword-extraction-4e6fd857d190
             
             #START OF TF-IDF AND WORD CLOUD PROCESS
-            printToFile(file_test,f'--------Start of New {str(x)} ---------------\n')
+            file_New_Keywords='NewAndKeywords_For_New_'+str(x)+'.txt'
+            printToFile(file_New_Keywords,f'--------Start of New {str(x)} ---------------\n')
             #Pre processing
-            printToFile(file_test,f' News Content :\n')
+            printToFile(file_New_Keywords,f' News Content :\n')
             for content in lsContent:
-                printToFile(file_test,content+'\n')
+                printToFile(file_New_Keywords,content+'\n')
+                lsContentCorpus.append(content)
             #End of Pre procesing
 
             #Creating TF-IDF and its dataframe
-            df=getDataFrameFromTF_IDF(lsContent,20,file_test)
+            lsRes=getDataFrameFromTF_IDF(lsContent,file_New_Keywords)
+            df=lsRes[0]
+            lsFeatures=lsRes[1]
             
-            dictWord_TF_IDF={}
-            for index,row in df.iterrows():
-                line=str(row['Feature'])+' , '+str(row['tfidf_value'])
-                dictWord_TF_IDF[str(row['Feature'])]=float(str(row['tfidf_value']))
-                printToFile(file_test,line+'\n')
+            
+            for keywordsLimit in [20,40,60]:
+                df_Sliced=df[:keywordsLimit]
+                print('-------Analysis for ',str(keywordsLimit), 'keyword---------\n')
+                print('Keywords limit: ',str(keywordsLimit),'\n')
+                print('Features size: ',str(len(lsFeatures)),'\n')
+                if keywordsLimit>len(lsFeatures):
+                    print('The keywords limit is greater than the feature list')
+                    os.sys.exit(0)
+
+                printToFile(file_New_Keywords,f'-------------------First {str(keywordsLimit)} Important Keywords--------------------\n')
+                printToFile(file_New_Keywords,f'-------------------Word , Tf-idf value--------------------\n')
+            
+                dictWord_TF_IDF={}
+                for index,row in df_Sliced.iterrows():
+                    line=str(row['Feature'])+' , '+str(row['tfidf_value'])
+                    dictWord_TF_IDF[str(row['Feature'])]=float(str(row['tfidf_value']))
+                    printToFile(file_New_Keywords,line+'\n')
                 
-            #Create WorldCloud from any dictionary (Ex: Word, Freq; Word, TF-IDF,....{Word, AnyValue})
+                #Create WorldCloud from any dictionary (Ex: Word, Freq; Word, TF-IDF,....{Word, AnyValue})
+                createWordCloud(f'image_new_{str(x)}_{str(keywordsLimit)}_keyword',dictWord_TF_IDF)
+                #END OF TF-IDF AND WORD CLOUD PROCESS
             
-            wordcloud = WordCloud().generate_from_frequencies(dictWord_TF_IDF)
-            plt.imshow(wordcloud, interpolation='bilinear')
-            plt.axis("off")
-            plt.savefig(f'image_new_{str(x)}.jpeg')
+            del dictWord_TF_IDF
+            del df
+            del df_Sliced
             
-    
-            printToFile(file_test,f'-------------------End of News {str(x)}--------------------\n')
-            #END OF TF-IDF AND WORD CLOUD PROCESS
-            
+            printToFile(file_New_Keywords,f'-------------------End of News {str(x)}--------------------\n')
             print(f'----------End of New {str(x)}-------------')
             if strSource in lsSources:
                 btnCommodity= devuelveElemento('/html/body/div[5]/section/div[1]/a')
                 BROWSER.execute_script("arguments[0].click();",btnCommodity)
             time.sleep(5)
-            
-        print(f'End of page {str(page)}')
-        printToFile(file_test,f'-------------------Printing All words from all news--------------------\n')
 
-        for word in list(set(lsWordAllNews)):
-            printToFile(file_test,f'{str(word)}\n')
+        #Out of the cycle of each page    
+        print(f'-End of page {str(page)}-')
+
+        if page==3:
+            print('Page 3...Starting the analysis for all Corpus')
+            #Print file "All words"
+            printToFile(file_all_words,f'-------------------Printing All words from all news--------------------\n')
+            for word in list(set(lsWordAllNews)):
+                printToFile(file_all_words,f'{str(word)}\n')
+
+            #Print file "tf idf for all news"
+         
+            #Creating TF-IDF and its dataframe
+            file_All_News='WholeCorpus.txt'
+            df_corpus=getDataFrameFromTF_IDF(lsContentCorpus,[20,40,60],file_All_News)
+        
+            #Generate word cloud for all documents keywords   
 
         #query=f'update tbControl set page={str(page+1)} where id={str(objControl.idControl)}'
         #db.executeNonQuery(query)
@@ -187,13 +216,20 @@ def pre_process_data(content):
 
     return content
 
+
+def createWordCloud(imageName,dictWord_Weight):
+    wordcloud = WordCloud().generate_from_frequencies(dictWord_Weight)
+    plt.imshow(wordcloud, interpolation='bilinear')
+    plt.axis("off")
+    plt.savefig(f'{imageName}.jpeg')
+    del wordcloud
     
-def getDataFrameFromTF_IDF(lsContent,keywordsLimit,file_test):
+def getDataFrameFromTF_IDF(lsContent,file_test):
     
     lsFinalStopWords=[]
     #Start of "some filtering"
     #I add up the Stopwords and some cutomized Stopwords (My stop words list)
-    lsFinalStopWords=list(set(lsStopWord) | set(lsMyStopWords))
+    lsFinalStopWords=list(set(lsStopWord_English) | set(lsMyStopWords) | set(lsStopWord_Spanish) )
     lsCorpus=[]
     lsVocabulary=[]
     lsVocabularyWithNoSW=[]
@@ -221,17 +257,10 @@ def getDataFrameFromTF_IDF(lsContent,keywordsLimit,file_test):
     lsTFIDF=[]
     for tf_idf_value in lsDocData[0]:
         lsTFIDF.append(tf_idf_value)
-    print('Keywords limit: ',str(keywordsLimit),'\n')
-    print('Features size: ',str(len(lsFeatures)),'\n')
-    if keywordsLimit>len(lsFeatures):
-        print('The keywords limit is greater than the feature list')
-        os.sys.exit(0)
 
-    printToFile(file_test,f'-------------------First {str(keywordsLimit)} Important Keywords--------------------\n')
-    printToFile(file_test,f'-------------------Word , Tf-idf value--------------------\n')
-
-    df = pd.DataFrame({'Feature': lsFeatures,'tfidf_value': lsTFIDF}).sort_values(by=['tfidf_value'],ascending=False)[0:keywordsLimit]
-    return df
+    df = pd.DataFrame({'Feature': lsFeatures,'tfidf_value': lsTFIDF}).sort_values(by=['tfidf_value'],ascending=False)
+    
+    return [df,lsFeatures]
       
 
 def printToFile(completeFileName,content):
