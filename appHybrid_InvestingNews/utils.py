@@ -107,11 +107,13 @@ def readUrl(url,page):
                     try:
                         linkPopUp=BROWSER.find_elements_by_xpath('/html/body/div[7]/div/div/div/a')[0]
                     except:
-                        linkPopUp=BROWSER.find_elements_by_xpath('/html/body/div[8]/div/div/div/a')[0]
                         try:
-                            linkPopUp=BROWSER.find_elements_by_xpath('/html/body/div[9]/div/div/div/a')[0]
-                        except:
-                            linkPopUp=BROWSER.find_elements_by_xpath('/html/body/div[10]/div/div/div/a')[0]    
+                           linkPopUp=BROWSER.find_elements_by_xpath('/html/body/div[8]/div/div/div/a')[0]
+                        except:   
+                            try:
+                                linkPopUp=BROWSER.find_elements_by_xpath('/html/body/div[9]/div/div/div/a')[0]
+                            except:
+                                linkPopUp=BROWSER.find_elements_by_xpath('/html/body/div[10]/div/div/div/a')[0]    
 
 
                 BROWSER.execute_script("arguments[0].click();",linkPopUp)
@@ -136,8 +138,8 @@ def readUrl(url,page):
             # https://towardsdatascience.com/using-tf-idf-to-form-descriptive-chapter-summaries-via-keyword-extraction-4e6fd857d190
             
             #START OF TF-IDF AND WORD CLOUD PROCESS
-            file_New_Keywords='NewAndKeywords_For_New_'+str(x)+'.txt'
-            printToFile(file_New_Keywords,f'--------Start of New {str(x)} ---------------\n')
+            file_New_Keywords='news_analysis\\NewAndKeywords_For_Page_'+str(page)+'_New_'+str(x)+'.txt'
+            printToFile(file_New_Keywords,f'--------Start of Page {str(page)} New {str(x)} ---------------\n')
             #Pre processing
             printToFile(file_New_Keywords,f' News Content :\n')
             for content in lsContent:
@@ -170,7 +172,8 @@ def readUrl(url,page):
                     printToFile(file_New_Keywords,line+'\n')
                 
                 #Create WorldCloud from any dictionary (Ex: Word, Freq; Word, TF-IDF,....{Word, AnyValue})
-                createWordCloud(f'image_new_{str(x)}_{str(keywordsLimit)}_keyword',dictWord_TF_IDF)
+                image_file='images_wordcloud\\image_page_'+str(page)+'_new_'+str(x)+'_'+str(keywordsLimit)+'_keyword.jpeg'
+                createWordCloud(image_file,dictWord_TF_IDF)
                 #END OF TF-IDF AND WORD CLOUD PROCESS
             
             del dictWord_TF_IDF
@@ -178,7 +181,7 @@ def readUrl(url,page):
             del df_Sliced
             
             printToFile(file_New_Keywords,f'-------------------End of News {str(x)}--------------------\n')
-            print(f'----------End of New {str(x)}-------------')
+            print(f'----------End of Page {str(page)} New {str(x)}-------------')
             if strSource in lsSources:
                 btnCommodity= devuelveElemento('/html/body/div[5]/section/div[1]/a')
                 BROWSER.execute_script("arguments[0].click();",btnCommodity)
@@ -221,7 +224,7 @@ def createWordCloud(imageName,dictWord_Weight):
     wordcloud = WordCloud().generate_from_frequencies(dictWord_Weight)
     plt.imshow(wordcloud, interpolation='bilinear')
     plt.axis("off")
-    plt.savefig(f'{imageName}.jpeg')
+    plt.savefig(f'{imageName}')
     del wordcloud
     
 def getDataFrameFromTF_IDF(lsContent,file_test):
