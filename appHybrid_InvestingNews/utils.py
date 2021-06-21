@@ -28,9 +28,10 @@ lsStopWord_Spanish= set(stopwords.words('spanish'))
 lsSources=['Reuters','Investing.com','Bloomberg']
 file_news='NewsDetection.txt'
 file_all_words='All_words_from_all_News.txt'
-lsWordAllNews=[]
-#lsContentCorpus has a collection of News, the Corpus
+
+#lsContentCorpus and lsWordAllNews_WithNoSW  are elements for the TF IDF of a SET OF NEWS
 lsContentCorpus=[]
+lsWordAllNews_WithNoSW=[]
 
 
 def returnChromeSettings():
@@ -129,14 +130,12 @@ def readUrl(url):
                 #START OF TF-IDF AND WORD CLOUD PROCESS
                 file_New_Keywords='news_analysis\\NewAndKeywords_For_Page_'+str(page)+'_New_'+str(x)+'.txt'
                 printToFile(file_New_Keywords,f'--------Start of Page {str(page)} New {str(x)} ---------------\n')
-                #Pre processing
                 printToFile(file_New_Keywords,f' News Content :\n')
                 for content in lsContent:
                     printToFile(file_New_Keywords,content+'\n')
-                    lsContentCorpus.append(content)
-                #End of Pre procesing
 
                 #Creating TF-IDF and its dataframe
+                lsRes=[]
                 lsRes=getDataFrameFromTF_IDF(lsContent)
                 df=lsRes[0]
                 lsFeatures=lsRes[1]
@@ -165,9 +164,9 @@ def readUrl(url):
                     createWordCloud(image_file,dictWord_TF_IDF)
                     #END OF TF-IDF AND WORD CLOUD PROCESS
             
-                del dictWord_TF_IDF
-                del df
-                del df_Sliced
+                    del dictWord_TF_IDF
+                    del df_Sliced
+                del df    
             
                 printToFile(file_New_Keywords,f'-------------------End of News {str(x)}--------------------\n')
                 print(f'----------End of Page {str(page)} New {str(x)}-------------')
@@ -181,20 +180,50 @@ def readUrl(url):
 
             if page==3:
                 print('Page 3...Starting the analysis for all Corpus')
-                """
+                
                 #Print file "All words"
                 printToFile(file_all_words,f'-------------------Printing All words from all news--------------------\n')
-                for word in list(set(lsWordAllNews)):
+                for word in list(set(lsWordAllNews_WithNoSW)):
                     printToFile(file_all_words,f'{str(word)}\n')
-
-                #Print file "tf idf for all news"
          
                 #Creating TF-IDF and its dataframe
-                file_All_News='WholeCorpus.txt'
-                df_corpus=getDataFrameFromTF_IDF(lsContentCorpus,[20,40,60],file_All_News)
+                file_All_News='wholecorpus\\WholeCorpus.txt'
+                #Creating TF-IDF and its dataframe
+                lsRes=[]
+                lsRes=getDataFrameFromTF_IDF(lsContentCorpus,True)
+                df=lsRes[0]
+                lsFeatures=lsRes[1]
+            
+            
+                for keywordsLimit in [20,30,50]:
+                    df_Sliced=df[:keywordsLimit]
+                    print('-------Analysis for ',str(keywordsLimit), 'keyword---------\n')
+                    print('Keywords limit: ',str(keywordsLimit),'\n')
+                    print('Features size: ',str(len(lsFeatures)),'\n')
+                    if keywordsLimit>len(lsFeatures):
+                        print('The keywords limit is greater than the feature list')
+                        os.sys.exit(0)
+
+                    printToFile(file_All_News,f'-------------------First {str(keywordsLimit)} Important Keywords--------------------\n')
+                    printToFile(file_All_News,f'-------------------Word , Tf-idf value--------------------\n')
+            
+                    dictWord_TF_IDF={}
+                    for index,row in df_Sliced.iterrows():
+                        line=str(row['Feature'])+' , '+str(row['tfidf_value'])
+                        dictWord_TF_IDF[str(row['Feature'])]=float(str(row['tfidf_value']))
+                        printToFile(file_New_Keywords,line+'\n')
+                
+                    #Create WorldCloud from any dictionary (Ex: Word, Freq; Word, TF-IDF,....{Word, AnyValue})
+                    image_file='wholecorpus\\image_page_wholeCorpus_'+str(keywordsLimit)+'_keyword.jpeg'
+                    createWordCloud(image_file,dictWord_TF_IDF)
+                    #END OF TF-IDF AND WORD CLOUD PROCESS
+            
+                    del dictWord_TF_IDF
+                    del df_Sliced
+                del df    
         
-                #Generate word cloud for all documents keywords   
-                """
+                   
+                
 
             #query=f'update tbControl set page={str(page+1)} where id={str(objControl.idControl)}'
             #db.executeNonQuery(query)
@@ -232,7 +261,7 @@ def createWordCloud(imageName,dictWord_Weight):
     plt.savefig(f'{imageName}')
     del wordcloud
     
-def getDataFrameFromTF_IDF(lsContent):
+def getDataFrameFromTF_IDF(lsContent,fullCorpus=False):
     
     lsFinalStopWords=[]
     #Start of "some filtering"
@@ -241,30 +270,40 @@ def getDataFrameFromTF_IDF(lsContent):
     lsCorpus=[]
     lsVocabulary=[]
     lsVocabularyWithNoSW=[]
-    data_preprocessed=pre_process_data(lsContent[0])
-    lsCorpus.append(data_preprocessed)
-    lsVocabulary=tokenize.word_tokenize(data_preprocessed) 
+    for document in lsContent:
+        data_preprocessed=pre_process_data(document)
+        lsCorpus.append(data_preprocessed)
+        lsContentCorpus.append(data_preprocessed)
+        for word_token in tokenize.word_tokenize(data_preprocessed):
+            lsVocabulary.append(word_token)
+   
     #Remove Comple list of stop words 
     for word in lsVocabulary:
         if word not in lsFinalStopWords:
             lsVocabularyWithNoSW.append(word)
-            lsWordAllNews.append(word)
+            #lsWordAllNews_WithNoSW si for the TF IDF with a set of NEWS
+            lsWordAllNews_WithNoSW.append(word)
 
     #End of "some filtering"
-    
 
-    vectorizer = TfidfVectorizer(vocabulary=list(set(lsVocabularyWithNoSW)))
-            
     #fit_transform() returns
     #X sparse matrix of (n_samples, n_features)
     #Tf-idf-weighted document-term matrix.
-            
-    tf_idf_matrix = vectorizer.fit_transform(lsCorpus)
+    
+    if fullCorpus:
+        vectorizer = TfidfVectorizer(vocabulary=list(set(lsWordAllNews_WithNoSW)))
+        tf_idf_matrix = vectorizer.fit_transform(lsContentCorpus)
+    else:
+        vectorizer = TfidfVectorizer(vocabulary=list(set(lsVocabularyWithNoSW)))
+        tf_idf_matrix = vectorizer.fit_transform(lsCorpus)
+                      
+    
     lsFeatures = vectorizer.get_feature_names()
     lsDocData = tf_idf_matrix.todense().tolist()
     lsTFIDF=[]
-    for tf_idf_value in lsDocData[0]:
-        lsTFIDF.append(tf_idf_value)
+    for doc in lsDocData:
+        for tf_idf_value in doc:
+            lsTFIDF.append(tf_idf_value)
 
     df = pd.DataFrame({'Feature': lsFeatures,'tfidf_value': lsTFIDF}).sort_values(by=['tfidf_value'],ascending=False)
     
