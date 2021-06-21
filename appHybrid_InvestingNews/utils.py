@@ -246,8 +246,12 @@ def pre_process_data(content):
 
 def devuelveElementoDinamico(xPath,option):
     try:
+        e=None
         newXPath=xPath.replace('option',str(option))
-        return BROWSER.find_elements_by_xpath(newXPath)[0]     
+        e=BROWSER.find_elements_by_xpath(newXPath)[0]  
+        time.sleep(3)
+        if e:
+            return e   
     except:
         option+=1
         devuelveElementoDinamico(xPath,option)
