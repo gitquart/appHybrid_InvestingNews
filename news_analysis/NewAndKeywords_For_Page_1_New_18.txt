@@ -1,0 +1,165 @@
+--------Start of Page 1 New 18 ---------------
+ News Content :
+About
+Contact
+Privacy Policy
+Bitcoin$32,788.00-5.43%
+Ethereum$1,993.72-6.30%
+XRP$0.68-7.49%
+Bitcoin Cash$493.36-7.77%
+HOME
+NEWS
+ANALYSIS
+CRYPTO
+AUTOTRADING
+DISCLAIMER
+PR
+Oil Prices Will Reach Near $100 In 2022 – Bank Of America
+by John Wanguba June 21, 2021 in FX Industry Reading Time: 4min read
+Bank of America Corporation said that oil may surge to reach $100 per barrel in the coming year as travel demand rebounds significantly. That is now the strongest call yet among the major predictions for a return to the triple digits.
+Global oil consumption is expected to continue outpacing supply next year as the economic recovery from the pandemic enhances fuel consumption, while the investment in new production is limited by environmental fears, according to a report by the American bank.
+The bank’s New York-based head of commodities research, Francisco Blanch, said:
+“There is plenty of pent-up oil demand ready to be unleashed.”
+Brent futures are trading near $74 per barrel on Monday. While the other analysts from Goldman Sachs and trading house Trafigura Group have also mentioned that oil might top $100 in the right conditions, the forecast by Bank of America is the strongest to date.
+In case crude oil returns to the triple digits, it will be the first time since 2014, before a major flood of North American shale oil sent the market into a plunge from where it has never recovered fully.
+“The increasingly bullish outlook for oil is adding to pressure on the OPEC+ coalition led by Saudi Arabia and Russia, which meets next week to consider reviving some more of the production it cut during the pandemic.”
+While Saudi Arabia has already indicated that it prefers to proceed cautiously, the ever-tighter world market may compel the alliance to open the taps just a little. Prices have already been stoked in June as another OPEC member Iran fails to get an agreement to relieve US sanctions put on its petroleum exports.
+Based on the Bank of America report, the near-term prospects for the OPEC+ alliance are now bright. Oil consumption will increase in the coming months as mass transit struggles to keep up with the extra travel demand, prompting the passengers to use more private cars.
+Even the current popularity of remote working is not expected to dent fuel consumption as much as it was earlier anticipated, since the home-workers use cars during the day to run personal errands. Blanch said:
+“Work-from-home means ‘work-from-car’ in many cases.”
+Simultaneously, the bank now expects that new oil supplies will remain limited. Shareholders will also pressure the major firms to invest in renewable energy, or push shale drillers to return cash instead of spending it on new drilling.
+But, the expectations for a tight market in the coming year are not yet unanimous. Another report published by the International Energy Agency earlier in June indicated that about half of the forecasted increase in demand can be effectively met by recovering output outside OPEC, predominantly from the United States.
+This would leave OPEC and its partners with considerable quantities of idle output, and more if Iran can strike the nuclear accord with the United States by then.
+Like what you're reading? Subscribe to our top stories
+Tags: Bank of Americabrent oilcrude oulcrude pricesIranoil marketsoil pricesOPECOrganization of Petroleum Exporting Countries (OPEC)Saudi Arabiashalethe US
+Related Posts
+FX INDUSTRY
+Goldman Sachs May Disrupt UK Transaction Business Space
+JUNE 21, 2021
+BLOCKCHAIN
+Iran Allegedly Bans Local Blockchain Association
+JUNE 21, 2021
+REGULATION
+Democratic Legislators Formed Group To Resolve Crypto Regulatory Issues
+JUNE 15, 2021
+FACEBOOK TWITTER INSTAGRAM TELEGRAM RSS YOUTUBE
+Newsletter
+Like what you're reading? Subscribe to our top stories
+
+
+
+
+
+
+
+
+
+Copyright © 2017-2019 Cryptovibes.com. Price data provided by our official partner CoinGecko.
+This website uses cookies. By continuing to use this website you are giving consent to cookies being used. Visit our Privacy and Cookie Policy. I Agree
+-------------------First 20 Important Keywords--------------------
+-------------------Word , Tf-idf value--------------------
+oil , 0.34462275839778883
+bank , 0.24123593087845216
+june , 0.2067736550386733
+opec , 0.17231137919889442
+consumption , 0.13784910335911552
+america , 0.13784910335911552
+2021 , 0.13784910335911552
+new , 0.13784910335911552
+demand , 0.13784910335911552
+use , 0.10338682751933664
+coming , 0.10338682751933664
+top , 0.10338682751933664
+may , 0.10338682751933664
+year , 0.10338682751933664
+iran , 0.10338682751933664
+100 , 0.10338682751933664
+major , 0.10338682751933664
+reading , 0.10338682751933664
+report , 0.10338682751933664
+21 , 0.10338682751933664
+-------------------First 30 Important Keywords--------------------
+-------------------Word , Tf-idf value--------------------
+oil , 0.34462275839778883
+bank , 0.24123593087845216
+june , 0.2067736550386733
+opec , 0.17231137919889442
+consumption , 0.13784910335911552
+america , 0.13784910335911552
+2021 , 0.13784910335911552
+new , 0.13784910335911552
+demand , 0.13784910335911552
+use , 0.10338682751933664
+coming , 0.10338682751933664
+top , 0.10338682751933664
+may , 0.10338682751933664
+year , 0.10338682751933664
+iran , 0.10338682751933664
+100 , 0.10338682751933664
+major , 0.10338682751933664
+reading , 0.10338682751933664
+report , 0.10338682751933664
+21 , 0.10338682751933664
+market , 0.10338682751933664
+blockchain , 0.06892455167955776
+strongest , 0.06892455167955776
+website , 0.06892455167955776
+cookies , 0.06892455167955776
+fx , 0.06892455167955776
+digits , 0.06892455167955776
+states , 0.06892455167955776
+production , 0.06892455167955776
+also , 0.06892455167955776
+-------------------First 50 Important Keywords--------------------
+-------------------Word , Tf-idf value--------------------
+oil , 0.34462275839778883
+bank , 0.24123593087845216
+june , 0.2067736550386733
+opec , 0.17231137919889442
+consumption , 0.13784910335911552
+america , 0.13784910335911552
+2021 , 0.13784910335911552
+new , 0.13784910335911552
+demand , 0.13784910335911552
+use , 0.10338682751933664
+coming , 0.10338682751933664
+top , 0.10338682751933664
+may , 0.10338682751933664
+year , 0.10338682751933664
+iran , 0.10338682751933664
+100 , 0.10338682751933664
+major , 0.10338682751933664
+reading , 0.10338682751933664
+report , 0.10338682751933664
+21 , 0.10338682751933664
+market , 0.10338682751933664
+blockchain , 0.06892455167955776
+strongest , 0.06892455167955776
+website , 0.06892455167955776
+cookies , 0.06892455167955776
+fx , 0.06892455167955776
+digits , 0.06892455167955776
+states , 0.06892455167955776
+production , 0.06892455167955776
+also , 0.06892455167955776
+barrel , 0.06892455167955776
+reach , 0.06892455167955776
+output , 0.06892455167955776
+shale , 0.06892455167955776
+youre , 0.06892455167955776
+trading , 0.06892455167955776
+sachs , 0.06892455167955776
+prices , 0.06892455167955776
+time , 0.06892455167955776
+already , 0.06892455167955776
+alliance , 0.06892455167955776
+triple , 0.06892455167955776
+united , 0.06892455167955776
+pandemic , 0.06892455167955776
+next , 0.06892455167955776
+american , 0.06892455167955776
+limited , 0.06892455167955776
+saudi , 0.06892455167955776
+group , 0.06892455167955776
+us , 0.06892455167955776
+-------------------End of News 18--------------------

@@ -1,0 +1,271 @@
+--------Start of Page 1 New 32 ---------------
+ News Content :
+DOW JONES, A NEWS CORP COMPANY
+About WSJ
+DJIA33798.39
+points with a
+1.53%▲ S&P 5004215.20
+points with a
+1.17%▲ Nasdaq14108.22
+points with a
+0.55%▲ U.S. 10 Yr-4/32 Yield
+with a
+1.485%▼ Crude Oil72.76
+points with a
+1.56%▲ Euro1.1907
+points with a
+0.37%▲
+The Wall Street Journal
+SubscribeSign In
+SPECIAL OFFER
+English Edition
+Print EditionVideoPodcastsLatest Headlines
+Home
+World
+U.S.
+Politics
+Economy
+Business
+Tech
+Markets
+Opinion
+Life & Arts
+Real Estate
+WSJ. Magazine
+Sports
+Search
+SHARE
+MARKETS COMMODITIES
+The Natural-Gas Glut Has Evaporated, Driving Prices Higher
+The power-plant fuel costs twice what it did at the start of last summer, portending higher utility bills and manufacturing costs
+Your browser does not support HTML5 video.
+Why Your Electricity Bill May Be Higher Than Your Neighbor’s
+Retail energy companies compete with local utilities to give U.S. consumers more choice. But in nearly every state where they operate, retailers have charged more than regulated incumbents, meaning you may be paying more for your electricity than your neighbor. Here’s why. Photo Illustration: Jacob Reynolds
+By Ryan Dezember
+June 20, 2021 5:30 am ET
+PRINT
+TEXT
+269
+Natural-gas prices are starting the summer air-conditioning season nearly twice as high as they were a year ago.
+Demand for the fuel is picking up as the world’s economies reopen and as Americans dial down their thermostats for what is expected to be a hot summer. Meanwhile, U.S. producers have stuck to the skimpy drilling plans they sketched out when prices were lower, eliminating the glut that was keeping them depressed.  
+Natural-gas futures ended Friday at $3.215 per million British thermal units, up 96% from a year ago and the highest price headed into summer since 2017. Futures traded even higher—and regional spot prices jumped—when triple-digit temperatures baked the Southwest earlier this month. Analysts expect prices to be even higher later in the year when it is time to fire up furnaces.
+It isn’t just in the U.S. where gas is running high. Dutch gas futures, a barometer for prices in Western Europe, have more than doubled over the past year—including a sharp rise since February—to multiyear highs. In Asia, imported liquefied natural gas is fetching more than five times what it did last June, beckoning tankers full of chilled shale gas across the Pacific.
+More expensive gas has stoked demand in international markets for coal, with which gas competes to fuel power plants. Futures prices for thermal coal loaded at a terminal in Newcastle, Australia, have more than doubled from a year ago. The benchmark price has added 27% over the past month and hasn’t been so high in nearly a decade.
+TO READ THE FULL STORY
+SUBSCRIBE
+SIGN IN
+Continue reading your article with
+a WSJ membership
+US $1 for 2 Months
+VIEW MEMBERSHIP OPTIONS
+SPONSORED OFFERS
+TARGET:
+20% off sitewide - Target Promo Code 2021
+MACY'S:
+Macy's coupon - Sign up to get 25% off next order
+KOHL'S:
+30% off Kohl's coupon for Rewards members
+SAKS FIFTH AVENUE:
+20% off first order - Saks Fifth Avenue promo code
+OLD NAVY:
+Get 50% off 1000's of styles at Old Navy
+PRETTYLITTLETHING:
+Extra 10% off PrettyLittleThing promo code for your orders
+UPCOMING EVENTS
+Jun
+24
+2021
+11:00 AM - 5:00 PM EDT
+Global Food Forum
+Jun
+30
+2021
+1:00 PM - 1:45 PM EDT
+WSJ Pro Cybersecurity Webinar: Aligning IT and Cybersecurity
+Jun
+30
+2021
+7:00 PM - 7:45 PM EDT
+WSJ+ Live: Daniel Kahneman and His Co-Authors on the Crisis of ‘Noise’
+ADD TO CALENDAR
+MOST POPULAR NEWS
+American Airlines Cuts Some Flights to Avoid Potential Strains
+The World Relies on One Chip Maker in Taiwan, Leaving Everyone Vulnerable
+The New Tween Status Look: LoveShackFancy Dresses and Golden Goose Sneakers
+What Investors Can Learn From The History of Inflation
+Why Women—Like Rihanna—Are Cutting Their Hair Short
+MOST POPULAR OPINION
+Opinion: Maskless Among the Lemmings
+Opinion: Iran Sends a Message to Biden
+Opinion: The Filibuster Helps Nobody, and That Means You
+Opinion: How Long Can America Keep Borrowing?
+Opinion: Arizona’s Almost Maybe 2.5% Flat Tax
+RECOMMENDED VIDEOS
+Deadly Tropical Depression Claudette Batters South
+What Biden-Putin Geneva Summit Looks Like on Russian Television
+What Is Turbulence? A Pilot Explains How It Happens, Even in Clear Skies
+iOS 15, iPadOS 15, MacOS Monterey: 10 Big Changes to Your Apple Device
+What’s Next for Israel After the End of Netanyahu’s Rule
+The Wall Street Journal
+English Edition
+Subscribe NowSign In
+BACK TO TOP «
+WSJ Membership
+WSJ+ Membership Benefits
+Subscription Options
+Why Subscribe?
+Corporate Subscriptions
+Professor Journal
+Student Journal
+WSJ High School Program
+WSJ Amenity Program
+Public Library Program
+WSJ Live
+Customer Service
+Customer Center
+Contact Us
+Tools & Features
+Emails & Alerts
+Guides
+Topics
+My News
+RSS Feeds
+Video Center
+Watchlist
+Podcasts
+Ads
+Advertise
+Commercial Real Estate Ads
+Place a Classified Ad
+Sell Your Business
+Sell Your Home
+Recruitment & Career Ads
+Coupons
+More
+About Us
+Commercial Partnerships
+Content Partnerships
+Corrections
+Jobs at WSJ
+News Archive
+Register for Free
+Reprints
+Buy Issues
+Facebook
+Twitter
+Instagram
+YouTube
+Podcasts
+Snapchat
+Google Play
+App Store
+Dow Jones ProductsBarron'sBigChartsDow Jones NewswiresFactivaFinancial NewsMansion GlobalMarketWatchPrivate MarketsRisk & ComplianceWSJ ProWSJ VideoWSJ Wine
+Privacy NoticeCookie NoticeDo Not Sell My Personal InformationCopyright PolicyData PolicySubscriber Agreement & Terms of UseYour Ad Choices
+Copyright ©2021 Dow Jones & Company, Inc. All Rights Reserved.
+-------------------First 20 Important Keywords--------------------
+-------------------Word , Tf-idf value--------------------
+wsj , 0.3125050443499248
+opinion , 0.19886684640449762
+prices , 0.19886684640449762
+2021 , 0.17045729691814082
+gas , 0.17045729691814082
+pm , 0.14204774743178403
+points , 0.14204774743178403
+high , 0.11363819794542722
+futures , 0.11363819794542722
+jones , 0.11363819794542722
+higher , 0.11363819794542722
+year , 0.11363819794542722
+news , 0.11363819794542722
+journal , 0.11363819794542722
+20 , 0.11363819794542722
+membership , 0.11363819794542722
+summer , 0.11363819794542722
+edt , 0.08522864845907041
+ago , 0.08522864845907041
+us , 0.08522864845907041
+-------------------First 30 Important Keywords--------------------
+-------------------Word , Tf-idf value--------------------
+wsj , 0.3125050443499248
+opinion , 0.19886684640449762
+prices , 0.19886684640449762
+2021 , 0.17045729691814082
+gas , 0.17045729691814082
+pm , 0.14204774743178403
+points , 0.14204774743178403
+high , 0.11363819794542722
+futures , 0.11363819794542722
+jones , 0.11363819794542722
+higher , 0.11363819794542722
+year , 0.11363819794542722
+news , 0.11363819794542722
+journal , 0.11363819794542722
+20 , 0.11363819794542722
+membership , 0.11363819794542722
+summer , 0.11363819794542722
+edt , 0.08522864845907041
+ago , 0.08522864845907041
+us , 0.08522864845907041
+10 , 0.08522864845907041
+subscribe , 0.08522864845907041
+jun , 0.08522864845907041
+program , 0.08522864845907041
+code , 0.08522864845907041
+promo , 0.08522864845907041
+fuel , 0.08522864845907041
+nearly , 0.08522864845907041
+even , 0.08522864845907041
+sell , 0.08522864845907041
+-------------------First 50 Important Keywords--------------------
+-------------------Word , Tf-idf value--------------------
+wsj , 0.3125050443499248
+opinion , 0.19886684640449762
+prices , 0.19886684640449762
+2021 , 0.17045729691814082
+gas , 0.17045729691814082
+pm , 0.14204774743178403
+points , 0.14204774743178403
+high , 0.11363819794542722
+futures , 0.11363819794542722
+jones , 0.11363819794542722
+higher , 0.11363819794542722
+year , 0.11363819794542722
+news , 0.11363819794542722
+journal , 0.11363819794542722
+20 , 0.11363819794542722
+membership , 0.11363819794542722
+summer , 0.11363819794542722
+edt , 0.08522864845907041
+ago , 0.08522864845907041
+us , 0.08522864845907041
+10 , 0.08522864845907041
+subscribe , 0.08522864845907041
+jun , 0.08522864845907041
+program , 0.08522864845907041
+code , 0.08522864845907041
+promo , 0.08522864845907041
+fuel , 0.08522864845907041
+nearly , 0.08522864845907041
+even , 0.08522864845907041
+sell , 0.08522864845907041
+ads , 0.08522864845907041
+dow , 0.08522864845907041
+30 , 0.08522864845907041
+markets , 0.08522864845907041
+naturalgas , 0.08522864845907041
+options , 0.05681909897271361
+target , 0.05681909897271361
+cybersecurity , 0.05681909897271361
+video , 0.05681909897271361
+15 , 0.05681909897271361
+avenue , 0.05681909897271361
+edition , 0.05681909897271361
+past , 0.05681909897271361
+wall , 0.05681909897271361
+coal , 0.05681909897271361
+demand , 0.05681909897271361
+world , 0.05681909897271361
+street , 0.05681909897271361
+business , 0.05681909897271361
+real , 0.05681909897271361
+-------------------End of News 32--------------------

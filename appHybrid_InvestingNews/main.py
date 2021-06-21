@@ -13,7 +13,7 @@ objControl= cInternalControl()
 #res=db.getQuery(query)
 #app=res[0][0]
 #page=int(res[0][1])
-for page in range(1,4):
-    url=f"https://www.investing.com/news/commodities-news/{str(page)}"
-    #print(f'App : {str(app)} on page {str(page)} ')
-    tool.readUrl(url,page)
+tool.returnChromeSettings()
+url="https://www.investing.com/news/commodities-news"
+#print(f'App : {str(app)} on page {str(page)} ')
+tool.readUrl(url)

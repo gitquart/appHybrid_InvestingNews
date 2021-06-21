@@ -1,0 +1,124 @@
+--------Start of Page 2 New 1 ---------------
+ News Content :
+© Reuters.
+(updates spot prices)
+By Barani Krishnan
+Investing.com - Gold bulls suffered their worst week since the 2020 Covid outbreak as prices fell almost 6% on the Federal Reserve’s expedited timetable for rate hikes and stimulus tapering.
+
+The moves generated fear beyond the necessary which played out well for the yellow metal’s bears.
+Front-month gold futures on New York’s Comex settled at $1,769 per ounce on Friday, down $5.80, or 0.3%. For the week, the decline was $110, or 5.9%, the biggest drop in Comex gold since the week ended March 6, 2020. The loss came after a seven-week low of $1,768 set for the benchmark gold futures contract on Thursday.
+The spot price of gold was at $1,765.53 by 4:00 PM ET (20:00 GMT). That was down by $7.78, or 0.4%, on the day, and off by $111, or almost 6%, on the week.
+Traders and fund managers sometimes decide on the direction for gold by looking at the spot price — which reflects bullion for prompt delivery — instead of futures.
+The Federal Reserve signaled at the end of its monthly policy meeting on Wednesday that it will raise interest rates at least twice by the end of 2023 to 0.6% from current levels of zero to 0.25%.
+The Fed also said it was looking out for data on when to start tapering its monthly asset purchase of $120 billion. The central bank has been buying at least $80 billion in Treasury bonds and $40 billion in mortgage bonds to support credit markets and the economy since the COVID-19 outbreak last year.
+The well-expected moves still managed to generate more market panic than necessary, sending the previously-battered Dollar Index rallying on the rate hike expectations and hammering commodities priced in the currency, including gold. Bears in the yellow metal loaded up massively on shorts a day after the Fed’s announcement, despite U.S. weekly jobless claims on Thursday that had been supportive to gold.
+Adding somewhat to the pressure on gold was St. Louis Fed President James Bullard’s observation on Friday that the central bank might have to consider raising interest rates by next year instead of 2023 as inflation could run ahead of its expectations.
+Bullard is a non-voting member of the Fed but a senior one whose comments often reverberate across markets.
+“The reflation trade is no more and this selling across commodities could see further short-term pressure with gold prices,” said Ed Moya, analyst at online trading platform OANDA.
+-------------------First 20 Important Keywords--------------------
+-------------------Word , Tf-idf value--------------------
+gold , 0.47565149415449404
+week , 0.19026059766179762
+futures , 0.14269544824634822
+fed , 0.14269544824634822
+billion , 0.14269544824634822
+prices , 0.14269544824634822
+spot , 0.14269544824634822
+rates , 0.09513029883089881
+looking , 0.09513029883089881
+across , 0.09513029883089881
+thursday , 0.09513029883089881
+day , 0.09513029883089881
+least , 0.09513029883089881
+rate , 0.09513029883089881
+2020 , 0.09513029883089881
+bears , 0.09513029883089881
+80 , 0.09513029883089881
+outbreak , 0.09513029883089881
+tapering , 0.09513029883089881
+almost , 0.09513029883089881
+-------------------First 30 Important Keywords--------------------
+-------------------Word , Tf-idf value--------------------
+gold , 0.47565149415449404
+week , 0.19026059766179762
+futures , 0.14269544824634822
+fed , 0.14269544824634822
+billion , 0.14269544824634822
+prices , 0.14269544824634822
+spot , 0.14269544824634822
+rates , 0.09513029883089881
+looking , 0.09513029883089881
+across , 0.09513029883089881
+thursday , 0.09513029883089881
+day , 0.09513029883089881
+least , 0.09513029883089881
+rate , 0.09513029883089881
+2020 , 0.09513029883089881
+bears , 0.09513029883089881
+80 , 0.09513029883089881
+outbreak , 0.09513029883089881
+tapering , 0.09513029883089881
+almost , 0.09513029883089881
+markets , 0.09513029883089881
+instead , 0.09513029883089881
+bank , 0.09513029883089881
+2023 , 0.09513029883089881
+friday , 0.09513029883089881
+interest , 0.09513029883089881
+year , 0.09513029883089881
+yellow , 0.09513029883089881
+monthly , 0.09513029883089881
+expectations , 0.09513029883089881
+-------------------First 50 Important Keywords--------------------
+-------------------Word , Tf-idf value--------------------
+gold , 0.47565149415449404
+week , 0.19026059766179762
+futures , 0.14269544824634822
+fed , 0.14269544824634822
+billion , 0.14269544824634822
+prices , 0.14269544824634822
+spot , 0.14269544824634822
+rates , 0.09513029883089881
+looking , 0.09513029883089881
+across , 0.09513029883089881
+thursday , 0.09513029883089881
+day , 0.09513029883089881
+least , 0.09513029883089881
+rate , 0.09513029883089881
+2020 , 0.09513029883089881
+bears , 0.09513029883089881
+80 , 0.09513029883089881
+outbreak , 0.09513029883089881
+tapering , 0.09513029883089881
+almost , 0.09513029883089881
+markets , 0.09513029883089881
+instead , 0.09513029883089881
+bank , 0.09513029883089881
+2023 , 0.09513029883089881
+friday , 0.09513029883089881
+interest , 0.09513029883089881
+year , 0.09513029883089881
+yellow , 0.09513029883089881
+monthly , 0.09513029883089881
+expectations , 0.09513029883089881
+pressure , 0.09513029883089881
+moves , 0.09513029883089881
+end , 0.09513029883089881
+commodities , 0.09513029883089881
+central , 0.09513029883089881
+price , 0.09513029883089881
+bonds , 0.09513029883089881
+federal , 0.09513029883089881
+necessary , 0.09513029883089881
+comex , 0.09513029883089881
+priced , 0.047565149415449405
+25 , 0.047565149415449405
+managed , 0.047565149415449405
+generate , 0.047565149415449405
+timetable , 0.047565149415449405
+zero , 0.047565149415449405
+policy , 0.047565149415449405
+announcement , 0.047565149415449405
+inflation , 0.047565149415449405
+sevenweek , 0.047565149415449405
+-------------------End of News 1--------------------

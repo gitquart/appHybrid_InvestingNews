@@ -1,0 +1,115 @@
+--------Start of Page 1 New 25 ---------------
+ News Content :
+© Reuters. Gold Steadies After Posting Biggest Weekly Loss in 15 Months
+(Bloomberg) -- Gold steadied after posting the biggest weekly loss in 15 months as the Federal Reserve’s hawkish shift damped reflation bets.
+Inflation risks may warrant the U.S. central bank beginning raising interest rates next year, St. Louis Fed President James Bullard said Friday. His comments came after last week’s Fed meeting where officials signaled monetary policy tightening could start earlier than expected, with Chair Jerome Powell saying that the Fed would begin a discussion about scaling back bond purchases used to support financial markets and the economy during the pandemic.
+Bullion has been weighed down by concerns over tighter monetary policy, although Powell cautioned that discussions about raising interest rates would be “highly premature.” He’s due to testify at a House Subcommittee hearing on the Fed’s pandemic emergency lending and its asset purchase programs Tuesday.
+Spot gold rose 0.2% to $1,768.45 an ounce at 7:24 a.m. in Singapore. Prices fell 6% last week, the most since March 2020. Silver, palladium and platinum all advanced. The Bloomberg Dollar Spot Index steadied after rising 2% last week.
+©2021 Bloomberg L.P.
+-------------------First 20 Important Keywords--------------------
+-------------------Word , Tf-idf value--------------------
+last , 0.21938172723813917
+fed , 0.21938172723813917
+gold , 0.21938172723813917
+bloomberg , 0.21938172723813917
+months , 0.14625448482542613
+posting , 0.14625448482542613
+policy , 0.14625448482542613
+raising , 0.14625448482542613
+interest , 0.14625448482542613
+week , 0.14625448482542613
+pandemic , 0.14625448482542613
+powell , 0.14625448482542613
+steadied , 0.14625448482542613
+rates , 0.14625448482542613
+15 , 0.14625448482542613
+monetary , 0.14625448482542613
+spot , 0.14625448482542613
+weekly , 0.14625448482542613
+loss , 0.14625448482542613
+biggest , 0.14625448482542613
+-------------------First 30 Important Keywords--------------------
+-------------------Word , Tf-idf value--------------------
+last , 0.21938172723813917
+fed , 0.21938172723813917
+gold , 0.21938172723813917
+bloomberg , 0.21938172723813917
+months , 0.14625448482542613
+posting , 0.14625448482542613
+policy , 0.14625448482542613
+raising , 0.14625448482542613
+interest , 0.14625448482542613
+week , 0.14625448482542613
+pandemic , 0.14625448482542613
+powell , 0.14625448482542613
+steadied , 0.14625448482542613
+rates , 0.14625448482542613
+15 , 0.14625448482542613
+monetary , 0.14625448482542613
+spot , 0.14625448482542613
+weekly , 0.14625448482542613
+loss , 0.14625448482542613
+biggest , 0.14625448482542613
+friday , 0.07312724241271307
+hes , 0.07312724241271307
+bank , 0.07312724241271307
+president , 0.07312724241271307
+march , 0.07312724241271307
+economy , 0.07312724241271307
+warrant , 0.07312724241271307
+singapore , 0.07312724241271307
+weeks , 0.07312724241271307
+2021 , 0.07312724241271307
+-------------------First 50 Important Keywords--------------------
+-------------------Word , Tf-idf value--------------------
+last , 0.21938172723813917
+fed , 0.21938172723813917
+gold , 0.21938172723813917
+bloomberg , 0.21938172723813917
+months , 0.14625448482542613
+posting , 0.14625448482542613
+policy , 0.14625448482542613
+raising , 0.14625448482542613
+interest , 0.14625448482542613
+week , 0.14625448482542613
+pandemic , 0.14625448482542613
+powell , 0.14625448482542613
+steadied , 0.14625448482542613
+rates , 0.14625448482542613
+15 , 0.14625448482542613
+monetary , 0.14625448482542613
+spot , 0.14625448482542613
+weekly , 0.14625448482542613
+loss , 0.14625448482542613
+biggest , 0.14625448482542613
+friday , 0.07312724241271307
+hes , 0.07312724241271307
+bank , 0.07312724241271307
+president , 0.07312724241271307
+march , 0.07312724241271307
+economy , 0.07312724241271307
+warrant , 0.07312724241271307
+singapore , 0.07312724241271307
+weeks , 0.07312724241271307
+2021 , 0.07312724241271307
+inflation , 0.07312724241271307
+platinum , 0.07312724241271307
+724 , 0.07312724241271307
+palladium , 0.07312724241271307
+rose , 0.07312724241271307
+cautioned , 0.07312724241271307
+advanced , 0.07312724241271307
+45 , 0.07312724241271307
+may , 0.07312724241271307
+earlier , 0.07312724241271307
+louis , 0.07312724241271307
+due , 0.07312724241271307
+lending , 0.07312724241271307
+discussion , 0.07312724241271307
+st , 0.07312724241271307
+fell , 0.07312724241271307
+signaled , 0.07312724241271307
+came , 0.07312724241271307
+shift , 0.07312724241271307
+highly , 0.07312724241271307
+-------------------End of News 25--------------------

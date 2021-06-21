@@ -59,146 +59,150 @@ readUrl
 Reads the url from the jury web site
 """
 
-def readUrl(url,page):
+def readUrl(url):
     try:
-        returnChromeSettings()
         BROWSER.get(url)
         time.sleep(4)
-        tag_article=BROWSER.find_elements_by_tag_name('article')
-        no_art=len(tag_article)
-        print('Total of News: ',str(no_art))
-        if no_art==0:
-            print('No news, shutting down...')
-            os.sys.exit(0)
-        #Reading articles
-        for x in range(1,no_art+1):
-            print(f'----------Start of Page {str(page)} New {str(x)}-------------')
-            #Check Source
-            lsContent=[]
-            strSource=''
-            txtSource=''
-            time.sleep(4)
-            #For source: Those from "lsSource" list have "span", the rest have "div"
-            try:
-                txtSource=BROWSER.find_elements_by_xpath(f'/html/body/div[5]/section/div[4]/article[{str(x)}]/div[1]/span/span[1]')[0]
-            except:
-                try:
-                   txtSource=BROWSER.find_elements_by_xpath(f'/html/body/div[5]/section/div[4]/article[{str(x)}]/div[1]/div/span[1]')[0]
-                except:
-                    print(f'----------End of Page {str(page)} New {str(x)} (Most probable an ad or No content)-------------')
-                    continue
-
-
-            strSource=txtSource.text    
-            strSource=strSource.split(' ')[1]
-            linkArticle=devuelveElemento(f'/html/body/div[5]/section/div[4]/article[{str(x)}]/div[1]/a')
-            BROWSER.execute_script("arguments[0].click();",linkArticle)
-            if strSource in lsSources:
-                #Case: Sources which news open in Investing.com
-                articleContent=devuelveElemento('/html/body/div[5]/section/div[3]')
-                lsContent.append(articleContent.text)
-            else:
-                #---To know how many windows are open----
-                
+        for page in range(1,4):
+            tag_article=BROWSER.find_elements_by_tag_name('article')
+            no_art=len(tag_article)
+            print('Total of News: ',str(no_art))
+            if no_art==0:
+                print('No news, shutting down...')
+                os.sys.exit(0)
+            #Reading articles
+            for x in range(1,no_art+1):
+                print(f'----------Start of Page {str(page)} New {str(x)}-------------')
+                #Check Source
+                lsContent=[]
+                strSource=''
+                txtSource=''
                 time.sleep(4)
-                #Get the link with a recursive method
-                linkPopUp=devuelveElementoDinamico('/html/body/div[option]/div/div/div/a',6)
-                time.sleep(3)
-                if linkPopUp:
-                    BROWSER.execute_script("arguments[0].click();",linkPopUp)
-                time.sleep(3)
-                if len(BROWSER.window_handles)>1:
-                    second_window=BROWSER.window_handles[1]
-                    BROWSER.switch_to.window(second_window)
-                    #Now in the second window
-                    time.sleep(5)
-                    textPage=devuelveElemento('/html/body')
-                    lsContent.append(textPage.text)
-                   
-                    #Close Window 2
-                    BROWSER.close()
-                    time.sleep(4)
-                    #Now in First window
-                    first_window=BROWSER.window_handles[0]
-                    BROWSER.switch_to.window(first_window)
-                    BROWSER.refresh()
-                   
-            #This implementation of code is based on : 
-            # https://towardsdatascience.com/using-tf-idf-to-form-descriptive-chapter-summaries-via-keyword-extraction-4e6fd857d190
-            
-            #START OF TF-IDF AND WORD CLOUD PROCESS
-            file_New_Keywords='news_analysis\\NewAndKeywords_For_Page_'+str(page)+'_New_'+str(x)+'.txt'
-            printToFile(file_New_Keywords,f'--------Start of Page {str(page)} New {str(x)} ---------------\n')
-            #Pre processing
-            printToFile(file_New_Keywords,f' News Content :\n')
-            for content in lsContent:
-                printToFile(file_New_Keywords,content+'\n')
-                lsContentCorpus.append(content)
-            #End of Pre procesing
+                #For source: Those from "lsSource" list have "span", the rest have "div"
+                try:
+                    txtSource=BROWSER.find_elements_by_xpath(f'/html/body/div[5]/section/div[4]/article[{str(x)}]/div[1]/span/span[1]')[0]
+                except:
+                    try:
+                       txtSource=BROWSER.find_elements_by_xpath(f'/html/body/div[5]/section/div[4]/article[{str(x)}]/div[1]/div/span[1]')[0]
+                    except:
+                        print(f'----------End of Page {str(page)} New {str(x)} (Most probable an ad or No content)-------------')
+                        continue
 
-            #Creating TF-IDF and its dataframe
-            lsRes=getDataFrameFromTF_IDF(lsContent,file_New_Keywords)
-            df=lsRes[0]
-            lsFeatures=lsRes[1]
-            
-            
-            for keywordsLimit in [20,40,60]:
-                df_Sliced=df[:keywordsLimit]
-                print('-------Analysis for ',str(keywordsLimit), 'keyword---------\n')
-                print('Keywords limit: ',str(keywordsLimit),'\n')
-                print('Features size: ',str(len(lsFeatures)),'\n')
-                if keywordsLimit>len(lsFeatures):
-                    print('The keywords limit is greater than the feature list')
-                    os.sys.exit(0)
 
-                printToFile(file_New_Keywords,f'-------------------First {str(keywordsLimit)} Important Keywords--------------------\n')
-                printToFile(file_New_Keywords,f'-------------------Word , Tf-idf value--------------------\n')
-            
-                dictWord_TF_IDF={}
-                for index,row in df_Sliced.iterrows():
-                    line=str(row['Feature'])+' , '+str(row['tfidf_value'])
-                    dictWord_TF_IDF[str(row['Feature'])]=float(str(row['tfidf_value']))
-                    printToFile(file_New_Keywords,line+'\n')
+                strSource=txtSource.text    
+                strSource=strSource.split(' ')[1]
+                linkArticle=devuelveElemento(f'/html/body/div[5]/section/div[4]/article[{str(x)}]/div[1]/a')
+                BROWSER.execute_script("arguments[0].click();",linkArticle)
+                if strSource in lsSources:
+                    #Case: Sources which news open in Investing.com
+                    articleContent=devuelveElemento('/html/body/div[5]/section/div[3]')
+                    lsContent.append(articleContent.text)
+                else:
+                    #---To know how many windows are open----
                 
-                #Create WorldCloud from any dictionary (Ex: Word, Freq; Word, TF-IDF,....{Word, AnyValue})
-                image_file='images_wordcloud\\image_page_'+str(page)+'_new_'+str(x)+'_'+str(keywordsLimit)+'_keyword.jpeg'
-                createWordCloud(image_file,dictWord_TF_IDF)
-                #END OF TF-IDF AND WORD CLOUD PROCESS
+                    time.sleep(4)
+                    #Get the link with a recursive method
+                    linkPopUp=devuelveElementoDinamico('/html/body/div[option]/div/div/div/a',6)
+                    time.sleep(3)
+                    if linkPopUp:
+                        BROWSER.execute_script("arguments[0].click();",linkPopUp)
+                    time.sleep(3)
+                    if len(BROWSER.window_handles)>1:
+                        second_window=BROWSER.window_handles[1]
+                        BROWSER.switch_to.window(second_window)
+                        #Now in the second window
+                        time.sleep(5)
+                        textPage=devuelveElemento('/html/body')
+                        lsContent.append(textPage.text)
+                   
+                        #Close Window 2
+                        BROWSER.close()
+                        time.sleep(4)
+                        #Now in First window
+                        first_window=BROWSER.window_handles[0]
+                        BROWSER.switch_to.window(first_window)
+                        BROWSER.refresh()
+                   
+                #This implementation of code is based on : 
+                # https://towardsdatascience.com/using-tf-idf-to-form-descriptive-chapter-summaries-via-keyword-extraction-4e6fd857d190
             
-            del dictWord_TF_IDF
-            del df
-            del df_Sliced
+                #START OF TF-IDF AND WORD CLOUD PROCESS
+                file_New_Keywords='news_analysis\\NewAndKeywords_For_Page_'+str(page)+'_New_'+str(x)+'.txt'
+                printToFile(file_New_Keywords,f'--------Start of Page {str(page)} New {str(x)} ---------------\n')
+                #Pre processing
+                printToFile(file_New_Keywords,f' News Content :\n')
+                for content in lsContent:
+                    printToFile(file_New_Keywords,content+'\n')
+                    lsContentCorpus.append(content)
+                #End of Pre procesing
+
+                #Creating TF-IDF and its dataframe
+                lsRes=getDataFrameFromTF_IDF(lsContent)
+                df=lsRes[0]
+                lsFeatures=lsRes[1]
             
-            printToFile(file_New_Keywords,f'-------------------End of News {str(x)}--------------------\n')
-            print(f'----------End of Page {str(page)} New {str(x)}-------------')
-            if strSource in lsSources:
-                btnCommodity= devuelveElemento('/html/body/div[5]/section/div[1]/a')
-                BROWSER.execute_script("arguments[0].click();",btnCommodity)
-            time.sleep(5)
+            
+                for keywordsLimit in [20,30,50]:
+                    df_Sliced=df[:keywordsLimit]
+                    print('-------Analysis for ',str(keywordsLimit), 'keyword---------\n')
+                    print('Keywords limit: ',str(keywordsLimit),'\n')
+                    print('Features size: ',str(len(lsFeatures)),'\n')
+                    if keywordsLimit>len(lsFeatures):
+                        print('The keywords limit is greater than the feature list')
+                        os.sys.exit(0)
 
-        #Out of the cycle of each page    
-        print(f'-End of page {str(page)}-')
+                    printToFile(file_New_Keywords,f'-------------------First {str(keywordsLimit)} Important Keywords--------------------\n')
+                    printToFile(file_New_Keywords,f'-------------------Word , Tf-idf value--------------------\n')
+            
+                    dictWord_TF_IDF={}
+                    for index,row in df_Sliced.iterrows():
+                        line=str(row['Feature'])+' , '+str(row['tfidf_value'])
+                        dictWord_TF_IDF[str(row['Feature'])]=float(str(row['tfidf_value']))
+                        printToFile(file_New_Keywords,line+'\n')
+                
+                    #Create WorldCloud from any dictionary (Ex: Word, Freq; Word, TF-IDF,....{Word, AnyValue})
+                    image_file='images_wordcloud\\image_page_'+str(page)+'_new_'+str(x)+'_'+str(keywordsLimit)+'_keyword.jpeg'
+                    createWordCloud(image_file,dictWord_TF_IDF)
+                    #END OF TF-IDF AND WORD CLOUD PROCESS
+            
+                del dictWord_TF_IDF
+                del df
+                del df_Sliced
+            
+                printToFile(file_New_Keywords,f'-------------------End of News {str(x)}--------------------\n')
+                print(f'----------End of Page {str(page)} New {str(x)}-------------')
+                if strSource in lsSources:
+                    btnCommodity= devuelveElemento('/html/body/div[5]/section/div[1]/a')
+                    BROWSER.execute_script("arguments[0].click();",btnCommodity)
+                time.sleep(5)
 
-        if page==3:
-            print('Page 3...Starting the analysis for all Corpus')
-            """
-            #Print file "All words"
-            printToFile(file_all_words,f'-------------------Printing All words from all news--------------------\n')
-            for word in list(set(lsWordAllNews)):
-                printToFile(file_all_words,f'{str(word)}\n')
+            #Loop for : Pages    
+            print(f'-End of page {str(page)}-')
 
-            #Print file "tf idf for all news"
+            if page==3:
+                print('Page 3...Starting the analysis for all Corpus')
+                """
+                #Print file "All words"
+                printToFile(file_all_words,f'-------------------Printing All words from all news--------------------\n')
+                for word in list(set(lsWordAllNews)):
+                    printToFile(file_all_words,f'{str(word)}\n')
+
+                #Print file "tf idf for all news"
          
-            #Creating TF-IDF and its dataframe
-            file_All_News='WholeCorpus.txt'
-            df_corpus=getDataFrameFromTF_IDF(lsContentCorpus,[20,40,60],file_All_News)
+                #Creating TF-IDF and its dataframe
+                file_All_News='WholeCorpus.txt'
+                df_corpus=getDataFrameFromTF_IDF(lsContentCorpus,[20,40,60],file_All_News)
         
-            #Generate word cloud for all documents keywords   
-            """
+                #Generate word cloud for all documents keywords   
+                """
 
-        #query=f'update tbControl set page={str(page+1)} where id={str(objControl.idControl)}'
-        #db.executeNonQuery(query)
-        BROWSER.quit()
+            #query=f'update tbControl set page={str(page+1)} where id={str(objControl.idControl)}'
+            #db.executeNonQuery(query)
+            btnNext=BROWSER.find_elements_by_xpath('/html/body/div[5]/section/div[5]/div[3]/a')[0]
+            if btnNext:
+                BROWSER.execute_script("arguments[0].click();",btnNext)
+
+        
 
 
     except NameError as error:
@@ -228,7 +232,7 @@ def createWordCloud(imageName,dictWord_Weight):
     plt.savefig(f'{imageName}')
     del wordcloud
     
-def getDataFrameFromTF_IDF(lsContent,file_test):
+def getDataFrameFromTF_IDF(lsContent):
     
     lsFinalStopWords=[]
     #Start of "some filtering"

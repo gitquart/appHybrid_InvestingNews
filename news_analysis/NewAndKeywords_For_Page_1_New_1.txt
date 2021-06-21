@@ -1,0 +1,112 @@
+--------Start of Page 1 New 1 ---------------
+ News Content :
+© Reuters. FILE PHOTO: Belarusian President Alexander Lukashenko delivers a speech during a meeting with parliamentarians, members of the Constitutional Commission and representatives of public administration bodies, in Minsk, Belarus May 26, 2021. Maxim Guchek/Bel
+WASHINGTON (Reuters) - The United States, Canada, Britain and the European Union on Monday called in a joint statement on the Belarusian government "to end its repressive practices against its own people."
+They also urged Belarusian President Alexander Lukashenko's government to cooperate with international investigations "into the events of May 23rd," when a Ryanair jet was forced to land in Minsk and a Belarusian journalist and his companion on board were arrested.
+-------------------First 20 Important Keywords--------------------
+-------------------Word , Tf-idf value--------------------
+belarusian , 0.43133109281375365
+government , 0.21566554640687682
+minsk , 0.21566554640687682
+president , 0.21566554640687682
+alexander , 0.21566554640687682
+may , 0.21566554640687682
+union , 0.10783277320343841
+delivers , 0.10783277320343841
+representatives , 0.10783277320343841
+cooperate , 0.10783277320343841
+statement , 0.10783277320343841
+monday , 0.10783277320343841
+investigations , 0.10783277320343841
+administration , 0.10783277320343841
+people , 0.10783277320343841
+united , 0.10783277320343841
+lukashenko , 0.10783277320343841
+photo , 0.10783277320343841
+26 , 0.10783277320343841
+canada , 0.10783277320343841
+-------------------First 30 Important Keywords--------------------
+-------------------Word , Tf-idf value--------------------
+belarusian , 0.43133109281375365
+government , 0.21566554640687682
+minsk , 0.21566554640687682
+president , 0.21566554640687682
+alexander , 0.21566554640687682
+may , 0.21566554640687682
+union , 0.10783277320343841
+delivers , 0.10783277320343841
+representatives , 0.10783277320343841
+cooperate , 0.10783277320343841
+statement , 0.10783277320343841
+monday , 0.10783277320343841
+investigations , 0.10783277320343841
+administration , 0.10783277320343841
+people , 0.10783277320343841
+united , 0.10783277320343841
+lukashenko , 0.10783277320343841
+photo , 0.10783277320343841
+26 , 0.10783277320343841
+canada , 0.10783277320343841
+maxim , 0.10783277320343841
+members , 0.10783277320343841
+states , 0.10783277320343841
+arrested , 0.10783277320343841
+belarus , 0.10783277320343841
+board , 0.10783277320343841
+bodies , 0.10783277320343841
+parliamentarians , 0.10783277320343841
+called , 0.10783277320343841
+constitutional , 0.10783277320343841
+-------------------First 50 Important Keywords--------------------
+-------------------Word , Tf-idf value--------------------
+belarusian , 0.43133109281375365
+government , 0.21566554640687682
+minsk , 0.21566554640687682
+president , 0.21566554640687682
+alexander , 0.21566554640687682
+may , 0.21566554640687682
+union , 0.10783277320343841
+delivers , 0.10783277320343841
+representatives , 0.10783277320343841
+cooperate , 0.10783277320343841
+statement , 0.10783277320343841
+monday , 0.10783277320343841
+investigations , 0.10783277320343841
+administration , 0.10783277320343841
+people , 0.10783277320343841
+united , 0.10783277320343841
+lukashenko , 0.10783277320343841
+photo , 0.10783277320343841
+26 , 0.10783277320343841
+canada , 0.10783277320343841
+maxim , 0.10783277320343841
+members , 0.10783277320343841
+states , 0.10783277320343841
+arrested , 0.10783277320343841
+belarus , 0.10783277320343841
+board , 0.10783277320343841
+bodies , 0.10783277320343841
+parliamentarians , 0.10783277320343841
+called , 0.10783277320343841
+constitutional , 0.10783277320343841
+lukashenkos , 0.10783277320343841
+file , 0.10783277320343841
+practices , 0.10783277320343841
+also , 0.10783277320343841
+forced , 0.10783277320343841
+european , 0.10783277320343841
+end , 0.10783277320343841
+joint , 0.10783277320343841
+events , 0.10783277320343841
+2021 , 0.10783277320343841
+23rd , 0.10783277320343841
+urged , 0.10783277320343841
+journalist , 0.10783277320343841
+jet , 0.10783277320343841
+repressive , 0.10783277320343841
+international , 0.10783277320343841
+commission , 0.10783277320343841
+ryanair , 0.10783277320343841
+guchekbel , 0.10783277320343841
+meeting , 0.10783277320343841
+-------------------End of News 1--------------------

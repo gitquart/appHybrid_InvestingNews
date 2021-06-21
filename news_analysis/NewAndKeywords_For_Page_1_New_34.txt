@@ -1,0 +1,121 @@
+--------Start of Page 1 New 34 ---------------
+ News Content :
+© Reuters. FILE PHOTO: Bottles of Australian wine are seen at a store selling imported wine in Beijing, China November 27, 2020. REUTERS/Florence Lo
+By Lidia Kelly
+MELBOURNE (Reuters) - Australia's complaint to the World Trade Organisation over China's anti-dumping duties on wine exports should enable bilateral negotiations, Foreign Minister Marise Payne said on Sunday.
+The government filed a complaint on Saturday over duties that were applied last year and nearly wiped out exports of Australian wine to the Chinese market. [L5N2O103C]
+"What lodging the dispute enables us to do is begin dispute consultation settlements, which actually is a bilateral discussion with China about the issues," Payne said in an interview on the Australian Broadcasting Corp's (ABC) 'Insiders' program.
+"We've seen duties of over 200% applied to Australian wine. We don't believe that that is consistent with China's obligations under the WTO. So that part of the process enables us to have that direct conversation."
+The Australian government has complained frequently that China has ignored calls to ease trade tensions.
+It is the second time in six months Australia has appealed to the WTO. In December, Canberra launched a formal appeal seeking a review of China's decision to impose hefty tariffs on imports of Australian barley.
+Relations with China, already rocky after Australia banned Huawei from its nascent 5G broadband networking in 2018, have worsened since Canberra called for an international inquiry into the origins of the coronavirus, first reported in central China last year.
+China, Australia's largest trading partner, responded by imposing tariffs on Australian commodities, including wine and barley and limited imports of Australian beef, coal and grapes, moves described by the United States as "economic coercion".
+Asked about the fresh international push to find answers to the origin of the virus that causes COVID-19, Payne said it was important to maintain the momentum.
+"We are very determined to work with our partners to ensure that (...) investigation is able to access its material that it needs, including within China," Payne said.
+-------------------First 20 Important Keywords--------------------
+-------------------Word , Tf-idf value--------------------
+australian , 0.40201512610368484
+china , 0.35176323534072423
+wine , 0.30151134457776363
+payne , 0.20100756305184242
+duties , 0.15075567228888181
+chinas , 0.15075567228888181
+dispute , 0.10050378152592121
+us , 0.10050378152592121
+australia , 0.10050378152592121
+enables , 0.10050378152592121
+imports , 0.10050378152592121
+trade , 0.10050378152592121
+last , 0.10050378152592121
+tariffs , 0.10050378152592121
+year , 0.10050378152592121
+australias , 0.10050378152592121
+government , 0.10050378152592121
+exports , 0.10050378152592121
+complaint , 0.10050378152592121
+international , 0.10050378152592121
+-------------------First 30 Important Keywords--------------------
+-------------------Word , Tf-idf value--------------------
+australian , 0.40201512610368484
+china , 0.35176323534072423
+wine , 0.30151134457776363
+payne , 0.20100756305184242
+duties , 0.15075567228888181
+chinas , 0.15075567228888181
+dispute , 0.10050378152592121
+us , 0.10050378152592121
+australia , 0.10050378152592121
+enables , 0.10050378152592121
+imports , 0.10050378152592121
+trade , 0.10050378152592121
+last , 0.10050378152592121
+tariffs , 0.10050378152592121
+year , 0.10050378152592121
+australias , 0.10050378152592121
+government , 0.10050378152592121
+exports , 0.10050378152592121
+complaint , 0.10050378152592121
+international , 0.10050378152592121
+barley , 0.10050378152592121
+seen , 0.10050378152592121
+wto , 0.10050378152592121
+including , 0.10050378152592121
+bilateral , 0.10050378152592121
+applied , 0.10050378152592121
+canberra , 0.10050378152592121
+partners , 0.050251890762960605
+worsened , 0.050251890762960605
+hefty , 0.050251890762960605
+-------------------First 50 Important Keywords--------------------
+-------------------Word , Tf-idf value--------------------
+australian , 0.40201512610368484
+china , 0.35176323534072423
+wine , 0.30151134457776363
+payne , 0.20100756305184242
+duties , 0.15075567228888181
+chinas , 0.15075567228888181
+dispute , 0.10050378152592121
+us , 0.10050378152592121
+australia , 0.10050378152592121
+enables , 0.10050378152592121
+imports , 0.10050378152592121
+trade , 0.10050378152592121
+last , 0.10050378152592121
+tariffs , 0.10050378152592121
+year , 0.10050378152592121
+australias , 0.10050378152592121
+government , 0.10050378152592121
+exports , 0.10050378152592121
+complaint , 0.10050378152592121
+international , 0.10050378152592121
+barley , 0.10050378152592121
+seen , 0.10050378152592121
+wto , 0.10050378152592121
+including , 0.10050378152592121
+bilateral , 0.10050378152592121
+applied , 0.10050378152592121
+canberra , 0.10050378152592121
+partners , 0.050251890762960605
+worsened , 0.050251890762960605
+hefty , 0.050251890762960605
+program , 0.050251890762960605
+market , 0.050251890762960605
+second , 0.050251890762960605
+bottles , 0.050251890762960605
+consultation , 0.050251890762960605
+direct , 0.050251890762960605
+six , 0.050251890762960605
+reutersflorence , 0.050251890762960605
+begin , 0.050251890762960605
+material , 0.050251890762960605
+ensure , 0.050251890762960605
+nearly , 0.050251890762960605
+coal , 0.050251890762960605
+filed , 0.050251890762960605
+origins , 0.050251890762960605
+broadcasting , 0.050251890762960605
+answers , 0.050251890762960605
+world , 0.050251890762960605
+negotiations , 0.050251890762960605
+5g , 0.050251890762960605
+-------------------End of News 34--------------------

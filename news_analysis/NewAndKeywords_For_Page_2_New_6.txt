@@ -1,0 +1,122 @@
+--------Start of Page 2 New 6 ---------------
+ News Content :
+© Reuters. FILE PHOTO: Pump jacks operate at sunset in Midland, Texas, U.S., February 11, 2019. Picture taken February 11, 2019. REUTERS/Nick Oxford/File Photo
+By Noah Browning
+LONDON (Reuters) -Oil prices were largely steady on Monday on rising demand in the northern hemisphere's summer driving season, but traders braced for a return of Iranian crude supplies despite a pause in talks to end U.S. sanctions.
+Brent crude for August lost 24 cents, or 0.3%, to $73.27 a barrel by 1255 GMT. U.S. West Texas Intermediate (WTI) crude for July was down 17 cents, or 0.2%, at $71.47.
+Both benchmarks have risen for the past four weeks on optimism over the pace of global COVID-19 vaccinations and expected pick-up in summer travel. The rebound has pushed up spot premiums for crude in Asia and Europe to multi-month highs.
+"Oil's underlying physical demand picture remains positive," said OANDA analyst Jeffrey Halley. "Despite the noise in financial markets, the real world is on the right track and will require increasing amounts of energy as it reopens."
+Bank of America (NYSE:BAC) on Monday said that Brent crude was likely to average $68 a barrel this year but could hit $100 next year on unleashed pent-up demand and more private car usage.
+Negotiations to revive the Iran nuclear deal took a pause on Sunday after hardline judge Ebrahim Raisi won the country's presidential election.
+Iranian and Western officials say Raisi's rise is unlikely to alter Iran's negotiating position. Two diplomats said they expected a break of about 10 days.
+"It is likely to delay the return of Iranian oil to the market, but it is unlikely to derail the path to a deal," said SEB chief commodity analyst Bjarne Schieldrop.
+A deal could lead to Iran exporting an extra 1 million barrels per day, or 1% of global supply, for more than six months from its storage facilities.
+Iran has boosted the volume of crude it has stored on oil tankers in recent months, data intelligence firm Kpler said, in what may be preparation for a resumption in exports.
+However, oil prices have drawn support from forecasts of limited growth in U.S. oil output, giving the Organization of the Petroleum Exporting Countries (OPEC) more power to manage the market in the short term before a potentially strong rise in shale oil output in 2022.
+-------------------First 20 Important Keywords--------------------
+-------------------Word , Tf-idf value--------------------
+oil , 0.3090157215747628
+crude , 0.3090157215747628
+deal , 0.1545078607873814
+iranian , 0.1545078607873814
+iran , 0.1545078607873814
+demand , 0.1545078607873814
+global , 0.10300524052492095
+likely , 0.10300524052492095
+cents , 0.10300524052492095
+barrel , 0.10300524052492095
+expected , 0.10300524052492095
+picture , 0.10300524052492095
+output , 0.10300524052492095
+year , 0.10300524052492095
+brent , 0.10300524052492095
+unlikely , 0.10300524052492095
+photo , 0.10300524052492095
+11 , 0.10300524052492095
+summer , 0.10300524052492095
+rise , 0.10300524052492095
+-------------------First 30 Important Keywords--------------------
+-------------------Word , Tf-idf value--------------------
+oil , 0.3090157215747628
+crude , 0.3090157215747628
+deal , 0.1545078607873814
+iranian , 0.1545078607873814
+iran , 0.1545078607873814
+demand , 0.1545078607873814
+global , 0.10300524052492095
+likely , 0.10300524052492095
+cents , 0.10300524052492095
+barrel , 0.10300524052492095
+expected , 0.10300524052492095
+picture , 0.10300524052492095
+output , 0.10300524052492095
+year , 0.10300524052492095
+brent , 0.10300524052492095
+unlikely , 0.10300524052492095
+photo , 0.10300524052492095
+11 , 0.10300524052492095
+summer , 0.10300524052492095
+rise , 0.10300524052492095
+prices , 0.10300524052492095
+exporting , 0.10300524052492095
+2019 , 0.10300524052492095
+return , 0.10300524052492095
+february , 0.10300524052492095
+analyst , 0.10300524052492095
+months , 0.10300524052492095
+monday , 0.10300524052492095
+market , 0.10300524052492095
+texas , 0.10300524052492095
+-------------------First 50 Important Keywords--------------------
+-------------------Word , Tf-idf value--------------------
+oil , 0.3090157215747628
+crude , 0.3090157215747628
+deal , 0.1545078607873814
+iranian , 0.1545078607873814
+iran , 0.1545078607873814
+demand , 0.1545078607873814
+global , 0.10300524052492095
+likely , 0.10300524052492095
+cents , 0.10300524052492095
+barrel , 0.10300524052492095
+expected , 0.10300524052492095
+picture , 0.10300524052492095
+output , 0.10300524052492095
+year , 0.10300524052492095
+brent , 0.10300524052492095
+unlikely , 0.10300524052492095
+photo , 0.10300524052492095
+11 , 0.10300524052492095
+summer , 0.10300524052492095
+rise , 0.10300524052492095
+prices , 0.10300524052492095
+exporting , 0.10300524052492095
+2019 , 0.10300524052492095
+return , 0.10300524052492095
+february , 0.10300524052492095
+analyst , 0.10300524052492095
+months , 0.10300524052492095
+monday , 0.10300524052492095
+market , 0.10300524052492095
+texas , 0.10300524052492095
+despite , 0.10300524052492095
+pause , 0.10300524052492095
+irans , 0.051502620262460476
+largely , 0.051502620262460476
+lead , 0.051502620262460476
+private , 0.051502620262460476
+delay , 0.051502620262460476
+firm , 0.051502620262460476
+tankers , 0.051502620262460476
+facilities , 0.051502620262460476
+increasing , 0.051502620262460476
+august , 0.051502620262460476
+bank , 0.051502620262460476
+noise , 0.051502620262460476
+potentially , 0.051502620262460476
+weeks , 0.051502620262460476
+london , 0.051502620262460476
+july , 0.051502620262460476
+pickup , 0.051502620262460476
+covid19 , 0.051502620262460476
+-------------------End of News 6--------------------

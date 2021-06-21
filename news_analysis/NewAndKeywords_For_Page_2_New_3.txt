@@ -1,0 +1,119 @@
+--------Start of Page 2 New 3 ---------------
+ News Content :
+© Reuters. FILE PHOTO: Fortune seekers are seen as they flock to the village after pictures and videos were shared on social media showing people celebrating after finding what they believe to be diamonds, in the village of KwaHlathi outside Ladysmith, in KwaZulu-Na
+JOHANNESBURG (Reuters) - Unidentified stones that lured thousands of fortune seekers to a rural South African village to mine the land with picks and shovels were not diamonds as hoped, officials said on Sunday, but quartz stones with relatively low, if any, value.
+People from across South Africa travelled to KwaHlathi in the country's eastern KwaZulu-Natal province where villagers had been digging since June 12 after a herder discovered the first stone in an open field and put out the word.
+Provincial executive council member for economic development and tourism, Ravi Pillay, told a media briefing on Sunday he had counted some 3,000 there during a visit to the site, where samples were taken to identify the stones.
+"The tests conducted conclusively revealed that the stones discovered in the area are not diamonds as some had hoped," he said, adding they were in fact quartz crystals.
+"The value, if any, of the quartz crystals is yet to be established but it must be mentioned that the value of quartz crystals is very low compared to that of diamonds."
+The event had highlighted the socio-economic challenges faced by local people, he continued. Like many areas in South Africa, high levels of unemployment and poverty have left communities living hand to mouth.
+People in the area had also raised concerns specifically around roads and water during the visit, which officials at the briefing said they would address.
+Meanwhile, the number of people mining the land had dwindled to less than 500, Pillay continued, though significant damage had already been done with an area of around 50 hectares covered in holes of up to one metre, posing a danger to cattle.
+He said those that continue to mine in the area, a situation that also risks the spread of COVID-19, would be encouraged to leave, though law enforcement could be drawn upon if necessary.
+-------------------First 20 Important Keywords--------------------
+-------------------Word , Tf-idf value--------------------
+people , 0.2782074420373286
+area , 0.2225659536298629
+stones , 0.2225659536298629
+quartz , 0.2225659536298629
+diamonds , 0.2225659536298629
+crystals , 0.16692446522239718
+value , 0.16692446522239718
+village , 0.16692446522239718
+south , 0.16692446522239718
+sunday , 0.11128297681493145
+mine , 0.11128297681493145
+africa , 0.11128297681493145
+officials , 0.11128297681493145
+fortune , 0.11128297681493145
+seekers , 0.11128297681493145
+briefing , 0.11128297681493145
+around , 0.11128297681493145
+media , 0.11128297681493145
+though , 0.11128297681493145
+discovered , 0.11128297681493145
+-------------------First 30 Important Keywords--------------------
+-------------------Word , Tf-idf value--------------------
+people , 0.2782074420373286
+area , 0.2225659536298629
+stones , 0.2225659536298629
+quartz , 0.2225659536298629
+diamonds , 0.2225659536298629
+crystals , 0.16692446522239718
+value , 0.16692446522239718
+village , 0.16692446522239718
+south , 0.16692446522239718
+sunday , 0.11128297681493145
+mine , 0.11128297681493145
+africa , 0.11128297681493145
+officials , 0.11128297681493145
+fortune , 0.11128297681493145
+seekers , 0.11128297681493145
+briefing , 0.11128297681493145
+around , 0.11128297681493145
+media , 0.11128297681493145
+though , 0.11128297681493145
+discovered , 0.11128297681493145
+land , 0.11128297681493145
+pillay , 0.11128297681493145
+kwahlathi , 0.11128297681493145
+hoped , 0.11128297681493145
+low , 0.11128297681493145
+visit , 0.11128297681493145
+continued , 0.11128297681493145
+also , 0.11128297681493145
+metre , 0.055641488407465724
+damage , 0.055641488407465724
+-------------------First 50 Important Keywords--------------------
+-------------------Word , Tf-idf value--------------------
+people , 0.2782074420373286
+area , 0.2225659536298629
+stones , 0.2225659536298629
+quartz , 0.2225659536298629
+diamonds , 0.2225659536298629
+crystals , 0.16692446522239718
+value , 0.16692446522239718
+village , 0.16692446522239718
+south , 0.16692446522239718
+sunday , 0.11128297681493145
+mine , 0.11128297681493145
+africa , 0.11128297681493145
+officials , 0.11128297681493145
+fortune , 0.11128297681493145
+seekers , 0.11128297681493145
+briefing , 0.11128297681493145
+around , 0.11128297681493145
+media , 0.11128297681493145
+though , 0.11128297681493145
+discovered , 0.11128297681493145
+land , 0.11128297681493145
+pillay , 0.11128297681493145
+kwahlathi , 0.11128297681493145
+hoped , 0.11128297681493145
+low , 0.11128297681493145
+visit , 0.11128297681493145
+continued , 0.11128297681493145
+also , 0.11128297681493145
+metre , 0.055641488407465724
+damage , 0.055641488407465724
+ladysmith , 0.055641488407465724
+specifically , 0.055641488407465724
+number , 0.055641488407465724
+council , 0.055641488407465724
+compared , 0.055641488407465724
+open , 0.055641488407465724
+leave , 0.055641488407465724
+enforcement , 0.055641488407465724
+raised , 0.055641488407465724
+left , 0.055641488407465724
+significant , 0.055641488407465724
+12 , 0.055641488407465724
+areas , 0.055641488407465724
+lured , 0.055641488407465724
+yet , 0.055641488407465724
+high , 0.055641488407465724
+encouraged , 0.055641488407465724
+like , 0.055641488407465724
+provincial , 0.055641488407465724
+development , 0.055641488407465724
+-------------------End of News 3--------------------

@@ -1,0 +1,116 @@
+--------Start of Page 1 New 27 ---------------
+ News Content :
+© Reuters. Oil Holds Near $72 as Iran Nuclear Talks End Without Agreement
+(Bloomberg) -- Oil was steady at the open of trading in Asia after the latest talks to revive a nuclear deal with Iran ended without an agreement, a day after the OPEC producer elected a new president.
+Futures in New York traded near $72 a barrel following a fourth weekly gain. Diplomats adjourned a sixth round of meetings with significant gaps remaining to mend the accord, the third time since talks began in April that negotiators have missed self-imposed deadlines to rejuvenate the agreement.
+The election of conservative cleric Ebrahim Raisi as Iran’s president, however, may add to delays in the quick return of a nuclear deal. Raisi is on the U.S. sanctions list for human rights abuses and Tehran insists penalties must be removed as part of an agreement to revive the pact.
+Crude is up almost 50% this year as major economies emerge from restrictions and lockdowns after the roll-out of Covid-19 vaccinations worldwide. Demand has rebounded, especially in the U.S. and parts of Asia. Oil consumption in China has exceeded pre-pandemic levels and India is showing signs of recovering from a deadly second wave that decimated its economy.
+Read also: Global Recovery Lifts Russian Oil Premium to Highest Since 2020
+©2021 Bloomberg L.P.
+-------------------First 20 Important Keywords--------------------
+-------------------Word , Tf-idf value--------------------
+oil , 0.2857142857142857
+agreement , 0.2857142857142857
+nuclear , 0.21428571428571427
+talks , 0.21428571428571427
+new , 0.14285714285714285
+revive , 0.14285714285714285
+without , 0.14285714285714285
+president , 0.14285714285714285
+bloomberg , 0.14285714285714285
+raisi , 0.14285714285714285
+asia , 0.14285714285714285
+near , 0.14285714285714285
+deal , 0.14285714285714285
+72 , 0.14285714285714285
+iran , 0.14285714285714285
+recovering , 0.07142857142857142
+open , 0.07142857142857142
+traded , 0.07142857142857142
+russian , 0.07142857142857142
+irans , 0.07142857142857142
+-------------------First 30 Important Keywords--------------------
+-------------------Word , Tf-idf value--------------------
+oil , 0.2857142857142857
+agreement , 0.2857142857142857
+nuclear , 0.21428571428571427
+talks , 0.21428571428571427
+new , 0.14285714285714285
+revive , 0.14285714285714285
+without , 0.14285714285714285
+president , 0.14285714285714285
+bloomberg , 0.14285714285714285
+raisi , 0.14285714285714285
+asia , 0.14285714285714285
+near , 0.14285714285714285
+deal , 0.14285714285714285
+72 , 0.14285714285714285
+iran , 0.14285714285714285
+recovering , 0.07142857142857142
+open , 0.07142857142857142
+traded , 0.07142857142857142
+russian , 0.07142857142857142
+irans , 0.07142857142857142
+parts , 0.07142857142857142
+began , 0.07142857142857142
+futures , 0.07142857142857142
+prepandemic , 0.07142857142857142
+global , 0.07142857142857142
+producer , 0.07142857142857142
+lifts , 0.07142857142857142
+sanctions , 0.07142857142857142
+economies , 0.07142857142857142
+economy , 0.07142857142857142
+-------------------First 50 Important Keywords--------------------
+-------------------Word , Tf-idf value--------------------
+oil , 0.2857142857142857
+agreement , 0.2857142857142857
+nuclear , 0.21428571428571427
+talks , 0.21428571428571427
+new , 0.14285714285714285
+revive , 0.14285714285714285
+without , 0.14285714285714285
+president , 0.14285714285714285
+bloomberg , 0.14285714285714285
+raisi , 0.14285714285714285
+asia , 0.14285714285714285
+near , 0.14285714285714285
+deal , 0.14285714285714285
+72 , 0.14285714285714285
+iran , 0.14285714285714285
+recovering , 0.07142857142857142
+open , 0.07142857142857142
+traded , 0.07142857142857142
+russian , 0.07142857142857142
+irans , 0.07142857142857142
+parts , 0.07142857142857142
+began , 0.07142857142857142
+futures , 0.07142857142857142
+prepandemic , 0.07142857142857142
+global , 0.07142857142857142
+producer , 0.07142857142857142
+lifts , 0.07142857142857142
+sanctions , 0.07142857142857142
+economies , 0.07142857142857142
+economy , 0.07142857142857142
+diplomats , 0.07142857142857142
+quick , 0.07142857142857142
+removed , 0.07142857142857142
+insists , 0.07142857142857142
+covid19 , 0.07142857142857142
+highest , 0.07142857142857142
+levels , 0.07142857142857142
+fourth , 0.07142857142857142
+negotiators , 0.07142857142857142
+crude , 0.07142857142857142
+consumption , 0.07142857142857142
+rollout , 0.07142857142857142
+second , 0.07142857142857142
+china , 0.07142857142857142
+decimated , 0.07142857142857142
+delays , 0.07142857142857142
+day , 0.07142857142857142
+pact , 0.07142857142857142
+must , 0.07142857142857142
+gaps , 0.07142857142857142
+-------------------End of News 27--------------------

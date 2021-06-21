@@ -1,0 +1,126 @@
+--------Start of Page 2 New 5 ---------------
+ News Content :
+© Reuters. Salvador Parra, manager at Burford Ranch, is seen with a garlic crop he is preparing to harvest and sell, in Cantua Creek, California, U.S. June 15, 2021. Photo taken June 15, 2021. REUTERS/Norma Galeana
+By Norma Galeana
+(Reuters) - Salvador Parra, the manager of Burford Ranch in California's Central Valley agricultural breadbasket, is worried about the lack of water.
+California's worst drought since 1977 has forced Parra to leave fallow 2,000 of his 6,000 acres and dig deep for water to save the crops already planted.
+"There's not very much being grown out there, just because there's no water. There's literally no water," said Parra.
+In a good year, the ranch grows everything from garlic, onions, tomatoes and alfalfa to cotton. This year, Parra needs emergency water sources just to bring a reduced crop to harvest.
+One well he is depending on is 800 feet (244 m) deep "and we're having to pump it all the way up to the surface so that we can irrigate our crops."
+The pipe system is costing the ranch thousands of dollars, but other options are just out of reach, Parra said.
+    He said the water that is available, called supplemental water, is very expensive - $2,000 an acre foot versus the regular price of $200-$250 an acre foot.
+"So, ten times the cost. We can't afford it."
+    The cost of the drought will ultimately be borne by the consumer, Parra said.
+"Consumers should be worried about garlic and onions and other crops, because come this time next year, they're going to be very scarce and the cost is going to be higher," he said.
+Agriculture is an important part of California's economy and the state is a top producer of vegetables, berries, nuts and dairy products.
+Alejandro Pena, 54, a farmworker for 35 years, said it hurts to see fallow fields.
+    "The years when it rained a lot, there were a lot of beets, saffron, all that. There was no unplanted land, it was very pretty, and now, wherever you look, you see all this wasteland," Pena said.
+    The Burford Ranch workforce has been reduced to 110 from 140, Pena said.
+    "If there is no water, there is no work, no money."
+-------------------First 20 Important Keywords--------------------
+-------------------Word , Tf-idf value--------------------
+water , 0.3985083851093743
+parra , 0.3486948369707025
+ranch , 0.24906774069335894
+theres , 0.14944064441601537
+cost , 0.14944064441601537
+pena , 0.14944064441601537
+burford , 0.14944064441601537
+garlic , 0.14944064441601537
+crops , 0.14944064441601537
+californias , 0.14944064441601537
+year , 0.14944064441601537
+crop , 0.09962709627734358
+manager , 0.09962709627734358
+galeana , 0.09962709627734358
+reduced , 0.09962709627734358
+salvador , 0.09962709627734358
+15 , 0.09962709627734358
+see , 0.09962709627734358
+deep , 0.09962709627734358
+lot , 0.09962709627734358
+-------------------First 30 Important Keywords--------------------
+-------------------Word , Tf-idf value--------------------
+water , 0.3985083851093743
+parra , 0.3486948369707025
+ranch , 0.24906774069335894
+theres , 0.14944064441601537
+cost , 0.14944064441601537
+pena , 0.14944064441601537
+burford , 0.14944064441601537
+garlic , 0.14944064441601537
+crops , 0.14944064441601537
+californias , 0.14944064441601537
+year , 0.14944064441601537
+crop , 0.09962709627734358
+manager , 0.09962709627734358
+galeana , 0.09962709627734358
+reduced , 0.09962709627734358
+salvador , 0.09962709627734358
+15 , 0.09962709627734358
+see , 0.09962709627734358
+deep , 0.09962709627734358
+lot , 0.09962709627734358
+fallow , 0.09962709627734358
+2000 , 0.09962709627734358
+acre , 0.09962709627734358
+worried , 0.09962709627734358
+drought , 0.09962709627734358
+going , 0.09962709627734358
+2021 , 0.09962709627734358
+harvest , 0.09962709627734358
+foot , 0.09962709627734358
+onions , 0.09962709627734358
+-------------------First 50 Important Keywords--------------------
+-------------------Word , Tf-idf value--------------------
+water , 0.3985083851093743
+parra , 0.3486948369707025
+ranch , 0.24906774069335894
+theres , 0.14944064441601537
+cost , 0.14944064441601537
+pena , 0.14944064441601537
+burford , 0.14944064441601537
+garlic , 0.14944064441601537
+crops , 0.14944064441601537
+californias , 0.14944064441601537
+year , 0.14944064441601537
+crop , 0.09962709627734358
+manager , 0.09962709627734358
+galeana , 0.09962709627734358
+reduced , 0.09962709627734358
+salvador , 0.09962709627734358
+15 , 0.09962709627734358
+see , 0.09962709627734358
+deep , 0.09962709627734358
+lot , 0.09962709627734358
+fallow , 0.09962709627734358
+2000 , 0.09962709627734358
+acre , 0.09962709627734358
+worried , 0.09962709627734358
+drought , 0.09962709627734358
+going , 0.09962709627734358
+2021 , 0.09962709627734358
+harvest , 0.09962709627734358
+foot , 0.09962709627734358
+onions , 0.09962709627734358
+years , 0.09962709627734358
+june , 0.09962709627734358
+cotton , 0.04981354813867179
+everything , 0.04981354813867179
+feet , 0.04981354813867179
+way , 0.04981354813867179
+theyre , 0.04981354813867179
+200250 , 0.04981354813867179
+unplanted , 0.04981354813867179
+1977 , 0.04981354813867179
+agriculture , 0.04981354813867179
+leave , 0.04981354813867179
+6000 , 0.04981354813867179
+needs , 0.04981354813867179
+vegetables , 0.04981354813867179
+important , 0.04981354813867179
+economy , 0.04981354813867179
+producer , 0.04981354813867179
+lack , 0.04981354813867179
+called , 0.04981354813867179
+-------------------End of News 5--------------------

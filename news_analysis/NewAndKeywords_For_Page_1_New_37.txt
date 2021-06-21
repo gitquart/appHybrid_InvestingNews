@@ -1,0 +1,123 @@
+--------Start of Page 1 New 37 ---------------
+ News Content :
+© Reuters.
+(updates with settlement prices)
+By Barani Krishnan
+Investing.com - Global oil markets closed up for a fourth straight week on Friday in a pre-summer rally based sometimes more on demand hype and inflation talk than on consumption, with U.S. fuel usage remaining tepid while Covid infections in the U.K. hit four-month highs.
+West Texas Intermediate crude, the benchmark for U.S. oil, settled at $71.64 per barrel, up 60 cents, or 0.8%. For the week, WTI gained 1.2% after matching a 2018 high of $72.99 on Wednesday.
+Brent crude, which acts as the global benchmark for oil, finished up 43 cents, or 0.6%, at $73.51 per barrel. For the week, Brent was on track to rose 1.1%, after it matched a 2019 peak of $74.96 on Wednesday.
+Oil prices have been on a tear lately amid projections for one of the biggest ever summer demand periods for fuel in the United States as the country reopens fully from Covid-19 lockdowns.
+Despite the optimism over global oil demand, U.S. gasoline demand has been questionable since the May 31 Memorial Day that marked the start of the peak summer driving period in the world’s largest oil consuming country. That suggests to some that more time is probably needed for U.S. fuel demand to accelerate.
+U.S. pump prices soared to seven-year highs above $3 per gallon this week despite stockpiles of gasoline surging by 10.5 million barrels over the past three weeks — nearly four times above forecast.
+The gasoline numbers have jarred with the drawdown in crude stockpiles, which have fallen some 19 million barrels over the past four weeks versus forecasts for a 9-million barrel drop, as refiners pushed out as much fuel as they could to the market in anticipation of take-up. 
+The Energy Information Administration says U.S. gasoline demand was around nine million barrels a day last week, back to pre-pandemic levels. But weekly numbers for the fuel have continued to show more builds than consumption.
+Prices of oil, along with those of other major commodities, have also been egged higher for months now by talk of surging U.S. inflation as supply chains in the country struggle to keep up with economic expansion after more than a year of pandemic suppression. The U.S. Consumer Price Index rose by 5% over the year in May, its biggest climb since 2008.
+There are also concerns about the economy outside the U.S. and how that could mesh with global oil demand.
+In the UK, some 11,007 new coronavirus infections were reported Thursday amid the spread of the highly transmissible Delta variant of the virus. The U.S. Centers for Disease Control and Prevention said the variant could become the dominant COVID strain in the U.S. as well despite the country’s massive vaccination drive against the virus.
+-------------------First 20 Important Keywords--------------------
+-------------------Word , Tf-idf value--------------------
+oil , 0.34554737023254406
+demand , 0.30235394895347606
+week , 0.21596710639534003
+fuel , 0.21596710639534003
+gasoline , 0.17277368511627203
+global , 0.17277368511627203
+prices , 0.17277368511627203
+country , 0.12958026383720403
+per , 0.12958026383720403
+crude , 0.12958026383720403
+barrels , 0.12958026383720403
+barrel , 0.12958026383720403
+million , 0.12958026383720403
+despite , 0.12958026383720403
+rose , 0.08638684255813601
+amid , 0.08638684255813601
+also , 0.08638684255813601
+wednesday , 0.08638684255813601
+consumption , 0.08638684255813601
+summer , 0.08638684255813601
+-------------------First 30 Important Keywords--------------------
+-------------------Word , Tf-idf value--------------------
+oil , 0.34554737023254406
+demand , 0.30235394895347606
+week , 0.21596710639534003
+fuel , 0.21596710639534003
+gasoline , 0.17277368511627203
+global , 0.17277368511627203
+prices , 0.17277368511627203
+country , 0.12958026383720403
+per , 0.12958026383720403
+crude , 0.12958026383720403
+barrels , 0.12958026383720403
+barrel , 0.12958026383720403
+million , 0.12958026383720403
+despite , 0.12958026383720403
+rose , 0.08638684255813601
+amid , 0.08638684255813601
+also , 0.08638684255813601
+wednesday , 0.08638684255813601
+consumption , 0.08638684255813601
+summer , 0.08638684255813601
+variant , 0.08638684255813601
+year , 0.08638684255813601
+numbers , 0.08638684255813601
+four , 0.08638684255813601
+infections , 0.08638684255813601
+brent , 0.08638684255813601
+surging , 0.08638684255813601
+talk , 0.08638684255813601
+virus , 0.08638684255813601
+weeks , 0.08638684255813601
+-------------------First 50 Important Keywords--------------------
+-------------------Word , Tf-idf value--------------------
+oil , 0.34554737023254406
+demand , 0.30235394895347606
+week , 0.21596710639534003
+fuel , 0.21596710639534003
+gasoline , 0.17277368511627203
+global , 0.17277368511627203
+prices , 0.17277368511627203
+country , 0.12958026383720403
+per , 0.12958026383720403
+crude , 0.12958026383720403
+barrels , 0.12958026383720403
+barrel , 0.12958026383720403
+million , 0.12958026383720403
+despite , 0.12958026383720403
+rose , 0.08638684255813601
+amid , 0.08638684255813601
+also , 0.08638684255813601
+wednesday , 0.08638684255813601
+consumption , 0.08638684255813601
+summer , 0.08638684255813601
+variant , 0.08638684255813601
+year , 0.08638684255813601
+numbers , 0.08638684255813601
+four , 0.08638684255813601
+infections , 0.08638684255813601
+brent , 0.08638684255813601
+surging , 0.08638684255813601
+talk , 0.08638684255813601
+virus , 0.08638684255813601
+weeks , 0.08638684255813601
+past , 0.08638684255813601
+peak , 0.08638684255813601
+inflation , 0.08638684255813601
+benchmark , 0.08638684255813601
+highs , 0.08638684255813601
+day , 0.08638684255813601
+biggest , 0.08638684255813601
+cents , 0.08638684255813601
+stockpiles , 0.08638684255813601
+may , 0.08638684255813601
+covid , 0.08638684255813601
+builds , 0.04319342127906801
+expansion , 0.04319342127906801
+well , 0.04319342127906801
+lately , 0.04319342127906801
+suppression , 0.04319342127906801
+prepandemic , 0.04319342127906801
+market , 0.04319342127906801
+periods , 0.04319342127906801
+memorial , 0.04319342127906801
+-------------------End of News 37--------------------
