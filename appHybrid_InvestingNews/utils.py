@@ -190,7 +190,7 @@ def readUrl(url):
                 file_All_News='wholecorpus\\WholeCorpus.txt'
                 #Creating TF-IDF and its dataframe
                 lsRes=[]
-                lsRes=getDataFrameFromTF_IDF(lsContentCorpus,True)
+                lsRes=getDataFrameFromTF_IDF(fullCorpus=True)
                 df=lsRes[0]
                 lsFeatures=lsRes[1]
             
@@ -261,7 +261,7 @@ def createWordCloud(imageName,dictWord_Weight):
     plt.savefig(f'{imageName}')
     del wordcloud
     
-def getDataFrameFromTF_IDF(lsContent,fullCorpus=False):
+def getDataFrameFromTF_IDF(lsContent=None,fullCorpus=False):
     
     lsFinalStopWords=[]
     #Start of "some filtering"
@@ -270,19 +270,20 @@ def getDataFrameFromTF_IDF(lsContent,fullCorpus=False):
     lsCorpus=[]
     lsVocabulary=[]
     lsVocabularyWithNoSW=[]
-    for document in lsContent:
-        data_preprocessed=pre_process_data(document)
-        lsCorpus.append(data_preprocessed)
-        lsContentCorpus.append(data_preprocessed)
-        for word_token in tokenize.word_tokenize(data_preprocessed):
-            lsVocabulary.append(word_token)
+    if lsContent is not None:
+        for document in lsContent:
+            data_preprocessed=pre_process_data(document)
+            lsCorpus.append(data_preprocessed)
+            lsContentCorpus.append(data_preprocessed)
+            for word_token in tokenize.word_tokenize(data_preprocessed):
+                lsVocabulary.append(word_token)
    
-    #Remove Comple list of stop words 
-    for word in lsVocabulary:
-        if word not in lsFinalStopWords:
-            lsVocabularyWithNoSW.append(word)
-            #lsWordAllNews_WithNoSW si for the TF IDF with a set of NEWS
-            lsWordAllNews_WithNoSW.append(word)
+        #Remove Comple list of stop words 
+        for word in lsVocabulary:
+            if word not in lsFinalStopWords:
+                lsVocabularyWithNoSW.append(word)
+                #lsWordAllNews_WithNoSW si for the TF IDF with a set of NEWS
+                lsWordAllNews_WithNoSW.append(word)
 
     #End of "some filtering"
 
