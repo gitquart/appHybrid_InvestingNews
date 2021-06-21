@@ -25,6 +25,7 @@ nltk.download('stopwords')
 lsMyStopWords=objControl.lsMyStopWords
 lsStopWord_English = set(stopwords.words('english'))
 lsStopWord_Spanish= set(stopwords.words('spanish'))
+lsFinalStopWords=list(set(lsStopWord_English) | set(lsMyStopWords) | set(lsStopWord_Spanish) )
 lsSources=['Reuters','Investing.com','Bloomberg']
 file_news='NewsDetection.txt'
 file_all_words='All_words_from_all_News.txt'
@@ -38,10 +39,10 @@ def returnChromeSettings():
     global BROWSER
     chromedriver_autoinstaller.install()
     options = Options()
-    ua = UserAgent()
-    userAgent = ua.random
-    options.add_argument("start-maximized")
-    options.add_argument(f"user-agent={userAgent}")
+    #ua = UserAgent()
+    #userAgent = ua.random
+    #options.add_argument("start-maximized")
+    #options.add_argument(f"user-agent={userAgent}")
     options.add_argument("--no-sandbox")
 
     if objControl.heroku:
@@ -68,7 +69,7 @@ def readUrl(url):
 
             if page==4:
                 print('Page 3...Starting the analysis for all Corpus')
-                
+                BROWSER.quit()
                 #Print file "All words"
                 printToFile(file_all_words,f'-------------------Printing All words from all news--------------------\n')
                 for word in list(set(lsWordAllNews_WithNoSW)):
@@ -185,8 +186,7 @@ def readUrl(url):
                 lsRes=getDataFrameFromTF_IDF(lsContent)
                 df=lsRes[0]
                 lsFeatures=lsRes[1]
-            
-            
+                
                 for keywordsLimit in [20,30,50]:
                     df_Sliced=df[:keywordsLimit]
                     print('-------Analysis for ',str(keywordsLimit), 'keyword---------\n')
@@ -200,9 +200,9 @@ def readUrl(url):
                     printToFile(file_New_Keywords,f'-------------------Word , Tf-idf value--------------------\n')
             
                     dictWord_TF_IDF={}
-                    for index,row in df_Sliced.iterrows():
-                        line=str(row['Feature'])+' , '+str(row['tfidf_value'])
-                        dictWord_TF_IDF[str(row['Feature'])]=float(str(row['tfidf_value']))
+                    for row in df_Sliced.iterrows():
+                        line=str(row[1].name)+' , '+str(row[1].values[0])
+                        dictWord_TF_IDF[str(row[1].name)]=float(str(row[1].values[0]))
                         printToFile(file_New_Keywords,line+'\n')
                 
                     #Create WorldCloud from any dictionary (Ex: Word, Freq; Word, TF-IDF,....{Word, AnyValue})
@@ -267,10 +267,8 @@ def createWordCloud(imageName,dictWord_Weight):
     
 def getDataFrameFromTF_IDF(lsContent=None,fullCorpus=False):
     
-    lsFinalStopWords=[]
     #Start of "some filtering"
     #I add up the Stopwords and some cutomized Stopwords (My stop words list)
-    lsFinalStopWords=list(set(lsStopWord_English) | set(lsMyStopWords) | set(lsStopWord_Spanish) )
     lsCorpus=[]
     lsVocabulary=[]
     lsVocabularyWithNoSW=[]
@@ -301,18 +299,22 @@ def getDataFrameFromTF_IDF(lsContent=None,fullCorpus=False):
     else:
         vectorizer = TfidfVectorizer(vocabulary=list(set(lsVocabularyWithNoSW)))
         tf_idf_matrix = vectorizer.fit_transform(lsCorpus)
-                      
-    
-    lsFeatures = vectorizer.get_feature_names()
-    lsDocData = tf_idf_matrix.todense().tolist()
-    lsTFIDF=[]
-    for doc in lsDocData:
-        for tf_idf_value in doc:
-            lsTFIDF.append(tf_idf_value)
 
-    df = pd.DataFrame({'Feature': lsFeatures,'tfidf_value': lsTFIDF}).sort_values(by=['tfidf_value'],ascending=False)
+    lsFeatures = vectorizer.get_feature_names()
+    lsDocData = tf_idf_matrix.todense().tolist()   
+
     
-    return [df,lsFeatures]
+    #lsTFIDF=[]
+    #for doc in lsDocData:
+        #for tf_idf_value in doc:
+            #lsTFIDF.append(tf_idf_value)
+
+    #df = pd.DataFrame({'Feature': lsFeatures,'tfidf_value': lsTFIDF}).sort_values(by=['tfidf_value'],ascending=False)
+    df = pd.DataFrame(data=lsDocData,columns=lsFeatures)
+    df_T=df.T
+   
+    
+    return [df_T,lsFeatures]
       
 
 def printToFile(completeFileName,content):
