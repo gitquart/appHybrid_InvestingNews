@@ -65,6 +65,52 @@ def readUrl(url):
         BROWSER.get(url)
         time.sleep(4)
         for page in range(1,4):
+
+            if page==4:
+                print('Page 3...Starting the analysis for all Corpus')
+                
+                #Print file "All words"
+                printToFile(file_all_words,f'-------------------Printing All words from all news--------------------\n')
+                for word in list(set(lsWordAllNews_WithNoSW)):
+                    printToFile(file_all_words,f'{str(word)}\n')
+         
+                #Creating TF-IDF and its dataframe
+                file_All_News='wholecorpus\\WholeCorpus.txt'
+                #Creating TF-IDF and its dataframe
+                lsRes=[]
+                lsRes=getDataFrameFromTF_IDF(fullCorpus=True)
+                df=lsRes[0]
+                lsFeatures=lsRes[1]
+            
+            
+                for keywordsLimit in [20,30,50]:
+                    df_Sliced=df[:keywordsLimit]
+                    print('-------Analysis for ',str(keywordsLimit), 'keyword---------\n')
+                    print('Keywords limit: ',str(keywordsLimit),'\n')
+                    print('Features size: ',str(len(lsFeatures)),'\n')
+                    if keywordsLimit>len(lsFeatures):
+                        print('The keywords limit is greater than the feature list')
+                        os.sys.exit(0)
+
+                    printToFile(file_All_News,f'-------------------First {str(keywordsLimit)} Important Keywords--------------------\n')
+                    printToFile(file_All_News,f'-------------------Word , Tf-idf value--------------------\n')
+            
+                    dictWord_TF_IDF={}
+                    for index,row in df_Sliced.iterrows():
+                        line=str(row['Feature'])+' , '+str(row['tfidf_value'])
+                        dictWord_TF_IDF[str(row['Feature'])]=float(str(row['tfidf_value']))
+                        printToFile(file_New_Keywords,line+'\n')
+                
+                    #Create WorldCloud from any dictionary (Ex: Word, Freq; Word, TF-IDF,....{Word, AnyValue})
+                    image_file='wholecorpus\\image_page_wholeCorpus_'+str(keywordsLimit)+'_keyword.jpeg'
+                    createWordCloud(image_file,dictWord_TF_IDF)
+                    #END OF TF-IDF AND WORD CLOUD PROCESS
+            
+                    del dictWord_TF_IDF
+                    del df_Sliced
+                del df    
+        
+                   
             tag_article=BROWSER.find_elements_by_tag_name('article')
             no_art=len(tag_article)
             print('Total of News: ',str(no_art))
@@ -178,53 +224,7 @@ def readUrl(url):
             #Loop for : Pages    
             print(f'-End of page {str(page)}-')
 
-            if page==3:
-                print('Page 3...Starting the analysis for all Corpus')
-                
-                #Print file "All words"
-                printToFile(file_all_words,f'-------------------Printing All words from all news--------------------\n')
-                for word in list(set(lsWordAllNews_WithNoSW)):
-                    printToFile(file_all_words,f'{str(word)}\n')
-         
-                #Creating TF-IDF and its dataframe
-                file_All_News='wholecorpus\\WholeCorpus.txt'
-                #Creating TF-IDF and its dataframe
-                lsRes=[]
-                lsRes=getDataFrameFromTF_IDF(fullCorpus=True)
-                df=lsRes[0]
-                lsFeatures=lsRes[1]
             
-            
-                for keywordsLimit in [20,30,50]:
-                    df_Sliced=df[:keywordsLimit]
-                    print('-------Analysis for ',str(keywordsLimit), 'keyword---------\n')
-                    print('Keywords limit: ',str(keywordsLimit),'\n')
-                    print('Features size: ',str(len(lsFeatures)),'\n')
-                    if keywordsLimit>len(lsFeatures):
-                        print('The keywords limit is greater than the feature list')
-                        os.sys.exit(0)
-
-                    printToFile(file_All_News,f'-------------------First {str(keywordsLimit)} Important Keywords--------------------\n')
-                    printToFile(file_All_News,f'-------------------Word , Tf-idf value--------------------\n')
-            
-                    dictWord_TF_IDF={}
-                    for index,row in df_Sliced.iterrows():
-                        line=str(row['Feature'])+' , '+str(row['tfidf_value'])
-                        dictWord_TF_IDF[str(row['Feature'])]=float(str(row['tfidf_value']))
-                        printToFile(file_New_Keywords,line+'\n')
-                
-                    #Create WorldCloud from any dictionary (Ex: Word, Freq; Word, TF-IDF,....{Word, AnyValue})
-                    image_file='wholecorpus\\image_page_wholeCorpus_'+str(keywordsLimit)+'_keyword.jpeg'
-                    createWordCloud(image_file,dictWord_TF_IDF)
-                    #END OF TF-IDF AND WORD CLOUD PROCESS
-            
-                    del dictWord_TF_IDF
-                    del df_Sliced
-                del df    
-        
-                   
-                
-
             #query=f'update tbControl set page={str(page+1)} where id={str(objControl.idControl)}'
             #db.executeNonQuery(query)
             btnNext=BROWSER.find_elements_by_xpath('/html/body/div[5]/section/div[5]/div[3]/a')[0]
