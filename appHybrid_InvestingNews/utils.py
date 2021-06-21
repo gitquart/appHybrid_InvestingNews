@@ -64,7 +64,7 @@ def readUrl(url):
     try:
         BROWSER.get(url)
         time.sleep(4)
-        for page in range(1,4):
+        for page in range(1,5):
 
             if page==4:
                 print('Page 3...Starting the analysis for all Corpus')
