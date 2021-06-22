@@ -80,15 +80,13 @@ def readUrl(url):
                 #Creating TF-IDF and its dataframe
                 lsRes=[]
                 lsRes=getDataFrameFromTF_IDF(fullCorpus=True)
-                df=lsRes
-                #lsFeatures=lsRes[1]
+                df=lsRes[0]
+                lsFeatures=lsRes[1]
             
             
                 for keywordsLimit in [20,30,50]:
                     df_Sliced=df[:keywordsLimit]
                     print('-------Analysis for ',str(keywordsLimit), 'keyword---------\n')
-                    print('Keywords limit: ',str(keywordsLimit),'\n')
-                    print('Features size: ',str(len(lsFeatures)),'\n')
                     if keywordsLimit>len(lsFeatures):
                         print('The keywords limit is greater than the feature list')
                         os.sys.exit(0)
@@ -97,9 +95,9 @@ def readUrl(url):
                     printToFile(file_All_News,f'-------------------Word , Tf-idf value--------------------\n')
             
                     dictWord_TF_IDF={}
-                    for index,row in df_Sliced.iterrows():
-                        line=str(row['Feature'])+' , '+str(row['tfidf_value'])
-                        dictWord_TF_IDF[str(row['Feature'])]=float(str(row['tfidf_value']))
+                    for row in df_Sliced.iterrows():
+                        line=str(row[1].name)+' , '+str(row[1].values[0])
+                        dictWord_TF_IDF[str(row[1].name)]=float(str(row[1].values[0]))
                         printToFile(file_New_Keywords,line+'\n')
                 
                     #Create WorldCloud from any dictionary (Ex: Word, Freq; Word, TF-IDF,....{Word, AnyValue})
