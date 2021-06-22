@@ -80,8 +80,8 @@ def readUrl(url):
                 #Creating TF-IDF and its dataframe
                 lsRes=[]
                 lsRes=getDataFrameFromTF_IDF(fullCorpus=True)
-                df=lsRes[0]
-                lsFeatures=lsRes[1]
+                df=lsRes
+                #lsFeatures=lsRes[1]
             
             
                 for keywordsLimit in [20,30,50]:
@@ -190,8 +190,6 @@ def readUrl(url):
                 for keywordsLimit in [20,30,50]:
                     df_Sliced=df[:keywordsLimit]
                     print('-------Analysis for ',str(keywordsLimit), 'keyword---------\n')
-                    print('Keywords limit: ',str(keywordsLimit),'\n')
-                    print('Features size: ',str(len(lsFeatures)),'\n')
                     if keywordsLimit>len(lsFeatures):
                         print('The keywords limit is greater than the feature list')
                         os.sys.exit(0)
@@ -230,8 +228,6 @@ def readUrl(url):
             btnNext=BROWSER.find_elements_by_xpath('/html/body/div[5]/section/div[5]/div[3]/a')[0]
             if btnNext:
                 BROWSER.execute_script("arguments[0].click();",btnNext)
-
-        
 
 
     except NameError as error:
@@ -288,15 +284,6 @@ def getDataFrameFromTF_IDF(lsContent=None,fullCorpus=False):
                 lsWordAllNews_WithNoSW.append(word)
 
     #End of "some filtering"
-    """
-    Solution for N dataset size
-    ------------------------------------------------
-    tfIdfVectorizer=TfidfVectorizer(use_idf=True)
-    tfIdf = tfIdfVectorizer.fit_transform(dataset)
-    df = pd.DataFrame(tfIdf[0].T.todense(), index=tfIdfVectorizer.get_feature_names(), columns=["TF-IDF"])
-    df = df.sort_values('TF-IDF', ascending=False)
-    print (df.head(25))
-    """
 
     #fit_transform() returns
     #X sparse matrix of (n_samples, n_features)
@@ -309,21 +296,21 @@ def getDataFrameFromTF_IDF(lsContent=None,fullCorpus=False):
         vectorizer = TfidfVectorizer(vocabulary=list(set(lsVocabularyWithNoSW)))
         tf_idf_matrix = vectorizer.fit_transform(lsCorpus)
 
-    #lsFeatures = vectorizer.get_feature_names()
-    #lsDocData = tf_idf_matrix.todense().tolist()   
-
     
-    #lsTFIDF=[]
-    #for doc in lsDocData:
-        #for tf_idf_value in doc:
-            #lsTFIDF.append(tf_idf_value)
-
-    #df = pd.DataFrame({'Feature': lsFeatures,'tfidf_value': lsTFIDF}).sort_values(by=['tfidf_value'],ascending=False)
-    df = pd.DataFrame(data=lsDocData,columns=lsFeatures)
-    df_T=df.T
+    """
+    Solution for N dataset size
+    ------------------------------------------------
+    tfIdfVectorizer=TfidfVectorizer(use_idf=True)
+    tfIdf = tfIdfVectorizer.fit_transform(dataset)
+    df = pd.DataFrame(tfIdf[0].T.todense(), index=tfIdfVectorizer.get_feature_names(), columns=["TF-IDF"])
+    df = df.sort_values('TF-IDF', ascending=False)
+    print (df.head(25))
+    """
+    df=pd.DataFrame(tf_idf_matrix[0].T.todense(),index=vectorizer.get_feature_names(),columns=["TF-IDF"])
+    df=df.sort_values('TF-IDF',ascending=False)
    
     
-    return [df_T,lsFeatures]
+    return [df,vectorizer.get_feature_names()]
       
 
 def printToFile(completeFileName,content):
