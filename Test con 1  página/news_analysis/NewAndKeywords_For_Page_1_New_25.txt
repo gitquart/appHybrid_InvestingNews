@@ -1,0 +1,105 @@
+--------Start of Page 1 New 25 ---------------
+ News Content :
+© Reuters.
+By Gina Lee
+Investing.com – Oil was up Tuesday morning in Asia, with signs emerging of a rapidly tightening market.
+Brent oil futures were up 0.32% to $75.14 by 4:41 PM ET (4:41 AM GMT), after hitting the $75 mark for the first time in more than two years. WTI futures inched up 0.10% to $73.19.
+Brent futures have rallied more than 40% this year as countries such as the U.S., China and Europe continue their economic recoveries from COVID-19, thus improving the fuel demand outlook.
+Bank of America Corp. (NYSE:BAC) even forecast that the global crude benchmark could hit the $100 a barrel in 2022 thanks to a rebound in travel.
+“Demand optimism is now well established, and a tightening of the market is very much in the spotlight... if there is a pause in this rally, it will likely come from the supply side,” Vanda (NASDAQ:VNDA) Insights founder Vandana Hari told Bloomberg.
+However, ongoing COVID-19 outbreaks in several countries are a grim reminder that fuel demand recovery remains uneven.
+Also dampening investor sentiment is China’s crackdown on its private refiners. The second batch of 2021 crude import quotas allocated to them was about 35% less than 2020, which could impact flows in the sector, which accounts for around a quarter of processing capacity in the world’s largest oil importer.
+However, the overall bullish outlook for the black liquid is adding pressure on the Organization of the Petroleum Exporting Countries and allies (OPEC+) to consider reviving more of the production curbed during COVID-19 when it meets in the following week.
+Investors now await U.S. crude oil supply from the American Petroleum Institute, due later in the day. Should the data and crude oil supply data from the U.S. Energy Information Administration, due later in the week, show a draw, it would be a fifth weekly decline.
+-------------------First 20 Important Keywords--------------------
+-------------------Word , Tf-idf value--------------------
+oil , 0.30372836961539346
+crude , 0.2429826956923148
+covid19 , 0.1822370217692361
+demand , 0.1822370217692361
+futures , 0.1822370217692361
+countries , 0.1822370217692361
+supply , 0.1822370217692361
+441 , 0.1214913478461574
+later , 0.1214913478461574
+outlook , 0.1214913478461574
+75 , 0.1214913478461574
+market , 0.1214913478461574
+due , 0.1214913478461574
+however , 0.1214913478461574
+brent , 0.1214913478461574
+week , 0.1214913478461574
+tightening , 0.1214913478461574
+petroleum , 0.1214913478461574
+data , 0.1214913478461574
+fuel , 0.1214913478461574
+-------------------First 30 Important Keywords--------------------
+-------------------Word , Tf-idf value--------------------
+oil , 0.30372836961539346
+crude , 0.2429826956923148
+covid19 , 0.1822370217692361
+demand , 0.1822370217692361
+futures , 0.1822370217692361
+countries , 0.1822370217692361
+supply , 0.1822370217692361
+441 , 0.1214913478461574
+later , 0.1214913478461574
+outlook , 0.1214913478461574
+75 , 0.1214913478461574
+market , 0.1214913478461574
+due , 0.1214913478461574
+however , 0.1214913478461574
+brent , 0.1214913478461574
+week , 0.1214913478461574
+tightening , 0.1214913478461574
+petroleum , 0.1214913478461574
+data , 0.1214913478461574
+fuel , 0.1214913478461574
+weekly , 0.0607456739230787
+decline , 0.0607456739230787
+improving , 0.0607456739230787
+likely , 0.0607456739230787
+uneven , 0.0607456739230787
+ongoing , 0.0607456739230787
+meets , 0.0607456739230787
+32 , 0.0607456739230787
+day , 0.0607456739230787
+sector , 0.0607456739230787
+-------------------First 35 Important Keywords--------------------
+-------------------Word , Tf-idf value--------------------
+oil , 0.30372836961539346
+crude , 0.2429826956923148
+covid19 , 0.1822370217692361
+demand , 0.1822370217692361
+futures , 0.1822370217692361
+countries , 0.1822370217692361
+supply , 0.1822370217692361
+441 , 0.1214913478461574
+later , 0.1214913478461574
+outlook , 0.1214913478461574
+75 , 0.1214913478461574
+market , 0.1214913478461574
+due , 0.1214913478461574
+however , 0.1214913478461574
+brent , 0.1214913478461574
+week , 0.1214913478461574
+tightening , 0.1214913478461574
+petroleum , 0.1214913478461574
+data , 0.1214913478461574
+fuel , 0.1214913478461574
+weekly , 0.0607456739230787
+decline , 0.0607456739230787
+improving , 0.0607456739230787
+likely , 0.0607456739230787
+uneven , 0.0607456739230787
+ongoing , 0.0607456739230787
+meets , 0.0607456739230787
+32 , 0.0607456739230787
+day , 0.0607456739230787
+sector , 0.0607456739230787
+organization , 0.0607456739230787
+bullish , 0.0607456739230787
+pressure , 0.0607456739230787
+lee , 0.0607456739230787
+importer , 0.0607456739230787
+-------------------End of News 25--------------------

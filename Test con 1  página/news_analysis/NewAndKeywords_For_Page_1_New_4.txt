@@ -1,0 +1,110 @@
+--------Start of Page 1 New 4 ---------------
+ News Content :
+© Reuters. FILE PHOTO: A customer leaves with shoping bags, as retail store Primark in Birmingham, Britain reopens its doors after a third lockdown imposed in early January due to the ongoing coronavirus disease (COVID-19) pandemic, April 12, 2021. REUTERS/Carl Rec
+By Andy Bruce and William Schomberg
+LONDON (Reuters) - British retail sales fell unexpectedly last month as a lifting of lockdown restrictions encouraged spending in restaurants rather than shops, according to official data.
+Retail sales fell 1.4% between April and May, the Office for National Statistics said.
+A Reuters poll of economists had pointed to an 1.6% month-on-month increase in retail sales volumes for May. Only three of 19 forecasts showed a fall.
+Food stores suffered the biggest hit, with a 5.7% drop in sales. Separately on Friday supermarket chain Tesco (OTC:TSCDY), Britain's biggest retailer, reported a sharp slowdown in underlying UK sales growth in its first quarter.
+"Anecdotal evidence suggests the easing of hospitality restrictions had an impact on sales as people returned to eating and drinking at locations such as restaurants and bars," the ONS said.
+Most economists said the weak retail sales data was not necessarily suggestive of weaker consumer spending as the economy recovers from the COVID-19 pandemic, since hospitality businesses have reported booming trade.
+But Samuel Tombs, at consultancy Pantheon Macroeconomics, said more recent payment card data suggested that the surge in consumer spending could be losing steam.
+"Households' real disposable income looks set to fall in Q4, as the end of the furlough scheme reduces employment and inflation rises to match wage growth," he said.
+The rapid advance of the "delta" variant of COVID-19, despite Britain's swift roll-out of vaccines, could also crimp household spending in the weeks ahead.
+An end to lockdown in England that had been scheduled for Monday has been delayed for four weeks.
+In annual terms, retail sales were 24.6% higher than May last year, short of the median expectation for a 29.0% increase.
+Household good stores bucked the wider decline with month-on-month growth of 9.0%, which the ONS linked to spending on outdoor goods.
+Earlier this week, motoring and outdoor goods store Halfords said it had been doing a roaring trade in bicycles.
+(This story fixes spelling in headline)
+-------------------First 20 Important Keywords--------------------
+-------------------Word , Tf-idf value--------------------
+sales , 0.3922322702763681
+retail , 0.29417420270727607
+spending , 0.24514516892273006
+lockdown , 0.14708710135363803
+growth , 0.14708710135363803
+data , 0.14708710135363803
+may , 0.14708710135363803
+covid19 , 0.14708710135363803
+consumer , 0.09805806756909202
+pandemic , 0.09805806756909202
+britains , 0.09805806756909202
+fall , 0.09805806756909202
+outdoor , 0.09805806756909202
+reported , 0.09805806756909202
+hospitality , 0.09805806756909202
+fell , 0.09805806756909202
+increase , 0.09805806756909202
+trade , 0.09805806756909202
+store , 0.09805806756909202
+stores , 0.09805806756909202
+-------------------First 30 Important Keywords--------------------
+-------------------Word , Tf-idf value--------------------
+sales , 0.3922322702763681
+retail , 0.29417420270727607
+spending , 0.24514516892273006
+lockdown , 0.14708710135363803
+growth , 0.14708710135363803
+data , 0.14708710135363803
+may , 0.14708710135363803
+covid19 , 0.14708710135363803
+consumer , 0.09805806756909202
+pandemic , 0.09805806756909202
+britains , 0.09805806756909202
+fall , 0.09805806756909202
+outdoor , 0.09805806756909202
+reported , 0.09805806756909202
+hospitality , 0.09805806756909202
+fell , 0.09805806756909202
+increase , 0.09805806756909202
+trade , 0.09805806756909202
+store , 0.09805806756909202
+stores , 0.09805806756909202
+weeks , 0.09805806756909202
+goods , 0.09805806756909202
+economists , 0.09805806756909202
+last , 0.09805806756909202
+april , 0.09805806756909202
+household , 0.09805806756909202
+ons , 0.09805806756909202
+restrictions , 0.09805806756909202
+restaurants , 0.09805806756909202
+monthonmonth , 0.09805806756909202
+-------------------First 35 Important Keywords--------------------
+-------------------Word , Tf-idf value--------------------
+sales , 0.3922322702763681
+retail , 0.29417420270727607
+spending , 0.24514516892273006
+lockdown , 0.14708710135363803
+growth , 0.14708710135363803
+data , 0.14708710135363803
+may , 0.14708710135363803
+covid19 , 0.14708710135363803
+consumer , 0.09805806756909202
+pandemic , 0.09805806756909202
+britains , 0.09805806756909202
+fall , 0.09805806756909202
+outdoor , 0.09805806756909202
+reported , 0.09805806756909202
+hospitality , 0.09805806756909202
+fell , 0.09805806756909202
+increase , 0.09805806756909202
+trade , 0.09805806756909202
+store , 0.09805806756909202
+stores , 0.09805806756909202
+weeks , 0.09805806756909202
+goods , 0.09805806756909202
+economists , 0.09805806756909202
+last , 0.09805806756909202
+april , 0.09805806756909202
+household , 0.09805806756909202
+ons , 0.09805806756909202
+restrictions , 0.09805806756909202
+restaurants , 0.09805806756909202
+monthonmonth , 0.09805806756909202
+end , 0.09805806756909202
+biggest , 0.09805806756909202
+card , 0.04902903378454601
+food , 0.04902903378454601
+coronavirus , 0.04902903378454601
+-------------------End of News 4--------------------

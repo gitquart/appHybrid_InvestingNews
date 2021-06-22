@@ -1,0 +1,103 @@
+--------Start of Page 1 New 1 ---------------
+ News Content :
+© Reuters. FILE PHOTO: An employee works on a production line manufacturing steel structures at a factory in Huzhou, Zhejiang province, China May 17, 2020. China Daily via REUTERS/Files
+By Eric Onstad
+LONDON (Reuters) - Global steel output shot up by 16.5% year-on-year in May as an easing of pandemic restrictions fuelled economic activity, but growth in top market China cooled, data showed on Tuesday.
+Global crude steel production rose to 174.4 million tonnes in May compared to a year earlier, the World Steel Association said in a statement.
+Steel output in China, the world's top producer and consumer of the metal, is expected to continue to lose steam in coming months as the government seeks to curb emissions and dampen credit growth, Capital Economics said.
+Although crude steel production in China rose 6.6% year-on-year to 99.5 million tonnes in May, daily output fell 1.6% month-on-month, Caroline Bain, chief commodities economist at Capital Economics, said in a note.
+"We expect China’s production to continue to ease back over the course of this year as demand softens," Bain said.
+In contrast, output elsewhere surged, with Japan, India and the United States rocketing 42%, 47% and 48% year-on-year respectively.
+The U.S. industry took advantage of a rally in steel prices there, Bain said. "U.S. production has still been relatively slow to recover from last year’s virus-related downturn, which in part explains the strength in prices there."
+-------------------First 20 Important Keywords--------------------
+-------------------Word , Tf-idf value--------------------
+steel , 0.4068667356033675
+china , 0.29061909685954823
+production , 0.29061909685954823
+may , 0.23249527748763857
+output , 0.23249527748763857
+bain , 0.17437145811572893
+yearonyear , 0.17437145811572893
+rose , 0.11624763874381928
+daily , 0.11624763874381928
+top , 0.11624763874381928
+prices , 0.11624763874381928
+growth , 0.11624763874381928
+capital , 0.11624763874381928
+million , 0.11624763874381928
+continue , 0.11624763874381928
+economics , 0.11624763874381928
+crude , 0.11624763874381928
+year , 0.11624763874381928
+tonnes , 0.11624763874381928
+global , 0.11624763874381928
+-------------------First 30 Important Keywords--------------------
+-------------------Word , Tf-idf value--------------------
+steel , 0.4068667356033675
+china , 0.29061909685954823
+production , 0.29061909685954823
+may , 0.23249527748763857
+output , 0.23249527748763857
+bain , 0.17437145811572893
+yearonyear , 0.17437145811572893
+rose , 0.11624763874381928
+daily , 0.11624763874381928
+top , 0.11624763874381928
+prices , 0.11624763874381928
+growth , 0.11624763874381928
+capital , 0.11624763874381928
+million , 0.11624763874381928
+continue , 0.11624763874381928
+economics , 0.11624763874381928
+crude , 0.11624763874381928
+year , 0.11624763874381928
+tonnes , 0.11624763874381928
+global , 0.11624763874381928
+pandemic , 0.05812381937190964
+chinas , 0.05812381937190964
+steam , 0.05812381937190964
+eric , 0.05812381937190964
+via , 0.05812381937190964
+months , 0.05812381937190964
+contrast , 0.05812381937190964
+47 , 0.05812381937190964
+expected , 0.05812381937190964
+16 , 0.05812381937190964
+-------------------First 35 Important Keywords--------------------
+-------------------Word , Tf-idf value--------------------
+steel , 0.4068667356033675
+china , 0.29061909685954823
+production , 0.29061909685954823
+may , 0.23249527748763857
+output , 0.23249527748763857
+bain , 0.17437145811572893
+yearonyear , 0.17437145811572893
+rose , 0.11624763874381928
+daily , 0.11624763874381928
+top , 0.11624763874381928
+prices , 0.11624763874381928
+growth , 0.11624763874381928
+capital , 0.11624763874381928
+million , 0.11624763874381928
+continue , 0.11624763874381928
+economics , 0.11624763874381928
+crude , 0.11624763874381928
+year , 0.11624763874381928
+tonnes , 0.11624763874381928
+global , 0.11624763874381928
+pandemic , 0.05812381937190964
+chinas , 0.05812381937190964
+steam , 0.05812381937190964
+eric , 0.05812381937190964
+via , 0.05812381937190964
+months , 0.05812381937190964
+contrast , 0.05812381937190964
+47 , 0.05812381937190964
+expected , 0.05812381937190964
+16 , 0.05812381937190964
+17 , 0.05812381937190964
+course , 0.05812381937190964
+seeks , 0.05812381937190964
+onstad , 0.05812381937190964
+back , 0.05812381937190964
+-------------------End of News 1--------------------

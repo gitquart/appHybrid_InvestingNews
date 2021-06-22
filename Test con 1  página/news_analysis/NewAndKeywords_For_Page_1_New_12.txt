@@ -1,0 +1,103 @@
+--------Start of Page 1 New 12 ---------------
+ News Content :
+© Reuters. FILE PHOTO: Autonomous robots assemble an X model SUV at the BMW manufacturing facility in Greer, South Carolina, U.S. November 4, 2019. REUTERS/Charles Mostoller/File Photo
+By Evan Sully
+(Reuters) - Factory activity in the U.S. mid-Atlantic region declined for the second consecutive month in June after hitting its highest pace in nearly half a century earlier this spring, a survey showed on Thursday.
+The Philadelphia Federal Reserve Bank said its business activity index fell to 30.7 from 31.5 in May. That was just shy of economists' expectations for a reading of 31.0, according to a Reuters poll.
+Any reading above zero indicates expansion in the region's manufacturing. The survey covers factories in eastern Pennsylvania, southern New Jersey and Delaware.
+It is seen as one of the first monthly indicators of the health of U.S. manufacturing leading up to the national report by the Institute for Supply Management, next due out July 1.
+Factories have struggled to keep up with demand in recent months as the economy shows signs of emerging from the COVID-19 recession and consumers flush with cash from recent stimulus programs ramp up spending. In March, the Philly Fed's factory activity gauge hit its highest level since April 1973.
+The bank's employment index increased to 30.7 from 19.3 in May.
+Additionally, the price paid index rose for the second consecutive month to 80.7 from 76.8 in the month prior, its highest reading since June 1979.
+-------------------First 20 Important Keywords--------------------
+-------------------Word , Tf-idf value--------------------
+activity , 0.21160368475757949
+reading , 0.21160368475757949
+highest , 0.21160368475757949
+manufacturing , 0.21160368475757949
+index , 0.21160368475757949
+month , 0.21160368475757949
+may , 0.14106912317171966
+recent , 0.14106912317171966
+31 , 0.14106912317171966
+factory , 0.14106912317171966
+factories , 0.14106912317171966
+second , 0.14106912317171966
+june , 0.14106912317171966
+photo , 0.14106912317171966
+30 , 0.14106912317171966
+consecutive , 0.14106912317171966
+survey , 0.14106912317171966
+price , 0.07053456158585983
+covers , 0.07053456158585983
+march , 0.07053456158585983
+-------------------First 30 Important Keywords--------------------
+-------------------Word , Tf-idf value--------------------
+activity , 0.21160368475757949
+reading , 0.21160368475757949
+highest , 0.21160368475757949
+manufacturing , 0.21160368475757949
+index , 0.21160368475757949
+month , 0.21160368475757949
+may , 0.14106912317171966
+recent , 0.14106912317171966
+31 , 0.14106912317171966
+factory , 0.14106912317171966
+factories , 0.14106912317171966
+second , 0.14106912317171966
+june , 0.14106912317171966
+photo , 0.14106912317171966
+30 , 0.14106912317171966
+consecutive , 0.14106912317171966
+survey , 0.14106912317171966
+price , 0.07053456158585983
+covers , 0.07053456158585983
+march , 0.07053456158585983
+report , 0.07053456158585983
+additionally , 0.07053456158585983
+indicates , 0.07053456158585983
+prior , 0.07053456158585983
+2019 , 0.07053456158585983
+months , 0.07053456158585983
+expectations , 0.07053456158585983
+fell , 0.07053456158585983
+hit , 0.07053456158585983
+jersey , 0.07053456158585983
+-------------------First 35 Important Keywords--------------------
+-------------------Word , Tf-idf value--------------------
+activity , 0.21160368475757949
+reading , 0.21160368475757949
+highest , 0.21160368475757949
+manufacturing , 0.21160368475757949
+index , 0.21160368475757949
+month , 0.21160368475757949
+may , 0.14106912317171966
+recent , 0.14106912317171966
+31 , 0.14106912317171966
+factory , 0.14106912317171966
+factories , 0.14106912317171966
+second , 0.14106912317171966
+june , 0.14106912317171966
+photo , 0.14106912317171966
+30 , 0.14106912317171966
+consecutive , 0.14106912317171966
+survey , 0.14106912317171966
+price , 0.07053456158585983
+covers , 0.07053456158585983
+march , 0.07053456158585983
+report , 0.07053456158585983
+additionally , 0.07053456158585983
+indicates , 0.07053456158585983
+prior , 0.07053456158585983
+2019 , 0.07053456158585983
+months , 0.07053456158585983
+expectations , 0.07053456158585983
+fell , 0.07053456158585983
+hit , 0.07053456158585983
+jersey , 0.07053456158585983
+monthly , 0.07053456158585983
+banks , 0.07053456158585983
+business , 0.07053456158585983
+spending , 0.07053456158585983
+pace , 0.07053456158585983
+-------------------End of News 12--------------------

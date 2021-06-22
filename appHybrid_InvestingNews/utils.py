@@ -27,12 +27,15 @@ lsStopWord_English = set(stopwords.words('english'))
 lsStopWord_Spanish= set(stopwords.words('spanish'))
 lsFinalStopWords=list(set(lsStopWord_English) | set(lsMyStopWords) | set(lsStopWord_Spanish) )
 lsSources=['Reuters','Investing.com','Bloomberg']
-file_news='NewsDetection.txt'
-file_all_words='All_words_from_all_News.txt'
-
+lsKeyWordsLimit=[20,30,35]
 #lsContentCorpus and lsWordAllNews_WithNoSW  are elements for the TF IDF of a SET OF NEWS
 lsContentCorpus=[]
 lsWordAllNews_WithNoSW=[]
+file_all_words='wholecorpus\\All_words_from_all_News.txt'
+file_all_news='wholecorpus\\All_News.txt'
+
+
+
 
 
 def returnChromeSettings():
@@ -67,16 +70,23 @@ def readUrl(url):
         time.sleep(4)
         for page in range(1,5):
 
-            if page==4:
-                print('Page 3...Starting the analysis for all Corpus')
+            if page==3:
                 BROWSER.quit()
+                #Print all news
+                printToFile(file_all_news,f'-------------------Printing  all news--------------------\n')
+                for doc in lsContentCorpus:
+                    printToFile('*************************************************************\n')
+                    printToFile(file_all_news,f'{doc}\n')
+                    printToFile('*************************************************************\n')
+
+
                 #Print file "All words"
                 printToFile(file_all_words,f'-------------------Printing All words from all news--------------------\n')
                 for word in list(set(lsWordAllNews_WithNoSW)):
                     printToFile(file_all_words,f'{str(word)}\n')
          
                 #Creating TF-IDF and its dataframe
-                file_All_News='wholecorpus\\WholeCorpus.txt'
+                file_All_News_KeyWords='wholecorpus\\WholeCorpus_Keywords.txt'
                 #Creating TF-IDF and its dataframe
                 lsRes=[]
                 lsRes=getDataFrameFromTF_IDF(fullCorpus=True)
@@ -84,21 +94,21 @@ def readUrl(url):
                 lsFeatures=lsRes[1]
             
             
-                for keywordsLimit in [20,30,50]:
+                for keywordsLimit in lsKeyWordsLimit:
                     df_Sliced=df[:keywordsLimit]
                     print('-------Analysis for ',str(keywordsLimit), 'keyword---------\n')
                     if keywordsLimit>len(lsFeatures):
                         print('The keywords limit is greater than the feature list')
                         os.sys.exit(0)
 
-                    printToFile(file_All_News,f'-------------------First {str(keywordsLimit)} Important Keywords--------------------\n')
-                    printToFile(file_All_News,f'-------------------Word , Tf-idf value--------------------\n')
+                    printToFile(file_All_News_KeyWords,f'-------------------First {str(keywordsLimit)} Important Keywords--------------------\n')
+                    printToFile(file_All_News_KeyWords,f'-------------------Word , Tf-idf value--------------------\n')
             
                     dictWord_TF_IDF={}
                     for row in df_Sliced.iterrows():
                         line=str(row[1].name)+' , '+str(row[1].values[0])
                         dictWord_TF_IDF[str(row[1].name)]=float(str(row[1].values[0]))
-                        printToFile(file_New_Keywords,line+'\n')
+                        printToFile(file_All_News_KeyWords,line+'\n')
                 
                     #Create WorldCloud from any dictionary (Ex: Word, Freq; Word, TF-IDF,....{Word, AnyValue})
                     image_file='wholecorpus\\image_page_wholeCorpus_'+str(keywordsLimit)+'_keyword.jpeg'
@@ -107,7 +117,10 @@ def readUrl(url):
             
                     del dictWord_TF_IDF
                     del df_Sliced
-                del df    
+                #if page condition
+                del df   
+                print('All td idf done...')
+                os.sys.exit(0) 
         
                    
             tag_article=BROWSER.find_elements_by_tag_name('article')
@@ -137,6 +150,7 @@ def readUrl(url):
 
                 strSource=txtSource.text    
                 strSource=strSource.split(' ')[1]
+                print(f'Source :{strSource}')
                 linkArticle=devuelveElemento(f'/html/body/div[5]/section/div[4]/article[{str(x)}]/div[1]/a')
                 BROWSER.execute_script("arguments[0].click();",linkArticle)
                 if strSource in lsSources:
@@ -148,7 +162,7 @@ def readUrl(url):
                 
                     time.sleep(4)
                     #Get the link with a recursive method
-                    linkPopUp=devuelveElementoDinamico('/html/body/div[option]/div/div/div/a',6)
+                    linkPopUp=devuelveElementoDinamico('/html/body/div[option]/div/div/div/a',6,15)
                     time.sleep(3)
                     if linkPopUp:
                         BROWSER.execute_script("arguments[0].click();",linkPopUp)
@@ -167,10 +181,14 @@ def readUrl(url):
                         #Now in First window
                         first_window=BROWSER.window_handles[0]
                         BROWSER.switch_to.window(first_window)
-                        BROWSER.refresh()
+                        #BROWSER.refresh()
+                        btnPopUpClose=devuelveElementoDinamico('/html/body/div[option]/span/i',6,15)
+                        time.sleep(3)
+                        if btnPopUpClose:
+                            BROWSER.execute_script("arguments[0].click();",btnPopUpClose)
                    
                 #This implementation of code is based on : 
-                # https://towardsdatascience.com/using-tf-idf-to-form-descriptive-chapter-summaries-via-keyword-extraction-4e6fd857d190
+                # https://towardsdatascience.com/tf-idf-explained-and-python-sklearn-implementation-b020c5e83275
             
                 #START OF TF-IDF AND WORD CLOUD PROCESS
                 file_New_Keywords='news_analysis\\NewAndKeywords_For_Page_'+str(page)+'_New_'+str(x)+'.txt'
@@ -185,7 +203,7 @@ def readUrl(url):
                 df=lsRes[0]
                 lsFeatures=lsRes[1]
                 
-                for keywordsLimit in [20,30,50]:
+                for keywordsLimit in lsKeyWordsLimit:
                     df_Sliced=df[:keywordsLimit]
                     print('-------Analysis for ',str(keywordsLimit), 'keyword---------\n')
                     if keywordsLimit>len(lsFeatures):
@@ -213,8 +231,9 @@ def readUrl(url):
                 printToFile(file_New_Keywords,f'-------------------End of News {str(x)}--------------------\n')
                 print(f'----------End of Page {str(page)} New {str(x)}-------------')
                 if strSource in lsSources:
-                    btnCommodity= devuelveElemento('/html/body/div[5]/section/div[1]/a')
-                    BROWSER.execute_script("arguments[0].click();",btnCommodity)
+                    #btnCommodity= devuelveElemento('/html/body/div[5]/section/div[1]/a')
+                    #BROWSER.execute_script("arguments[0].click();",btnCommodity)
+                    BROWSER.execute_script("window.history.go(-1)")      
                 time.sleep(5)
 
             #Loop for : Pages    
@@ -226,6 +245,7 @@ def readUrl(url):
             btnNext=BROWSER.find_elements_by_xpath('/html/body/div[5]/section/div[5]/div[3]/a')[0]
             if btnNext:
                 BROWSER.execute_script("arguments[0].click();",btnNext)
+              
 
 
     except NameError as error:
@@ -238,8 +258,11 @@ def pre_process_data(content):
     return content
 
 
-def devuelveElementoDinamico(xPath,option):
+def devuelveElementoDinamico(xPath,option,limit):
     try:
+        if option==limit:
+            print(f'Element was not find from {str(option)} to {str(limit)}')
+            os.sys.exit(0)
         e=None
         newXPath=xPath.replace('option',str(option))
         e=BROWSER.find_elements_by_xpath(newXPath)[0]  
@@ -248,7 +271,7 @@ def devuelveElementoDinamico(xPath,option):
             return e   
     except:
         option+=1
-        devuelveElementoDinamico(xPath,option)
+        devuelveElementoDinamico(xPath,option,limit)
                    
 
 
@@ -288,15 +311,22 @@ def getDataFrameFromTF_IDF(lsContent=None,fullCorpus=False):
     #Tf-idf-weighted document-term matrix.
     
     if fullCorpus:
+        if (not lsWordAllNews_WithNoSW) or (not lsContentCorpus):
+            print('No vocabulary or content')
+            os.sys.exit(0)
         vectorizer = TfidfVectorizer(vocabulary=list(set(lsWordAllNews_WithNoSW)))
         tf_idf_matrix = vectorizer.fit_transform(lsContentCorpus)
     else:
+        if (not lsVocabularyWithNoSW) or (not lsCorpus):
+            print('No vocabulary or content')
+            os.sys.exit(0)
         vectorizer = TfidfVectorizer(vocabulary=list(set(lsVocabularyWithNoSW)))
         tf_idf_matrix = vectorizer.fit_transform(lsCorpus)
 
     
     """
     Solution for N dataset size
+    Link https://towardsdatascience.com/tf-idf-explained-and-python-sklearn-implementation-b020c5e83275
     ------------------------------------------------
     tfIdfVectorizer=TfidfVectorizer(use_idf=True)
     tfIdf = tfIdfVectorizer.fit_transform(dataset)

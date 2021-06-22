@@ -1,0 +1,102 @@
+--------Start of Page 1 New 2 ---------------
+ News Content :
+© Reuters. Coloured cotton reels are seen at the Fashion Enter factory in London England, January 8, 2016. REUTERS/Eddie Keogh/Files
+LONDON (Reuters) - British manufacturers reported the strongest growth in output on record but also expect to raise their prices at the fastest pace in nearly 40 years, according to a survey which adds to signs of growing inflation pressures.
+The Confederation of British Industry's monthly index for industrial output growth over the past three months was the highest since the CBI records began in 1975 at +37, helped by the lifting of coronavirus restrictions.
+The CBI's orders balance - measuring the difference between the proportion of employers who say order levels are above or below normal - hit +19 in June from +17 in May, its highest since 1988.
+Economists polled by Reuters had expected a reading of +18.
+"Encouragingly, this performance is reflected in the majority of manufacturing sub-sectors and looks set to continue in the coming quarter," Anna Leach, the CBI's deputy chief economist, said.
+"However, supply shortages continue to bite, and firms expect that to push through into prices in the months ahead."
+The survey's price balance rose to +46 from +38 in May, the highest since 1982 and well above its average of +3.
+-------------------First 20 Important Keywords--------------------
+-------------------Word , Tf-idf value--------------------
+highest , 0.24743582965269675
+months , 0.1649572197684645
+output , 0.1649572197684645
+cbis , 0.1649572197684645
+expect , 0.1649572197684645
+london , 0.1649572197684645
+may , 0.1649572197684645
+continue , 0.1649572197684645
+growth , 0.1649572197684645
+british , 0.1649572197684645
+prices , 0.1649572197684645
+balance , 0.1649572197684645
+hit , 0.08247860988423225
+encouragingly , 0.08247860988423225
+monthly , 0.08247860988423225
+price , 0.08247860988423225
+raise , 0.08247860988423225
+37 , 0.08247860988423225
+three , 0.08247860988423225
+expected , 0.08247860988423225
+-------------------First 30 Important Keywords--------------------
+-------------------Word , Tf-idf value--------------------
+highest , 0.24743582965269675
+months , 0.1649572197684645
+output , 0.1649572197684645
+cbis , 0.1649572197684645
+expect , 0.1649572197684645
+london , 0.1649572197684645
+may , 0.1649572197684645
+continue , 0.1649572197684645
+growth , 0.1649572197684645
+british , 0.1649572197684645
+prices , 0.1649572197684645
+balance , 0.1649572197684645
+hit , 0.08247860988423225
+encouragingly , 0.08247860988423225
+monthly , 0.08247860988423225
+price , 0.08247860988423225
+raise , 0.08247860988423225
+37 , 0.08247860988423225
+three , 0.08247860988423225
+expected , 0.08247860988423225
+pace , 0.08247860988423225
+1975 , 0.08247860988423225
+1982 , 0.08247860988423225
+17 , 0.08247860988423225
+looks , 0.08247860988423225
+1988 , 0.08247860988423225
+shortages , 0.08247860988423225
+coronavirus , 0.08247860988423225
+deputy , 0.08247860988423225
+reflected , 0.08247860988423225
+-------------------First 35 Important Keywords--------------------
+-------------------Word , Tf-idf value--------------------
+highest , 0.24743582965269675
+months , 0.1649572197684645
+output , 0.1649572197684645
+cbis , 0.1649572197684645
+expect , 0.1649572197684645
+london , 0.1649572197684645
+may , 0.1649572197684645
+continue , 0.1649572197684645
+growth , 0.1649572197684645
+british , 0.1649572197684645
+prices , 0.1649572197684645
+balance , 0.1649572197684645
+hit , 0.08247860988423225
+encouragingly , 0.08247860988423225
+monthly , 0.08247860988423225
+price , 0.08247860988423225
+raise , 0.08247860988423225
+37 , 0.08247860988423225
+three , 0.08247860988423225
+expected , 0.08247860988423225
+pace , 0.08247860988423225
+1975 , 0.08247860988423225
+1982 , 0.08247860988423225
+17 , 0.08247860988423225
+looks , 0.08247860988423225
+1988 , 0.08247860988423225
+shortages , 0.08247860988423225
+coronavirus , 0.08247860988423225
+deputy , 0.08247860988423225
+reflected , 0.08247860988423225
+leach , 0.08247860988423225
+reuterseddie , 0.08247860988423225
+order , 0.08247860988423225
+strongest , 0.08247860988423225
+june , 0.08247860988423225
+-------------------End of News 2--------------------

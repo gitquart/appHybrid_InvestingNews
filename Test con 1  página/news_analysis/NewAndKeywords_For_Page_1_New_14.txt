@@ -1,0 +1,101 @@
+--------Start of Page 1 New 14 ---------------
+ News Content :
+© Reuters. FILE PHOTO: People, wearing a protective face masks, shop at a local market amid the coronavirus disease (COVID-19) outbreak in Nice, France, March 4, 2021. REUTERS/Eric Gaillard
+BRUSSELS (Reuters) - A sharp spike in energy prices and more expensive services boosted euro zone consumer inflation in May as expected, data confirmed on Thursday, taking the rate of price growth just above the European Central Banks target.
+The European Union's statistics office Eurostat confirmed inflation in the 19 countries sharing the euro rose 0.3% month- on-month for a 2.0% year-on-year increase, as estimated earlier. The ECB wants to keep inflation below, but close to 2%.
+Energy prices added 1.19 percentage point to the overall year-on-year figure and services 0.45 point, while food, alcohol and tobacco added 0.15 point.
+Without the most volatile components of energy and food, or what the ECB calls core inflation, prices rose 0.2% on the month and only 0.9% year-on-year.
+Economists expect inflation may be even higher late in the year, coming closer to 2.5% as the recovery from a pandemic-induced double-dip recession and recent commodity price increases add to price pressures.
+But the ECB believes the surge in inflation is temporary and has vowed to keep its monetary policy loose because the drivers of price growth will fade early next year and inflation will be below target for years to come.
+-------------------First 20 Important Keywords--------------------
+-------------------Word , Tf-idf value--------------------
+inflation , 0.439219063596711
+price , 0.25098232205526344
+prices , 0.18823674154144757
+energy , 0.18823674154144757
+ecb , 0.18823674154144757
+point , 0.18823674154144757
+yearonyear , 0.18823674154144757
+19 , 0.12549116102763172
+food , 0.12549116102763172
+euro , 0.12549116102763172
+month , 0.12549116102763172
+year , 0.12549116102763172
+growth , 0.12549116102763172
+confirmed , 0.12549116102763172
+may , 0.12549116102763172
+keep , 0.12549116102763172
+european , 0.12549116102763172
+services , 0.12549116102763172
+target , 0.12549116102763172
+added , 0.12549116102763172
+-------------------First 30 Important Keywords--------------------
+-------------------Word , Tf-idf value--------------------
+inflation , 0.439219063596711
+price , 0.25098232205526344
+prices , 0.18823674154144757
+energy , 0.18823674154144757
+ecb , 0.18823674154144757
+point , 0.18823674154144757
+yearonyear , 0.18823674154144757
+19 , 0.12549116102763172
+food , 0.12549116102763172
+euro , 0.12549116102763172
+month , 0.12549116102763172
+year , 0.12549116102763172
+growth , 0.12549116102763172
+confirmed , 0.12549116102763172
+may , 0.12549116102763172
+keep , 0.12549116102763172
+european , 0.12549116102763172
+services , 0.12549116102763172
+target , 0.12549116102763172
+added , 0.12549116102763172
+rose , 0.12549116102763172
+gaillard , 0.06274558051381586
+coronavirus , 0.06274558051381586
+volatile , 0.06274558051381586
+office , 0.06274558051381586
+brussels , 0.06274558051381586
+banks , 0.06274558051381586
+amid , 0.06274558051381586
+sharing , 0.06274558051381586
+recession , 0.06274558051381586
+-------------------First 35 Important Keywords--------------------
+-------------------Word , Tf-idf value--------------------
+inflation , 0.439219063596711
+price , 0.25098232205526344
+prices , 0.18823674154144757
+energy , 0.18823674154144757
+ecb , 0.18823674154144757
+point , 0.18823674154144757
+yearonyear , 0.18823674154144757
+19 , 0.12549116102763172
+food , 0.12549116102763172
+euro , 0.12549116102763172
+month , 0.12549116102763172
+year , 0.12549116102763172
+growth , 0.12549116102763172
+confirmed , 0.12549116102763172
+may , 0.12549116102763172
+keep , 0.12549116102763172
+european , 0.12549116102763172
+services , 0.12549116102763172
+target , 0.12549116102763172
+added , 0.12549116102763172
+rose , 0.12549116102763172
+gaillard , 0.06274558051381586
+coronavirus , 0.06274558051381586
+volatile , 0.06274558051381586
+office , 0.06274558051381586
+brussels , 0.06274558051381586
+banks , 0.06274558051381586
+amid , 0.06274558051381586
+sharing , 0.06274558051381586
+recession , 0.06274558051381586
+disease , 0.06274558051381586
+temporary , 0.06274558051381586
+march , 0.06274558051381586
+expected , 0.06274558051381586
+come , 0.06274558051381586
+-------------------End of News 14--------------------

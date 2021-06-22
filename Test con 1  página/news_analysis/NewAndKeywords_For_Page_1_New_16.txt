@@ -1,0 +1,109 @@
+--------Start of Page 1 New 16 ---------------
+ News Content :
+© Reuters. FILE PHOTO: Apartment blocks are pictured in Beijing, China December 16, 2017. REUTERS/Jason Lee
+BEIJING (Reuters) -New home prices in China rose in May at the same pace as in April, official data showed on Thursday, but there were signs that government measures to cool the market were beginning to temper gains.
+Average new home prices in 70 major cities grew 0.6% in May, unchanged from April, according to Reuters calculations based on data released by the National Bureau of Statistics.
+On a year-on-year basis, new home prices rose 4.9%, slightly faster than a 4.8% rise in April.
+Real estate, a vital source of growth for China's economy, has bounced back quickly from the COVID-19 crisis. But a relentless rise in home prices, particularly in big cities, has raised concerns about overheating and prompted the government to ramp up efforts to cool the red-hot market this year.
+"The new home price growth has peaked," said Li Yujia, chief economist at Guangdong Property Policy Research Institute.
+"It is due to local government's price caps, and sales discounts offered by many developers who are in debt repayment peak season and under stringent scrutiny on debt ratios."
+Chinese property prices have risen rapidly this year, even as the government took a series of measures to cool the market including stricter rules for home buyers, curbing debt accumulation by developers and guiding banks to increase mortgage rates.
+The NBS data showed 62 cities reported monthly gains in May, with the number unchanged from the tally in April.
+New home prices quickened slightly in tier-1 cities, while growth flatlined in tier-2 and 3 cities.
+Second-hand home prices in Shenzhen, the front runner amid the rampant property boom, fell 0.1% month-on-month in May. Zhang Dawei, chief analyst with property agency Centaline, said it was the first monthly fall in nearly two years.
+Li expected new home price growth to remain elevated as land prices stay high, although developers are likely to ramp up price discounts to promote sales.
+"The growth is expected to soften at the end of (the) third quarter if current policy tightenings remain in place."
+Earlier this week, data showed China's real estate investment rose in May at its weakest clip this year as policy tightening on developers' financing and mortgages gradually kicked in, although growth stayed resilient.
+China's home prices are expected to grow 5% this year, according to a Reuters poll of analysts in June, up from a forecast for a 3.3% gain in a similar survey in February.
+-------------------First 20 Important Keywords--------------------
+-------------------Word , Tf-idf value--------------------
+home , 0.37932162090544075
+prices , 0.3413894588148967
+growth , 0.22759297254326447
+new , 0.22759297254326447
+cities , 0.18966081045272037
+may , 0.18966081045272037
+developers , 0.1517286483621763
+price , 0.1517286483621763
+year , 0.1517286483621763
+data , 0.1517286483621763
+property , 0.1517286483621763
+april , 0.1517286483621763
+chinas , 0.11379648627163223
+debt , 0.11379648627163223
+showed , 0.11379648627163223
+expected , 0.11379648627163223
+market , 0.11379648627163223
+government , 0.11379648627163223
+rose , 0.11379648627163223
+policy , 0.11379648627163223
+-------------------First 30 Important Keywords--------------------
+-------------------Word , Tf-idf value--------------------
+home , 0.37932162090544075
+prices , 0.3413894588148967
+growth , 0.22759297254326447
+new , 0.22759297254326447
+cities , 0.18966081045272037
+may , 0.18966081045272037
+developers , 0.1517286483621763
+price , 0.1517286483621763
+year , 0.1517286483621763
+data , 0.1517286483621763
+property , 0.1517286483621763
+april , 0.1517286483621763
+chinas , 0.11379648627163223
+debt , 0.11379648627163223
+showed , 0.11379648627163223
+expected , 0.11379648627163223
+market , 0.11379648627163223
+government , 0.11379648627163223
+rose , 0.11379648627163223
+policy , 0.11379648627163223
+cool , 0.11379648627163223
+beijing , 0.07586432418108816
+china , 0.07586432418108816
+slightly , 0.07586432418108816
+discounts , 0.07586432418108816
+monthly , 0.07586432418108816
+remain , 0.07586432418108816
+sales , 0.07586432418108816
+chief , 0.07586432418108816
+estate , 0.07586432418108816
+-------------------First 35 Important Keywords--------------------
+-------------------Word , Tf-idf value--------------------
+home , 0.37932162090544075
+prices , 0.3413894588148967
+growth , 0.22759297254326447
+new , 0.22759297254326447
+cities , 0.18966081045272037
+may , 0.18966081045272037
+developers , 0.1517286483621763
+price , 0.1517286483621763
+year , 0.1517286483621763
+data , 0.1517286483621763
+property , 0.1517286483621763
+april , 0.1517286483621763
+chinas , 0.11379648627163223
+debt , 0.11379648627163223
+showed , 0.11379648627163223
+expected , 0.11379648627163223
+market , 0.11379648627163223
+government , 0.11379648627163223
+rose , 0.11379648627163223
+policy , 0.11379648627163223
+cool , 0.11379648627163223
+beijing , 0.07586432418108816
+china , 0.07586432418108816
+slightly , 0.07586432418108816
+discounts , 0.07586432418108816
+monthly , 0.07586432418108816
+remain , 0.07586432418108816
+sales , 0.07586432418108816
+chief , 0.07586432418108816
+estate , 0.07586432418108816
+although , 0.07586432418108816
+rise , 0.07586432418108816
+unchanged , 0.07586432418108816
+according , 0.07586432418108816
+real , 0.07586432418108816
+-------------------End of News 16--------------------

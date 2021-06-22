@@ -1,0 +1,101 @@
+--------Start of Page 1 New 35 ---------------
+ News Content :
+© Reuters. Gold Holds Gain as Powell Reiterates Rising Inflation Won’t Last
+(Bloomberg) -- Gold held an advance as investors weighed comments by Federal Reserve Chair Jerome Powell, who reiterated that higher inflation will likely be transitory.
+Inflation had picked up but should move back toward the Fed’s 2% target once supply imbalances resolve, Powell said in written remarks prepared for his Tuesday testimony before the House Select Subcommittee on the Coronavirus Crisis. Investors will tune in to the hearing for potential questions that shed more light on his view on the pace of the economic rebound and the outlook for monetary policy.
+Read more: Powell Renews Forecast for Inflation Subsiding Toward Fed’s Goal
+Bullion climbed Monday after its biggest weekly decline in 15 months, helped by a drop in the dollar and robust inflows into gold-backed exchange-traded funds late last week. While gold took a hit after the Fed’s hawkish tilt at its most recent policy meeting, it’s recovering a little as investors weigh the prospects of very gradual tightening.
+Spot gold was little changed at $1,784.14 an ounce at 9:14 a.m. in Singapore, after climbing 1.1% on Monday. Prices fell 6% last week, the most since March 2020. Silver retreated, while platinum and palladium steadied. The Bloomberg Dollar Spot Index edged up after dropping 0.4% on Monday.
+©2021 Bloomberg L.P.
+-------------------First 20 Important Keywords--------------------
+-------------------Word , Tf-idf value--------------------
+gold , 0.2734343708098653
+powell , 0.2734343708098653
+inflation , 0.2734343708098653
+bloomberg , 0.20507577810739896
+investors , 0.20507577810739896
+monday , 0.20507577810739896
+last , 0.20507577810739896
+feds , 0.20507577810739896
+toward , 0.13671718540493266
+dollar , 0.13671718540493266
+week , 0.13671718540493266
+policy , 0.13671718540493266
+little , 0.13671718540493266
+spot , 0.13671718540493266
+chair , 0.06835859270246633
+likely , 0.06835859270246633
+weekly , 0.06835859270246633
+pace , 0.06835859270246633
+decline , 0.06835859270246633
+914 , 0.06835859270246633
+-------------------First 30 Important Keywords--------------------
+-------------------Word , Tf-idf value--------------------
+gold , 0.2734343708098653
+powell , 0.2734343708098653
+inflation , 0.2734343708098653
+bloomberg , 0.20507577810739896
+investors , 0.20507577810739896
+monday , 0.20507577810739896
+last , 0.20507577810739896
+feds , 0.20507577810739896
+toward , 0.13671718540493266
+dollar , 0.13671718540493266
+week , 0.13671718540493266
+policy , 0.13671718540493266
+little , 0.13671718540493266
+spot , 0.13671718540493266
+chair , 0.06835859270246633
+likely , 0.06835859270246633
+weekly , 0.06835859270246633
+pace , 0.06835859270246633
+decline , 0.06835859270246633
+914 , 0.06835859270246633
+light , 0.06835859270246633
+advance , 0.06835859270246633
+holds , 0.06835859270246633
+silver , 0.06835859270246633
+changed , 0.06835859270246633
+coronavirus , 0.06835859270246633
+back , 0.06835859270246633
+target , 0.06835859270246633
+written , 0.06835859270246633
+prices , 0.06835859270246633
+-------------------First 35 Important Keywords--------------------
+-------------------Word , Tf-idf value--------------------
+gold , 0.2734343708098653
+powell , 0.2734343708098653
+inflation , 0.2734343708098653
+bloomberg , 0.20507577810739896
+investors , 0.20507577810739896
+monday , 0.20507577810739896
+last , 0.20507577810739896
+feds , 0.20507577810739896
+toward , 0.13671718540493266
+dollar , 0.13671718540493266
+week , 0.13671718540493266
+policy , 0.13671718540493266
+little , 0.13671718540493266
+spot , 0.13671718540493266
+chair , 0.06835859270246633
+likely , 0.06835859270246633
+weekly , 0.06835859270246633
+pace , 0.06835859270246633
+decline , 0.06835859270246633
+914 , 0.06835859270246633
+light , 0.06835859270246633
+advance , 0.06835859270246633
+holds , 0.06835859270246633
+silver , 0.06835859270246633
+changed , 0.06835859270246633
+coronavirus , 0.06835859270246633
+back , 0.06835859270246633
+target , 0.06835859270246633
+written , 0.06835859270246633
+prices , 0.06835859270246633
+recovering , 0.06835859270246633
+renews , 0.06835859270246633
+select , 0.06835859270246633
+imbalances , 0.06835859270246633
+hit , 0.06835859270246633
+-------------------End of News 35--------------------

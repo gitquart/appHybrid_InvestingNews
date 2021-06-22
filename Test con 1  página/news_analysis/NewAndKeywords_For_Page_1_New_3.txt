@@ -1,0 +1,107 @@
+--------Start of Page 1 New 3 ---------------
+ News Content :
+© Reuters. FILE PHOTO: A row of houses are seen in London, Britain June 3, 2015. REUTERS/Suzanne Plunkett
+LONDON (Reuters) - Asking prices for British homes between mid May and early June
+rose by 0.8% compared with a month before, the biggest rise for the time of year since 2015, as available housing remains in short supply, property website Rightmove (OTC:RTMVY) said on Monday.
+The increase is less than the 1.8% recorded a month earlier but still takes asking prices 7.5% above their level in early March 2020, before Britain went into its first COVID lockdown.
+"Buyer demand remains very strong, though with an all-time low in the number of properties available for sale ... and new stock at higher-than-ever average prices, there are early signs of a slowing in the frenetic pace," Tim Bannister, Rightmove's director of property data, said.
+Rightmove, which says it advertises 95% of homes for sale in Britain, collected the data between May 9 and June 12.
+British house prices surged last year despite the pandemic as many richer households sought more space to work from home, and the government cut property purchase taxes to reverse an initial slump in sales early in the pandemic.
+June is the last month when the full stamp duty tax break applies, before it is wholly phased out in October.
+Britain's official measure of house prices, based on completed transactions, showed prices in the year to April rose 8.9%, after a 9.9% increase for the year to March.
+Rightmove said the most expensive homes were seeing the biggest percentage increases in asking prices. Typically these were detached houses with at least four bedrooms whose buyers were less stretched for cash.
+London has seen weaker prices and demand than other parts of Britain, due to a fall in the number of foreign buyers and less need for many high-paid workers to commute to city-centre jobs.
+Separate figures from property data company LonRes showed prices were 1.9% lower in expensive parts of the capital than a year ago. The number of new listings in central London was 33% higher in May than two years before.
+"Demand is not outstripping supply in most areas of prime London. Estate agents' windows have, for the most part, stayed well stocked, meaning prices have not seen the rapid growth experienced in other parts of the country," LonRes's head of research, Marcus Dixon, said.
+-------------------First 20 Important Keywords--------------------
+-------------------Word , Tf-idf value--------------------
+prices , 0.43810795433832356
+year , 0.21905397716916178
+london , 0.21905397716916178
+june , 0.1752431817353294
+britain , 0.1752431817353294
+early , 0.1752431817353294
+property , 0.1752431817353294
+homes , 0.13143238630149706
+may , 0.13143238630149706
+number , 0.13143238630149706
+rightmove , 0.13143238630149706
+month , 0.13143238630149706
+asking , 0.13143238630149706
+less , 0.13143238630149706
+parts , 0.13143238630149706
+seen , 0.13143238630149706
+data , 0.13143238630149706
+demand , 0.13143238630149706
+expensive , 0.0876215908676647
+british , 0.0876215908676647
+-------------------First 30 Important Keywords--------------------
+-------------------Word , Tf-idf value--------------------
+prices , 0.43810795433832356
+year , 0.21905397716916178
+london , 0.21905397716916178
+june , 0.1752431817353294
+britain , 0.1752431817353294
+early , 0.1752431817353294
+property , 0.1752431817353294
+homes , 0.13143238630149706
+may , 0.13143238630149706
+number , 0.13143238630149706
+rightmove , 0.13143238630149706
+month , 0.13143238630149706
+asking , 0.13143238630149706
+less , 0.13143238630149706
+parts , 0.13143238630149706
+seen , 0.13143238630149706
+data , 0.13143238630149706
+demand , 0.13143238630149706
+expensive , 0.0876215908676647
+british , 0.0876215908676647
+rose , 0.0876215908676647
+last , 0.0876215908676647
+biggest , 0.0876215908676647
+buyers , 0.0876215908676647
+pandemic , 0.0876215908676647
+increase , 0.0876215908676647
+remains , 0.0876215908676647
+available , 0.0876215908676647
+many , 0.0876215908676647
+houses , 0.0876215908676647
+-------------------First 35 Important Keywords--------------------
+-------------------Word , Tf-idf value--------------------
+prices , 0.43810795433832356
+year , 0.21905397716916178
+london , 0.21905397716916178
+june , 0.1752431817353294
+britain , 0.1752431817353294
+early , 0.1752431817353294
+property , 0.1752431817353294
+homes , 0.13143238630149706
+may , 0.13143238630149706
+number , 0.13143238630149706
+rightmove , 0.13143238630149706
+month , 0.13143238630149706
+asking , 0.13143238630149706
+less , 0.13143238630149706
+parts , 0.13143238630149706
+seen , 0.13143238630149706
+data , 0.13143238630149706
+demand , 0.13143238630149706
+expensive , 0.0876215908676647
+british , 0.0876215908676647
+rose , 0.0876215908676647
+last , 0.0876215908676647
+biggest , 0.0876215908676647
+buyers , 0.0876215908676647
+pandemic , 0.0876215908676647
+increase , 0.0876215908676647
+remains , 0.0876215908676647
+available , 0.0876215908676647
+many , 0.0876215908676647
+houses , 0.0876215908676647
+supply , 0.0876215908676647
+new , 0.0876215908676647
+2015 , 0.0876215908676647
+march , 0.0876215908676647
+sale , 0.0876215908676647
+-------------------End of News 3--------------------

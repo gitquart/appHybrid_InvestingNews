@@ -1,0 +1,110 @@
+--------Start of Page 1 New 5 ---------------
+ News Content :
+© Reuters. FILE PHOTO: Employees wearing protective face masks work on the automobile assembly line as the maker ramps up car production with new security and health measures as a step to resume fully operation, during the outbreak of the coronavirus disease (COVID-
+TOKYO (Reuters) - Business confidence among Japan's large manufacturers likely improved in the second quarter thanks to a boost to exports and corporate profits from a global demand recovery, a Reuters poll showed on Friday.
+Other data next week is expected to show the Tokyo-area consumer price index (CPI) fell again in June as slow consumer demand amid the coronavirus pandemic caused a further easing of prices.
+The Bank of Japan's quarterly tankan business sentiment survey was expected to show the headline index for big manufacturers' sentiment rose to plus 15 from plus 5 in March, the poll of 16 economists showed.
+An increase would mark the fourth consecutive quarter of improvement.
+"Large manufacturers are expected to see corporate profits improve as the yen remains on a depreciating trend, and are supported by steadily increasing conditions in exports due to a recovery in overseas economies," analysts at the Japan Research Institute wrote.
+The mood among big non-manufacturers was also likely to improve, turning positive for the first time since the first quarter of last year, the poll showed.
+But big non-manufacturers' sentiment was still expected to remain more subdued than that of manufacturers, likely coming in at plus 3 from minus 1 in March.
+The forecasts suggested firms are shaking off more of the drag from the coronavirus pandemic, but it continues to weigh heavily on non-manufacturers.
+After contracting in January-March, Japan's economy is expected to grow at a much slower pace than other major economies such as the United States in the second quarter, in part due to anti-virus measures and a late vaccine rollout.
+For the three months ahead, big manufacturers' optimism was expected to improve at a slower pace, likely rising to plus 18, the poll showed.
+The big non-manufacturers' outlook index was seen rising to plus 8, it showed.
+Big firms will likely raise their capital spending plans by 7.2% for the current fiscal year as the outlook improves.
+The BOJ will announce the tankan quarterly survey results at 8:50 a.m. on July 1.
+The BOJ on Friday maintained its massive stimulus, while it also said it will launch a new scheme to encourage financial institutions to boost lending and investment for fighting climate change.
+Separate data from the internal ministry due out on June 25 is expected to show Tokyo-area core consumer prices, which exclude fresh food but include oil products, fell 0.1% in June from a year earlier, the poll found.
+-------------------First 20 Important Keywords--------------------
+-------------------Word , Tf-idf value--------------------
+expected , 0.28769822778437526
+big , 0.24659848095803594
+showed , 0.20549873413169661
+likely , 0.20549873413169661
+manufacturers , 0.20549873413169661
+plus , 0.20549873413169661
+poll , 0.20549873413169661
+quarter , 0.1643989873053573
+nonmanufacturers , 0.1643989873053573
+year , 0.12329924047901797
+sentiment , 0.12329924047901797
+due , 0.12329924047901797
+japans , 0.12329924047901797
+june , 0.12329924047901797
+index , 0.12329924047901797
+improve , 0.12329924047901797
+coronavirus , 0.12329924047901797
+consumer , 0.12329924047901797
+show , 0.12329924047901797
+march , 0.08219949365267865
+-------------------First 30 Important Keywords--------------------
+-------------------Word , Tf-idf value--------------------
+expected , 0.28769822778437526
+big , 0.24659848095803594
+showed , 0.20549873413169661
+likely , 0.20549873413169661
+manufacturers , 0.20549873413169661
+plus , 0.20549873413169661
+poll , 0.20549873413169661
+quarter , 0.1643989873053573
+nonmanufacturers , 0.1643989873053573
+year , 0.12329924047901797
+sentiment , 0.12329924047901797
+due , 0.12329924047901797
+japans , 0.12329924047901797
+june , 0.12329924047901797
+index , 0.12329924047901797
+improve , 0.12329924047901797
+coronavirus , 0.12329924047901797
+consumer , 0.12329924047901797
+show , 0.12329924047901797
+march , 0.08219949365267865
+first , 0.08219949365267865
+among , 0.08219949365267865
+prices , 0.08219949365267865
+boost , 0.08219949365267865
+recovery , 0.08219949365267865
+outlook , 0.08219949365267865
+economies , 0.08219949365267865
+large , 0.08219949365267865
+pace , 0.08219949365267865
+second , 0.08219949365267865
+-------------------First 35 Important Keywords--------------------
+-------------------Word , Tf-idf value--------------------
+expected , 0.28769822778437526
+big , 0.24659848095803594
+showed , 0.20549873413169661
+likely , 0.20549873413169661
+manufacturers , 0.20549873413169661
+plus , 0.20549873413169661
+poll , 0.20549873413169661
+quarter , 0.1643989873053573
+nonmanufacturers , 0.1643989873053573
+year , 0.12329924047901797
+sentiment , 0.12329924047901797
+due , 0.12329924047901797
+japans , 0.12329924047901797
+june , 0.12329924047901797
+index , 0.12329924047901797
+improve , 0.12329924047901797
+coronavirus , 0.12329924047901797
+consumer , 0.12329924047901797
+show , 0.12329924047901797
+march , 0.08219949365267865
+first , 0.08219949365267865
+among , 0.08219949365267865
+prices , 0.08219949365267865
+boost , 0.08219949365267865
+recovery , 0.08219949365267865
+outlook , 0.08219949365267865
+economies , 0.08219949365267865
+large , 0.08219949365267865
+pace , 0.08219949365267865
+second , 0.08219949365267865
+friday , 0.08219949365267865
+demand , 0.08219949365267865
+fell , 0.08219949365267865
+also , 0.08219949365267865
+business , 0.08219949365267865
+-------------------End of News 5--------------------

@@ -1,0 +1,109 @@
+--------Start of Page 1 New 17 ---------------
+ News Content :
+© Reuters. FILE PHOTO: Steel beams on the draw span, which needs replacement, are shown on the Arlington Memorial Bridge in Washington, U.S., June 20, 2016. REUTERS/Joshua Roberts
+By Valerie Volcovici
+WASHINGTON (Reuters) - Leaders of environmental and labor groups - two of President Joe Biden's biggest supporters - urged the White House and Democratic congressional leaders on Tuesday to reject any bipartisan infrastructure deal that lacks strong provisions to tackle climate change and strengthen unions.
+The BlueGreen Alliance, whose partners include some of the country's biggest environmental groups and labor unions, said in a letter its members were "troubled by recent proposals" that are "watered down."
+It called on Democrats to strive for an infrastructure package that captures the main elements of Biden's proposed $1.7 trillion package.
+"We urge you to ensure that this investment is as bold and transformative as our current moment demands and reject short-sighted proposals that would delay or weaken economic recovery, and that may fracture the broad array of constituencies and organizations that are unified in support of more ambitious proposals," the letter said.
+"Now is not the time for small-minded measures."
+Biden had envisioned a sweeping infrastructure package that would revamp the nation's roads and bridges while accelerating a rapid U.S. shift toward clean energy to fight climate change.
+Republicans have said proposals addressing issues like climate change do not count as "infrastructure," leaving negotiations in the evenly divided Senate at an impasse as Democrats threaten not to support a deal that omits such measures.
+After separate efforts at a bipartisan bill failed, a new infrastructure plan costing a little over $1 trillion has been gaining support in the U.S. Senate, but disputes remain over how it should be funded.
+Democratic Senator Mark Warner, a member of the bipartisan group trying to hammer out a deal, has said the proposal includes more than $100 billion in energy-related “clean grid” investments, but details have not been released.
+Jason Walsh, executive director of the BlueGreen Alliance, warned that the ideas currently on the table would kill the momentum around climate action and bolstering unions and said Democrats should look to other options.
+"None of the proposals we’ve seen emerge from bipartisan negotiations come close to meeting the mark on jobs, climate or justice. It’s time to move on,” he told Reuters.
+The letter was signed by the heads of organizations ranging from the United Steelworkers, Service Employees International Union, Sierra Club and Natural Resources Defense Council.
+It said any package should include measures to expand clean energy, modernize the electric grid, prioritize investments in low-income and minority areas and make it easier for unions to organize.
+-------------------First 20 Important Keywords--------------------
+-------------------Word , Tf-idf value--------------------
+infrastructure , 0.23945657130528783
+climate , 0.23945657130528783
+proposals , 0.23945657130528783
+package , 0.19156525704423027
+unions , 0.19156525704423027
+bipartisan , 0.19156525704423027
+letter , 0.1436739427831727
+clean , 0.1436739427831727
+support , 0.1436739427831727
+change , 0.1436739427831727
+democrats , 0.1436739427831727
+deal , 0.1436739427831727
+measures , 0.1436739427831727
+mark , 0.09578262852211514
+bidens , 0.09578262852211514
+organizations , 0.09578262852211514
+energy , 0.09578262852211514
+democratic , 0.09578262852211514
+alliance , 0.09578262852211514
+trillion , 0.09578262852211514
+-------------------First 30 Important Keywords--------------------
+-------------------Word , Tf-idf value--------------------
+infrastructure , 0.23945657130528783
+climate , 0.23945657130528783
+proposals , 0.23945657130528783
+package , 0.19156525704423027
+unions , 0.19156525704423027
+bipartisan , 0.19156525704423027
+letter , 0.1436739427831727
+clean , 0.1436739427831727
+support , 0.1436739427831727
+change , 0.1436739427831727
+democrats , 0.1436739427831727
+deal , 0.1436739427831727
+measures , 0.1436739427831727
+mark , 0.09578262852211514
+bidens , 0.09578262852211514
+organizations , 0.09578262852211514
+energy , 0.09578262852211514
+democratic , 0.09578262852211514
+alliance , 0.09578262852211514
+trillion , 0.09578262852211514
+grid , 0.09578262852211514
+bluegreen , 0.09578262852211514
+reject , 0.09578262852211514
+senate , 0.09578262852211514
+washington , 0.09578262852211514
+negotiations , 0.09578262852211514
+biggest , 0.09578262852211514
+time , 0.09578262852211514
+leaders , 0.09578262852211514
+labor , 0.09578262852211514
+-------------------First 35 Important Keywords--------------------
+-------------------Word , Tf-idf value--------------------
+infrastructure , 0.23945657130528783
+climate , 0.23945657130528783
+proposals , 0.23945657130528783
+package , 0.19156525704423027
+unions , 0.19156525704423027
+bipartisan , 0.19156525704423027
+letter , 0.1436739427831727
+clean , 0.1436739427831727
+support , 0.1436739427831727
+change , 0.1436739427831727
+democrats , 0.1436739427831727
+deal , 0.1436739427831727
+measures , 0.1436739427831727
+mark , 0.09578262852211514
+bidens , 0.09578262852211514
+organizations , 0.09578262852211514
+energy , 0.09578262852211514
+democratic , 0.09578262852211514
+alliance , 0.09578262852211514
+trillion , 0.09578262852211514
+grid , 0.09578262852211514
+bluegreen , 0.09578262852211514
+reject , 0.09578262852211514
+senate , 0.09578262852211514
+washington , 0.09578262852211514
+negotiations , 0.09578262852211514
+biggest , 0.09578262852211514
+time , 0.09578262852211514
+leaders , 0.09578262852211514
+labor , 0.09578262852211514
+investments , 0.09578262852211514
+groups , 0.09578262852211514
+environmental , 0.09578262852211514
+include , 0.09578262852211514
+senator , 0.04789131426105757
+-------------------End of News 17--------------------

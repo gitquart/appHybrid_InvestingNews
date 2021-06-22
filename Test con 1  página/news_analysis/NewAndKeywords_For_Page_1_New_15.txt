@@ -1,0 +1,103 @@
+--------Start of Page 1 New 15 ---------------
+ News Content :
+© Reuters. FILE PHOTO: A container is lifted at Keelung port, northern Taiwan, October 30, 2015. Taiwan narrowly dodged a recession in the third quarter even as the economy contracted for the first time since the global financial crisis, with exporters suffering a c
+TAIPEI (Reuters) - Taiwan's export orders likely rose in May for the 15th month in a row, a Reuters poll showed, buoyed by strong sustained demand for technology products during lockdowns as millions of people work from home and take classes remotely.
+The median forecast from a poll of 10 economists expects export orders to surge 40.15% from the year-ago period. Forecasts for growth ranged from 20.5% to 45%.
+Taiwan's export orders are a leading indicator of demand for hi-tech gadgets and Asia's exports, and typically lead actual exports by two to three months.
+Despite a spike in domestic COVID-19 cases, Taiwan's economy remains strong with exports unaffected.
+The island's April export orders, a bellwether of global technology demand, jumped 42.6% year-on-year to $54.93 billion.
+Taiwan's manufacturers, such as the world's largest contract chipmaker Taiwan Semiconductor Manufacturing Co Ltd, are a key part of the global supply chain for technology giants such as Apple Inc (NASDAQ:AAPL).
+The data for May will be released on Monday, June 21.
+(Poll compiled by Carol Lee; Reporting by Ben Blanchard, Editing by Sherry Jacob-Phillips)
+-------------------First 20 Important Keywords--------------------
+-------------------Word , Tf-idf value--------------------
+orders , 0.26490647141300877
+export , 0.26490647141300877
+taiwans , 0.26490647141300877
+global , 0.19867985355975656
+poll , 0.19867985355975656
+technology , 0.19867985355975656
+taiwan , 0.19867985355975656
+exports , 0.19867985355975656
+demand , 0.19867985355975656
+economy , 0.13245323570650439
+strong , 0.13245323570650439
+may , 0.13245323570650439
+domestic , 0.06622661785325219
+exporters , 0.06622661785325219
+30 , 0.06622661785325219
+months , 0.06622661785325219
+carol , 0.06622661785325219
+financial , 0.06622661785325219
+actual , 0.06622661785325219
+work , 0.06622661785325219
+-------------------First 30 Important Keywords--------------------
+-------------------Word , Tf-idf value--------------------
+orders , 0.26490647141300877
+export , 0.26490647141300877
+taiwans , 0.26490647141300877
+global , 0.19867985355975656
+poll , 0.19867985355975656
+technology , 0.19867985355975656
+taiwan , 0.19867985355975656
+exports , 0.19867985355975656
+demand , 0.19867985355975656
+economy , 0.13245323570650439
+strong , 0.13245323570650439
+may , 0.13245323570650439
+domestic , 0.06622661785325219
+exporters , 0.06622661785325219
+30 , 0.06622661785325219
+months , 0.06622661785325219
+carol , 0.06622661785325219
+financial , 0.06622661785325219
+actual , 0.06622661785325219
+work , 0.06622661785325219
+contract , 0.06622661785325219
+cases , 0.06622661785325219
+likely , 0.06622661785325219
+northern , 0.06622661785325219
+keelung , 0.06622661785325219
+contracted , 0.06622661785325219
+home , 0.06622661785325219
+released , 0.06622661785325219
+recession , 0.06622661785325219
+lee , 0.06622661785325219
+-------------------First 35 Important Keywords--------------------
+-------------------Word , Tf-idf value--------------------
+orders , 0.26490647141300877
+export , 0.26490647141300877
+taiwans , 0.26490647141300877
+global , 0.19867985355975656
+poll , 0.19867985355975656
+technology , 0.19867985355975656
+taiwan , 0.19867985355975656
+exports , 0.19867985355975656
+demand , 0.19867985355975656
+economy , 0.13245323570650439
+strong , 0.13245323570650439
+may , 0.13245323570650439
+domestic , 0.06622661785325219
+exporters , 0.06622661785325219
+30 , 0.06622661785325219
+months , 0.06622661785325219
+carol , 0.06622661785325219
+financial , 0.06622661785325219
+actual , 0.06622661785325219
+work , 0.06622661785325219
+contract , 0.06622661785325219
+cases , 0.06622661785325219
+likely , 0.06622661785325219
+northern , 0.06622661785325219
+keelung , 0.06622661785325219
+contracted , 0.06622661785325219
+home , 0.06622661785325219
+released , 0.06622661785325219
+recession , 0.06622661785325219
+lee , 0.06622661785325219
+reporting , 0.06622661785325219
+forecasts , 0.06622661785325219
+10 , 0.06622661785325219
+first , 0.06622661785325219
+sustained , 0.06622661785325219
+-------------------End of News 15--------------------
