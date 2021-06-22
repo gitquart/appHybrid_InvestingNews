@@ -156,7 +156,9 @@ def readUrl(url):
                 if strSource in lsSources:
                     #Case: Sources which news open in Investing.com
                     articleContent=devuelveElemento('/html/body/div[5]/section/div[3]')
-                    lsContent.append(articleContent.text)
+                    time.sleep(3)
+                    if articleContent:
+                        lsContent.append(articleContent.text)
                 else:
                     #---To know how many windows are open----
                 
