@@ -288,6 +288,15 @@ def getDataFrameFromTF_IDF(lsContent=None,fullCorpus=False):
                 lsWordAllNews_WithNoSW.append(word)
 
     #End of "some filtering"
+    """
+    Solution for N dataset size
+    ------------------------------------------------
+    tfIdfVectorizer=TfidfVectorizer(use_idf=True)
+    tfIdf = tfIdfVectorizer.fit_transform(dataset)
+    df = pd.DataFrame(tfIdf[0].T.todense(), index=tfIdfVectorizer.get_feature_names(), columns=["TF-IDF"])
+    df = df.sort_values('TF-IDF', ascending=False)
+    print (df.head(25))
+    """
 
     #fit_transform() returns
     #X sparse matrix of (n_samples, n_features)
@@ -300,8 +309,8 @@ def getDataFrameFromTF_IDF(lsContent=None,fullCorpus=False):
         vectorizer = TfidfVectorizer(vocabulary=list(set(lsVocabularyWithNoSW)))
         tf_idf_matrix = vectorizer.fit_transform(lsCorpus)
 
-    lsFeatures = vectorizer.get_feature_names()
-    lsDocData = tf_idf_matrix.todense().tolist()   
+    #lsFeatures = vectorizer.get_feature_names()
+    #lsDocData = tf_idf_matrix.todense().tolist()   
 
     
     #lsTFIDF=[]
