@@ -70,14 +70,14 @@ def readUrl(url):
         time.sleep(4)
         for page in range(1,5):
 
-            if page==3:
+            if page==4:
                 BROWSER.quit()
                 #Print all news
                 printToFile(file_all_news,f'-------------------Printing  all news--------------------\n')
                 for doc in lsContentCorpus:
-                    printToFile('*************************************************************\n')
+                    printToFile(file_all_news,'*************************************************************\n')
                     printToFile(file_all_news,f'{doc}\n')
-                    printToFile('*************************************************************\n')
+                    printToFile(file_all_news,'*************************************************************\n')
 
 
                 #Print file "All words"
@@ -163,6 +163,7 @@ def readUrl(url):
                     #---To know how many windows are open----
                 
                     time.sleep(4)
+                    linkPopUp=None
                     #Get the link with a recursive method
                     linkPopUp=devuelveElementoDinamico('/html/body/div[option]/div/div/div/a',6,15)
                     time.sleep(3)
@@ -184,6 +185,7 @@ def readUrl(url):
                         first_window=BROWSER.window_handles[0]
                         BROWSER.switch_to.window(first_window)
                         #BROWSER.refresh()
+                        btnPopUpClose=None
                         btnPopUpClose=devuelveElementoDinamico('/html/body/div[option]/span/i',6,15)
                         time.sleep(3)
                         if btnPopUpClose:
