@@ -15,5 +15,4 @@ objControl= cInternalControl()
 #page=int(res[0][1])
 tool.returnChromeSettings()
 url="https://www.investing.com/news/commodities-news"
-#print(f'App : {str(app)} on page {str(page)} ')
 tool.readUrl(url)
